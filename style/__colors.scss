@@ -1,4 +1,8 @@
 :root {
   --color-text-default: black;
   --color-bg-default: white;
+  --color-accent: darkblue;
+
+  --color-bg-button: var(--color-accent);
+  --color-text-button: white;
 }

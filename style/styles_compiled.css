@@ -1,6 +1,9 @@
 :root {
   --color-text-default: black;
-  --color-bg-default: white; }
+  --color-bg-default: white;
+  --color-accent: darkblue;
+  --color-bg-button: var(--color-accent);
+  --color-text-button: white; }
 
 :root {
   /* Scale: 1.414 (Augmented Fourth) 
@@ -44,7 +47,17 @@ li {
 :root {
   --border-radius-small: 0.25rem;
   --border-radius-medium: 0.5rem;
-  --border-radius-large: 1rem; }
+  --border-radius-large: 1rem;
+  --border-radius-button: var(--border-radius-medium); }
+
+.et_pb_button,
+.et_pb_button:hover,
+.et_pb_button.et_pb_bg_layout_light,
+.et_pb_button.et_pb_bg_layout_light:hover {
+  background-color: var(--color-bg-button);
+  border: none;
+  border-radius: var(--border-radius-button);
+  color: var(--color-text-button); }
 
 img {
   border-radius: 1rem; }
