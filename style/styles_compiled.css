@@ -1,0 +1,37 @@
+p,
+li {
+  max-width: 80ch; }
+
+.heading-eyebrow,
+.heading-eyebrow h2,
+.heading-eyebrow h3,
+.heading-eyebrow h4,
+.heading-metadata,
+.heading-metadata h3 {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+body {
+  font-weight: 400;
+  /* override */ }
+
+img {
+  border-radius: 1rem; }
+
+.et_pb_section {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+.et_pb_row {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+.layout-portfolio-stats .et_pb_column {
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 1rem; }
+
+.text-portfolio-stat-value {
+  font-size: 96px; }
+
+/*# sourceMappingURL=styles_compiled.css.map */
