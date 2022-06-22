@@ -3,6 +3,8 @@
   /* TODO: Make dynamic */
   --color-bg-default: white;
   /* TODO: Make dynamic */
+  --color-text-secondary-default: gray;
+  /*TODO: Make dynamic */
   --color-accent: darkblue;
   /* TODO: Make dynamic */
   --color-bg-button: var(--color-accent);
@@ -45,8 +47,10 @@
   --line-height-sub-paragraph: 1.5;
   /* TODO: Make dynamic */ }
 
+body, h1, h2, h3, h4, h5, h6, p, li {
+  font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif; }
+
 body {
-  font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   /* override */
   font-size: 16px; }
@@ -88,8 +92,15 @@ h1, h2, h3, h4, h5, h6, p, li {
 .heading-eyebrow h4,
 .heading-metadata,
 .heading-metadata h3 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  color: var(--color-text-secondary-default); }
+
+.heading-eyebrow {
+  margin-bottom: 0 !important;
+  /* override */ }
 
 :root {
   --border-radius-small: 0.25rem;
@@ -118,6 +129,7 @@ img {
   margin-top: 5rem;
   margin-bottom: 5rem; }
 
+/* Portfolio Stats */
 .layout-portfolio-stats .et_pb_column {
   border: 1px solid black;
   padding: 2rem;

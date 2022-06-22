@@ -1,6 +1,9 @@
 :root {
   --color-text-default: black; /* TODO: Make dynamic */
   --color-bg-default: white; /* TODO: Make dynamic */
+
+
+  --color-text-secondary-default: gray; /*TODO: Make dynamic */
   --color-accent: darkblue; /* TODO: Make dynamic */
 
   --color-bg-button: var(--color-accent); /* Make more specific */
