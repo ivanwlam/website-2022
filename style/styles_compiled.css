@@ -56,7 +56,8 @@ body .et_pb_button:hover,
 body .et_pb_button.et_pb_bg_layout_light:hover {
   background-color: var(--color-bg-button);
   border: none;
-  border-radius: var(--border-radius-button);
+  border-radius: var(--border-radius-button) !important;
+  /* override */
   color: var(--color-text-button); }
 
 img {
