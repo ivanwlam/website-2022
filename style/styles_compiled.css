@@ -51,9 +51,9 @@ li {
   --border-radius-button: var(--border-radius-medium); }
 
 .et_pb_button,
-.et_pb_button:hover,
+body .et_pb_button:hover,
 .et_pb_button.et_pb_bg_layout_light,
-.et_pb_button.et_pb_bg_layout_light:hover {
+body .et_pb_button.et_pb_bg_layout_light:hover {
   background-color: var(--color-bg-button);
   border: none;
   border-radius: var(--border-radius-button);
