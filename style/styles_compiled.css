@@ -1,29 +1,49 @@
 :root {
   --color-text-default: black;
+  /* TODO: Make dynamic */
   --color-bg-default: white;
+  /* TODO: Make dynamic */
   --color-accent: darkblue;
+  /* TODO: Make dynamic */
   --color-bg-button: var(--color-accent);
-  --color-text-button: white; }
+  /* Make more specific */
+  --color-text-button: white;
+  /* TODO: Make dynamic */ }
 
 :root {
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
   */
   --font-size-h1: 113.05px;
+  /* TODO: Make dynamic */
   --font-size-h2: 79.95px;
+  /* TODO: Make dynamic */
   --font-size-h3: 56.54px;
-  --font-size-h4: 39.99px
+  /* TODO: Make dynamic */
+  --font-size-h4: 39.99px /* TODO: Make dynamic */
   --font-size-h5: 28.28px;
+  /* TODO: Make dynamic */
   --font-size-h6: 20px;
+  /* TODO: Make dynamic */
   --font-size-paragraph: 20px;
+  /* TODO: Make dynamic */
   --font-size-sub-paragraph: 14.14px;
   --line-height-h1: 1.5;
+  /* TODO: Make dynamic */
   --line-height-h2: 1.5;
+  /* TODO: Make dynamic */
   --line-height-h3: 1.5;
+  /* TODO: Make dynamic */
   --line-height-h4: 1.5;
+  /* TODO: Make dynamic */
   --line-height-h5: 1.5;
+  /* TODO: Make dynamic */
   --line-height-h6: 1.5;
-  --line-height-p: 1.5; }
+  /* TODO: Make dynamic */
+  --line-height-paragraph: 1.5;
+  /* TODO: Make dynamic */
+  --line-height-sub-paragraph: 1.5;
+  /* TODO: Make dynamic */ }
 
 body {
   font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
@@ -31,8 +51,35 @@ body {
   /* override */
   font-size: 16px; }
 
-p,
-li {
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1); }
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2); }
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3); }
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4); }
+
+h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5); }
+
+h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6); }
+
+p, li {
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph); }
+
+h1, h2, h3, h4, h5, h6, p, li {
   max-width: 80ch; }
 
 .heading-eyebrow,
