@@ -1,3 +1,33 @@
+:root {
+  --color-text-default: black;
+  --color-bg-default: white; }
+
+:root {
+  /* Scale: 1.414 (Augmented Fourth) 
+  https://type-scale.com
+  */
+  --font-size-h1: 113.05px;
+  --font-size-h2: 79.95px;
+  --font-size-h3: 56.54px;
+  --font-size-h4: 39.99px
+  --font-size-h5: 28.28px;
+  --font-size-h6: 20px;
+  --font-size-paragraph: 20px;
+  --font-size-sub-paragraph: 14.14px;
+  --line-height-h1: 1.5;
+  --line-height-h2: 1.5;
+  --line-height-h3: 1.5;
+  --line-height-h4: 1.5;
+  --line-height-h5: 1.5;
+  --line-height-h6: 1.5;
+  --line-height-p: 1.5; }
+
+body {
+  font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  /* override */
+  font-size: 16px; }
+
 p,
 li {
   max-width: 80ch; }
@@ -11,9 +41,10 @@ li {
   text-transform: uppercase;
   font-weight: bold; }
 
-body {
-  font-weight: 400;
-  /* override */ }
+:root {
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem; }
 
 img {
   border-radius: 1rem; }
