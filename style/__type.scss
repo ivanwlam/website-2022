@@ -31,6 +31,7 @@
   --font-size-h3:               calc(var(--type-scale) * var(--font-size-h4));
   --font-size-h2:               calc(var(--type-scale) * var(--font-size-h3));
   --font-size-h1:               calc(var(--type-scale) * var(--font-size-h2));
+  --font-size-super-heading:    calc(var(--type-scale) * var(--font-size-h1));
 
   --font-size-sub-paragraph:    calc(var(--font-paragraph) / var(--type-scale));
 }

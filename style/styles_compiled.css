@@ -53,6 +53,7 @@
   --font-size-h3: calc(var(--type-scale) * var(--font-size-h4));
   --font-size-h2: calc(var(--type-scale) * var(--font-size-h3));
   --font-size-h1: calc(var(--type-scale) * var(--font-size-h2));
+  --font-size-super-heading: calc(var(--type-scale) * var(--font-size-h1));
   --font-size-sub-paragraph: calc(var(--font-paragraph) / var(--type-scale)); }
 
 body, h1, h2, h3, h4, h5, h6, p, li {
@@ -147,6 +148,9 @@ img {
   border: 1px solid black;
   padding: 2rem;
   border-radius: 1rem; }
+
+.text-portfolio-stat-value p {
+  font-size: var(--font-size-super-heading); }
 
 .text-portfolio-stat-value {
   font-size: 96px; }
