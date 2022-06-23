@@ -3,27 +3,9 @@
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
   */
-
-  --font-size-h1:             113.05px; /* TODO: Make dynamic */
-  --font-size-h2:             79.95px; /* TODO: Make dynamic */
-  --font-size-h3:             56.54px; /* TODO: Make dynamic */
-  --font-size-h4:             39.99px /* TODO: Make dynamic */
-  --font-size-h5:             28.28px; /* TODO: Make dynamic */
-  --font-size-h6:             20px; /* TODO: Make dynamic */
-  --font-size-paragraph:      20px; /* TODO: Make dynamic */
-  --font-size-sub-paragraph:  14.14px;
-
-  --line-height-h1:             1.5; /* TODO: Make dynamic */
-  --line-height-h2:             1.5; /* TODO: Make dynamic */
-  --line-height-h3:             1.5; /* TODO: Make dynamic */
-  --line-height-h4:             1.5; /* TODO: Make dynamic */
-  --line-height-h5:             1.5; /* TODO: Make dynamic */
-  --line-height-h6:             1.5; /* TODO: Make dynamic */
-  --line-height-paragraph:      1.5; /* TODO: Make dynamic */
-  --line-height-sub-paragraph:  1.5; /* TODO: Make dynamic */
-
-
   --type-scale:                 1.32;
+
+  --font-size-paragraph:        20px; /* TODO: Make dynamic */
 
   --font-size-h6:               var(--font-size-paragraph);
   --font-size-h5:               calc(var(--type-scale) * var(--font-size-h6));
@@ -33,7 +15,22 @@
   --font-size-h1:               calc(var(--type-scale) * var(--font-size-h2));
   --font-size-super-heading:    calc(var(--type-scale) * var(--font-size-h1));
 
+  --font-size-super-paragraph:  calc(var(--type-scale) * var(--font-size-paragraph));
   --font-size-sub-paragraph:    calc(var(--font-paragraph) / var(--type-scale));
+
+  
+  --line-height-h1:               1.3; /* TODO: Make dynamic */
+  --line-height-h2:               1.3; /* TODO: Make dynamic */
+  --line-height-h3:               1.3; /* TODO: Make dynamic */
+  --line-height-h4:               1.3; /* TODO: Make dynamic */
+  --line-height-h5:               1.5; /* TODO: Make dynamic */
+  --line-height-h6:               1.5; /* TODO: Make dynamic */
+  --line-height-paragraph:        1.5; /* TODO: Make dynamic */
+  --line-height-super-paragraph:  1.5; /* TODO: Make dynamic */
+  --line-height-sub-paragraph:    1.5; /* TODO: Make dynamic */
+
+
+  
 }
 
 body, h1, h2, h3, h4, h5, h6, p, li {
@@ -61,7 +58,12 @@ h2,
   line-height:  var(--line-height-h2);
 }
 
-h3 {
+h3,
+.et_pb_column_1_3 h3, 
+.et_pb_column_1_4 h3, 
+.et_pb_column_1_5 h3, 
+.et_pb_column_1_6 h3, 
+.et_pb_column_2_5 h3  {
   font-size:    var(--font-size-h3);
   line-height:  var(--line-height-h3);
 }
