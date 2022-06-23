@@ -96,7 +96,7 @@ p, li {
   line-height: var(--line-height-paragraph); }
 
 h1, h2, h3, h4, h5, h6, p, li {
-  max-width: 80ch; }
+  max-width: 65ch; }
 
 .heading-eyebrow,
 .heading-eyebrow h2,
