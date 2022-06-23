@@ -16,7 +16,7 @@
   --font-size-super-heading:    calc(var(--type-scale) * var(--font-size-h1));
 
   --font-size-super-paragraph:  calc(var(--type-scale) * var(--font-size-paragraph));
-  --font-size-sub-paragraph:    calc(var(--font-paragraph) / var(--type-scale));
+  --font-size-sub-paragraph:    calc(var(--font-size-paragraph) / var(--type-scale));
 
   
   --line-height-h1:               1.3; /* TODO: Make dynamic */
