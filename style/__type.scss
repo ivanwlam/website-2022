@@ -50,8 +50,13 @@ h1 {
 }
 
 
-h2 {
-  font-size:    var(--font-size-h2);
+h2,
+.et_pb_column_1_3 h2, 
+.et_pb_column_1_4 h2, 
+.et_pb_column_1_5 h2, 
+.et_pb_column_1_6 h2, 
+.et_pb_column_2_5 h2 {
+  font-size:    var(--font-size-h2) !important;
   line-height:  var(--line-height-h2);
 }
 
