@@ -30,6 +30,8 @@
   --line-height-sub-paragraph:    1.5; /* TODO: Make dynamic */
 
 
+  --font-weight-bold:             700;
+  --font-weight-extra-bold:       800;
   
 }
 
@@ -101,7 +103,6 @@ h1, h2, h3, h4, h5, h6, p, li {
 .heading-metadata,
 .heading-metadata h3{
 	text-transform: uppercase;
-	font-weight: bold;
   color: var(--color-text-secondary-default);
 }
 
@@ -111,12 +112,14 @@ h1, h2, h3, h4, h5, h6, p, li {
 .heading-eyebrow h4 {
 	font-size: var(--font-size-h6);
   line-height: var(--line-height-h6);
+	font-weight: var(--font-weight-bold);
 }
 
 .heading-metadata,
 .heading-metadata h3{
 	font-size: var(--font-size-sub-paragraph);
   line-height: var(--line-height-sub-paragraph);
+	font-weight: var(--font-weight-extra-bold);
 }
 
 .heading-eyebrow {

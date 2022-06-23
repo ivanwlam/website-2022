@@ -1,3 +1,10 @@
 img {
 	border-radius: 1rem;
 }
+
+.layout-widget-about h2 + p{
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}

@@ -45,7 +45,9 @@
   --line-height-super-paragraph: 1.5;
   /* TODO: Make dynamic */
   --line-height-sub-paragraph: 1.5;
-  /* TODO: Make dynamic */ }
+  /* TODO: Make dynamic */
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800; }
 
 body, h1, h2, h3, h4, h5, h6, p, li {
   font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif; }
@@ -103,7 +105,6 @@ h1, h2, h3, h4, h5, h6, p, li {
 .heading-metadata,
 .heading-metadata h3 {
   text-transform: uppercase;
-  font-weight: bold;
   color: var(--color-text-secondary-default); }
 
 .heading-eyebrow,
@@ -111,12 +112,14 @@ h1, h2, h3, h4, h5, h6, p, li {
 .heading-eyebrow h3,
 .heading-eyebrow h4 {
   font-size: var(--font-size-h6);
-  line-height: var(--line-height-h6); }
+  line-height: var(--line-height-h6);
+  font-weight: var(--font-weight-bold); }
 
 .heading-metadata,
 .heading-metadata h3 {
   font-size: var(--font-size-sub-paragraph);
-  line-height: var(--line-height-sub-paragraph); }
+  line-height: var(--line-height-sub-paragraph);
+  font-weight: var(--font-weight-extra-bold); }
 
 .heading-eyebrow {
   margin-bottom: 0 !important;
@@ -143,6 +146,12 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
 
 img {
   border-radius: 1rem; }
+
+.layout-widget-about h2 + p {
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph);
+  margin-top: 2em;
+  margin-bottom: 2em; }
 
 .et_pb_section {
   margin-top: 5rem;
