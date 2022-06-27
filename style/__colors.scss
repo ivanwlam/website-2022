@@ -53,13 +53,13 @@
   
 
 
-  --color-line-dark-on-light:               hsla(var(--color-hs-black) / 35%);
-  --color-line-dark-on-light-emphasis:      hsla(var(--color-hs-black) / 75%);
-  --color-line-dark-on-light-deemphasis:    hsla(var(--color-hs-black) / 15%);
+  --color-line-dark-on-light:               hsla(var(--color-hsl-black) / 35%);
+  --color-line-dark-on-light-emphasis:      hsla(var(--color-hsl-black) / 75%);
+  --color-line-dark-on-light-deemphasis:    hsla(var(--color-hsl-black) / 15%);
 
-  --color-line-light-on-dark:               hsla(var(--color-hs-white) / 35%);
-  --color-line-light-on-dark-emphasis:      hsla(var(--color-hs-white) / 60%);
-  --color-line-light-on-dark-deemphasis:    hsla(var(--color-hs-white) / 20%);
+  --color-line-light-on-dark:               hsla(var(--color-hsl-white) / 35%);
+  --color-line-light-on-dark-emphasis:      hsla(var(--color-hsl-white) / 60%);
+  --color-line-light-on-dark-deemphasis:    hsla(var(--color-hsl-white) / 20%);
 
   --color-line-accent-on-light:             hsla(var(--color-hsl-accent-on-light) / 100%);
   --color-line-accent-on-dark-light:        hsla(var(--color-hsl-accent-on-dark) / 100%);
