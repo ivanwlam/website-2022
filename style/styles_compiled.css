@@ -39,7 +39,7 @@
   --color-bg-default: var(--color-bg-light)white;
   --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
   --color-bg-button: var(--color-bg-accent-on-light);
-  --color-text-button: var(--color-text-light-on-dark); }
+  --color-text-button: hsla(var(--color-hsl-white) / 95%); }
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -47,14 +47,14 @@
     --color-text-default: var(--color-text-dark-on-light);
     --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-light);
-    --color-text-button: var(--color-text-light-on-dark); } }
+    --color-text-button: hsla(var(--color-hsl-white) / 95%); } }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg-default: var(--color-bg-dark);
     --color-text-default: var(--color-text-light-on-dark);
     --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-dark);
-    --color-text-button: var(--color-text-light-on-light); } }
+    --color-text-button: hsla(var(--color-hsl-white) / 85%); } }
 :root {
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com

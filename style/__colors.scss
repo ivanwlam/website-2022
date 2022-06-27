@@ -60,14 +60,13 @@
   /*  */
 
 
-  --color-text-default: var(--color-text-dark-on-light);
-  --color-bg-default: var(--color-bg-light)white;
+  --color-text-default:               var(--color-text-dark-on-light);
+  --color-bg-default:                 var(--color-bg-light)white;
 
-
-  --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+  --color-text-secondary-default:     var(--color-text-dark-on-light-deemphasis);
   
-  --color-bg-button: var(--color-bg-accent-on-light);
-  --color-text-button: var(--color-text-light-on-dark);
+  --color-bg-button:                  var(--color-bg-accent-on-light);
+  --color-text-button:                hsla(var(--color-hsl-white) / 95%);
 
 }
 
@@ -78,8 +77,8 @@
     --color-text-default:             var(--color-text-dark-on-light);
     --color-text-secondary-default:   var(--color-text-dark-on-light-deemphasis);
 
-    --color-bg-button: var(--color-bg-accent-on-light);
-    --color-text-button: var(--color-text-light-on-dark);
+    --color-bg-button:                var(--color-bg-accent-on-light);
+    --color-text-button:              hsla(var(--color-hsl-white) / 95%);
   }
 }
 
@@ -90,7 +89,7 @@
     --color-text-default:             var(--color-text-light-on-dark);
     --color-text-secondary-default:   var(--color-text-light-on-dark-deemphasis);
 
-    --color-bg-button: var(--color-bg-accent-on-dark);
-    --color-text-button: var(--color-text-light-on-light);
+    --color-bg-button:                var(--color-bg-accent-on-dark);
+    --color-text-button:              hsla(var(--color-hsl-white) / 85%);
   }
 }
