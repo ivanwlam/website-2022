@@ -249,6 +249,9 @@ img {
   margin-bottom: 2em; }
 
 .et_pb_section {
+  background-color: var(--color-bg-default); }
+
+.et_pb_section {
   margin-top: 5rem;
   margin-bottom: 5rem; }
 
