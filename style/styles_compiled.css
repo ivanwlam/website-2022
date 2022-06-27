@@ -7,10 +7,12 @@
   --color-hs-neutral: var(--color-hue-neutral) var(--color-saturation-neutral);
   --color-hsl-black: var(--color-hs-neutral) 0%;
   --color-hsl-white: var(--color-hs-neutral) 100%;
+  --color-hsl-accent-on-light: var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-dark: var(--color-hue-accent) var(--color-saturation-default) 21%;
   --color-link-on-light: hsl(var(--color-hue-link) var(--color-saturation-default) 35%);
   --color-link-on-dark: hsl(var(--color-hue-link) var(--color-saturation-default) 50%);
-  --color-accent-on-light: hsl(var(--color-hue-accent) var(--color-saturation-default) 21%);
-  --color-accent-on-dark: hsl(var(--color-hue-accent) var(--color-saturation-default) 35%);
+  --color-accent-on-light: hsl(var(--color-hsl-accent-on-light));
+  --color-accent-on-dark: hsl(var(--color-hsl-accent-on-dark));
   --color-accent: var(--color-accent-on-light);
   --color-bg-light: hsl(var(--color-hs-neutral) 95%);
   --color-bg-light-highlight: hsl(var(--color-hs-neutral) 100%);
@@ -34,12 +36,17 @@
   --color-line-light-on-dark: hsla(var(--color-hs-white) / 35%);
   --color-line-light-on-dark-emphasis: hsla(var(--color-hs-white) / 60%);
   --color-line-light-on-dark-deemphasis: hsla(var(--color-hs-white) / 20%);
+  --color-line-accent-on-light: hsla(var(--color-hsl-accent-on-light) / 100%);
+  --color-line-accent-on-dark-light: hsla(var(--color-hsl-accent-on-dark) / 100%);
   /*  */
   --color-text-default: var(--color-text-dark-on-light);
   --color-bg-default: var(--color-bg-light)white;
   --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
   --color-bg-button: var(--color-bg-accent-on-light);
-  --color-text-button: hsla(var(--color-hsl-white) / 95%); }
+  --color-text-button: hsla(var(--color-hsl-white) / 95%);
+  --color-line: var(--color-line-dark-on-light);
+  --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
+  --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis); }
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -47,14 +54,20 @@
     --color-text-default: var(--color-text-dark-on-light);
     --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-light);
-    --color-text-button: hsla(var(--color-hsl-white) / 95%); } }
+    --color-text-button: hsla(var(--color-hsl-white) / 95%);
+    --color-line: var(--color-line-dark-on-light);
+    --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
+    --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis); } }
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg-default: var(--color-bg-dark);
     --color-text-default: var(--color-text-light-on-dark);
     --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-dark);
-    --color-text-button: hsla(var(--color-hsl-white) / 85%); } }
+    --color-text-button: hsla(var(--color-hsl-white) / 85%);
+    --color-line: var(--color-line-light-on-dark);
+    --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
+    --color-line-deemphasis: var(--color-line-light-on-dark-deemphasis); } }
 :root {
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
