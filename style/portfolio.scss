@@ -28,3 +28,15 @@
 .text-portfolio-stat-value {
 	font-size: 96px;
 }
+
+/* Sample Project Grid */
+
+.et_pb_portfolio .et_pb_ajax_pagination_container {
+  display: flex;
+  column-gap: var(--spacing-large);
+}
+
+.et_pb_portfolio .et_pb_ajax_pagination_container h3 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
