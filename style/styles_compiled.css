@@ -225,6 +225,19 @@ body .et_pb_button:hover,
 body .et_pb_button.et_pb_bg_layout_light:hover {
   background-color: var(--color-bg-button-hover); }
 
+.et_pb_contact * input,
+.et_pb_contact * textarea {
+  background-color: var(--color-bg-form-field);
+  /* override */
+  border-radius: var(--border-radius-medium);
+  /* override */
+  color: var(--color-text-form-field);
+  /* override */
+  font-size: var(--font-size-paragraph);
+  /* override */
+  padding: var(--spacing-large);
+  /* override */ }
+
 img {
   border-radius: 1rem; }
 
