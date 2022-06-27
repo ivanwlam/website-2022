@@ -8,7 +8,7 @@
   --color-hsl-black: var(--color-hs-neutral) 0%;
   --color-hsl-white: var(--color-hs-neutral) 100%;
   --color-hsl-accent-on-light: var(--color-hue-accent) var(--color-saturation-default) 21%;
-  --color-hsl-accent-on-dark: var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-dark: var(--color-hue-accent) var(--color-saturation-default) 35%;
   --color-link-on-light: hsl(var(--color-hue-link) var(--color-saturation-default) 35%);
   --color-link-on-dark: hsl(var(--color-hue-link) var(--color-saturation-default) 50%);
   --color-accent-on-light: hsl(var(--color-hsl-accent-on-light));
@@ -19,7 +19,9 @@
   --color-bg-dark: hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight: hsl(var(--color-hs-neutral) 5%);
   --color-bg-accent-on-light: hsl(var(--color-hue-accent) var(--color-saturation-default) 25%);
+  --color-bg-accent-on-light-highlight: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
   --color-bg-accent-on-dark: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-dark-highlight: hsl(var(--color-hue-accent) var(--color-saturation-default) 35%);
   --color-text-dark-on-light: hsl(var(--color-hs-neutral) 25%);
   --color-text-dark-on-light-emphasis: hsl(var(--color-hs-neutral) 5%);
   --color-text-dark-on-light-deemphasis: hsl(var(--color-hs-neutral) 40%);
@@ -54,6 +56,7 @@
     --color-text-default: var(--color-text-dark-on-light);
     --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-light);
+    --color-bg-button-hover: var(--color-bg-accent-on-light-highlight);
     --color-text-button: hsla(var(--color-hsl-white) / 95%);
     --color-line: var(--color-line-dark-on-light);
     --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
@@ -64,6 +67,7 @@
     --color-text-default: var(--color-text-light-on-dark);
     --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
     --color-bg-button: var(--color-bg-accent-on-dark);
+    --color-bg-button-hover: var(--color-bg-accent-on-dark-highlight);
     --color-text-button: hsla(var(--color-hsl-white) / 85%);
     --color-line: var(--color-line-light-on-dark);
     --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
@@ -194,11 +198,18 @@ h1, h2, h3, h4, h5, h6, p, li {
 body .et_pb_button:hover,
 .et_pb_button.et_pb_bg_layout_light,
 body .et_pb_button.et_pb_bg_layout_light:hover {
-  background-color: var(--color-bg-button);
   border: none;
   border-radius: var(--border-radius-button) !important;
   /* override */
   color: var(--color-text-button); }
+
+.et_pb_button,
+.et_pb_button.et_pb_bg_layout_light {
+  background-color: var(--color-bg-button); }
+
+body .et_pb_button:hover,
+body .et_pb_button.et_pb_bg_layout_light:hover {
+  background-color: var(--color-bg-button-hover); }
 
 img {
   border-radius: 1rem; }

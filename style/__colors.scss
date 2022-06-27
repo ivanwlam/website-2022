@@ -13,7 +13,7 @@
   --color-hsl-black:                        var(--color-hs-neutral) 0%;
   --color-hsl-white:                        var(--color-hs-neutral) 100%;
   --color-hsl-accent-on-light:              var(--color-hue-accent) var(--color-saturation-default) 21%;
-  --color-hsl-accent-on-dark:              var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-dark:               var(--color-hue-accent) var(--color-saturation-default) 35%;
 
 
   --color-link-on-light:                    hsl(var(--color-hue-link) var(--color-saturation-default) 35%);
@@ -32,7 +32,9 @@
   --color-bg-dark-highlight:                hsl(var(--color-hs-neutral) 5%);
 
   --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 25%);
+  --color-bg-accent-on-light-highlight:     hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
   --color-bg-accent-on-dark:                hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-dark-highlight:      hsl(var(--color-hue-accent) var(--color-saturation-default) 35%);
 
 
   --color-text-dark-on-light:               hsl(var(--color-hs-neutral) 25%);
@@ -88,6 +90,7 @@
     --color-text-secondary-default:   var(--color-text-dark-on-light-deemphasis);
 
     --color-bg-button:                var(--color-bg-accent-on-light);
+    --color-bg-button-hover:          var(--color-bg-accent-on-light-highlight);
     --color-text-button:              hsla(var(--color-hsl-white) / 95%);
 
     --color-line:                     var(--color-line-dark-on-light);
@@ -104,6 +107,7 @@
     --color-text-secondary-default:   var(--color-text-light-on-dark-deemphasis);
 
     --color-bg-button:                var(--color-bg-accent-on-dark);
+    --color-bg-button-hover:          var(--color-bg-accent-on-dark-highlight);
     --color-text-button:              hsla(var(--color-hsl-white) / 85%);
 
     --color-line:                     var(--color-line-light-on-dark);
