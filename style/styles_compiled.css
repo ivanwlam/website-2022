@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6, p, li {
   --spacing-small: 0.25rem;
   --spacing-medium: 0.5rem;
   --spacing-large: 1rem;
-  --spacing-extra-large: 1.5rem; }
+  --spacing-extra-large: 2rem; }
 
 .et_pb_button,
 body .et_pb_button:hover,
@@ -278,7 +278,7 @@ img {
 /* Sample Project Grid */
 .et_pb_portfolio .et_pb_ajax_pagination_container {
   display: flex;
-  column-gap: var(--spacing-large); }
+  column-gap: var(--spacing-extra-large); }
 
 .et_pb_portfolio .et_pb_ajax_pagination_container h3 {
   font-size: var(--font-size-h5);
