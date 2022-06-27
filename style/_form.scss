@@ -1,0 +1,9 @@
+.et_pb_contact * input /* override */,
+.et_pb_contact * textarea /* override */
+{
+	background-color: var(--color-bg-form-field); /* override */
+	border-radius: var(--border-radius-medium); /* override */
+	color: var(--color-text-form-field); /* override */
+	font-size: var(--font-size-paragraph); /* override */
+	padding: var(--spacing-large); /* override */
+}
