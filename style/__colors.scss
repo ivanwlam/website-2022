@@ -1,11 +1,26 @@
 :root {
 
   --color-hue-neutral:          0;
+  --color-hue-link:             202;
+  --color-hue-accent:           119;
+
+
   --color-saturation-neutral:   0%;
+  --color-saturation-default:   100%;
+
 
   --color-hs-neutral:                       var(--color-hue-neutral) var(--color-saturation-neutral);
   --color-hsl-black:                        var(--color-hs-neutral) 0%;
   --color-hsl-white:                        var(--color-hs-neutral) 100%;
+
+
+  --color-link-on-light:                    hsl(var(--color-hue-link) var(--color-saturation-default) 35);
+  --color-link-on-dark:                     hsl(var(--color-hue-link) var(--color-saturation-default) 50);
+
+  --color-accent-on-light:                  hsl(var(--color-hue-accent) var(--color-saturation-default) 21);
+  --color-accent-on-dark:                   hsl(var(--color-hue-accent) var(--color-saturation-default) 35);
+
+  --color-accent:                           var(--color-accent-on-light);
 
 
   --color-bg-light:                         hsl(var(--color-hs-neutral) 95%);
@@ -13,6 +28,9 @@
 
   --color-bg-dark:                          hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight:                hsl(var(--color-hs-neutral) 5%);
+
+  --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 25);
+  --color-bg-accent-on-dark:                hsl(var(--color-hue-accent) var(--color-saturation-default) 30);
 
 
   --color-text-dark-on-light:               hsl(var(--color-hs-neutral) 25%);
@@ -22,6 +40,13 @@
   --color-text-light-on-dark:               hsl(var(--color-hs-neutral) 75%);
   --color-text-light-on-dark-emphasis:      hsl(var(--color-hs-neutral) 95%);
   --color-text-light-on-dark-deemphasis:    hsl(var(--color-hs-neutral) 55%);
+
+  --color-text-link-on-light:               var(--color-link-on-light);
+  --color-text-link-on-dark:                var(--color-link-on-dark);
+
+  --color-text-accent-on-light:             var(--color-accent-on-light);
+  --color-text-accent-on-dark:              var(--color-accent-on-dark);
+  
 
 
   --color-line-dark-on-light:               hsla(var(--color-hs-black) / 35%);
@@ -35,15 +60,15 @@
   /*  */
 
 
-  --color-text-default: black; /* TODO: Make dynamic */
-  --color-bg-default: white; /* TODO: Make dynamic */
+  --color-text-default: var(--color-text-dark-on-light);
+  --color-bg-default: var(--color-bg-light)white;
 
 
-  --color-text-secondary-default: gray; /*TODO: Make dynamic */
-  --color-accent: darkblue; /* TODO: Make dynamic */
+  --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+  
+  --color-bg-button: var(--color-bg-accent-on-light);
+  --color-text-button: var(--color-text-light-on-dark);
 
-  --color-bg-button: var(--color-accent); /* Make more specific */
-  --color-text-button: white; /* TODO: Make dynamic */
 }
 
 @media (prefers-color-scheme: light) {
@@ -52,6 +77,9 @@
 
     --color-text-default:             var(--color-text-dark-on-light);
     --color-text-secondary-default:   var(--color-text-dark-on-light-deemphasis);
+
+    --color-bg-button: var(--color-bg-accent-on-light);
+    --color-text-button: var(--color-text-light-on-dark);
   }
 }
 
@@ -61,5 +89,8 @@
     --color-bg-default:               var(--color-bg-dark);
     --color-text-default:             var(--color-text-light-on-dark);
     --color-text-secondary-default:   var(--color-text-light-on-dark-deemphasis);
+
+    --color-bg-button: var(--color-bg-accent-on-dark);
+    --color-text-button: var(--color-text-light-on-light);
   }
 }
