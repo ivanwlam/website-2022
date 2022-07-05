@@ -29,14 +29,14 @@
 	const getDaysFromMinutes = function (minutes) {
 	  let date = new Date();
 	  date.setTime(date.getTime() + (minutes * 60 * 1000));
-	  console.log("date", date);
+	  // console.log("date", date);
 	  return date;
 	};
   
 	const getValidVisitorCookieString = function (minutes) {
 	  let expiryDate = getDaysFromMinutes(minutes);
-	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";";
-	  console.log("cookieValue", cookieValue);
+	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";secure;";
+	  // console.log("cookieValue", cookieValue);
 	  return cookieValue;
 	};
 
