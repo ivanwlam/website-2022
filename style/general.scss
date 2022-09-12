@@ -15,7 +15,7 @@ img {
 
 /* Content Layout */
 
-@media (max-width: 1599px) {
+@media (max-width: 1599px) { /* for 1600px screen width breakpoint */
 	.layout-portfolio-body-row-1-1 {
 		display: block; /* Override */
 	}
@@ -25,7 +25,7 @@ img {
 	}
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1450px) { /* for 1440px screen width breakpoint */
 	.layout-portfolio-body-row-2-3 {
 		display: block; /* Override */
 	}
