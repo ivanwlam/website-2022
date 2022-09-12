@@ -254,7 +254,7 @@ img {
 /* Content Layout */
 @media (max-width: 1599px) {
   /* for 1600px screen width breakpoint */
-  .layout-portfolio-body-row-1-1 {
+  .layout-portfolio-body-row.layout-portfolio-body-row-1-1 {
     display: block;
     /* Override */ }
 
@@ -263,7 +263,7 @@ img {
     /* override */ } }
 @media (max-width: 1450px) {
   /* for 1440px screen width breakpoint */
-  .layout-portfolio-body-row-2-3 {
+  .layout-portfolio-body-row.layout-portfolio-body-row-2-3 {
     display: block;
     /* Override */ }
 
