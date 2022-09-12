@@ -12,3 +12,25 @@ img {
 .et_pb_section {
   background-color: var(--color-bg-default);
 }
+
+/* Content Layout */
+
+@media (max-width: 1599px) {
+	.layout-portfolio-body-row-1-1 {
+		display: block; /* Override */
+	}
+	
+	.layout-portfolio-body-row-1-1 > .et_pb_column {
+		width: 100%; /* override */
+	}
+}
+
+@media (max-width: 1450px) {
+	.layout-portfolio-body-row-2-3 {
+		display: block; /* Override */
+	}
+	
+	.layout-portfolio-body-row-2-3 > .et_pb_column {
+		width: 100%; /* override */
+	}
+}
