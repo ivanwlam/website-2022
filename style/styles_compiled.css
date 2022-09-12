@@ -270,6 +270,10 @@ img {
   .layout-portfolio-body-row-2-3 > .et_pb_column {
     width: 100%;
     /* override */ } }
+/* Images */
+.layout-portfolio-body-row img {
+  background: linear-gradient(180deg, #E7EBEF 0%, #C2CCD6 100%); }
+
 .et_pb_section {
   margin-top: 5rem;
   margin-bottom: 5rem; }

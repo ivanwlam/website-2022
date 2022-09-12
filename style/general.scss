@@ -34,3 +34,9 @@ img {
 		width: 100%; /* override */
 	}
 }
+
+/* Images */
+
+.layout-portfolio-body-row img {
+  background: linear-gradient(180deg, #E7EBEF 0%, #C2CCD6 100%); // TODO: Make colors variables
+}
