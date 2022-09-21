@@ -8,10 +8,17 @@
 	margin-bottom: 5rem;
 }
 
+.layout-portfolio-body-row-heading-main .et_pb_module p {
+  /* Paragraph of high-level headings */
+	font-size: var(--font-size-super-paragraph);
+}
+
 .layout-portfolio-body-row {
 	display: flex;
 	align-items: center;
 }
+
+
 
 /* Portfolio Stats */
 .layout-portfolio-stats .et_pb_column {
