@@ -23,6 +23,10 @@ img {
 	.layout-portfolio-body-row-1-1 > .et_pb_column {
 		width: 100%; /* override */
 	}
+
+  .layout-portfolio-body-row-1-1 > .et_pb_column:last-of-type {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 1450px) { /* for 1440px screen width breakpoint */
@@ -33,6 +37,10 @@ img {
 	.layout-portfolio-body-row-2-3 > .et_pb_column {
 		width: 100%; /* override */
 	}
+
+  .layout-portfolio-body-row-2-3 > .et_pb_column:last-of-type {
+    margin-top: 2rem;
+  }
 }
 
 /* Images */

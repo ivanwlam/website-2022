@@ -1,10 +1,10 @@
 /*
 Error: wrong number of arguments (1 for 4) for `hsla'
-        on line 42 of style/general.scss
+        on line 50 of style/general.scss
         from line 6 of style/tocompile.scss
 
 Backtrace:
-style/general.scss:42
+style/general.scss:50
 style/tocompile.scss:6
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
@@ -71,4 +71,4 @@ style/tocompile.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 4) for `hsla'\A         on line 42 of style/general.scss\A         from line 6 of style/tocompile.scss"; }
+  content: "Error: wrong number of arguments (1 for 4) for `hsla'\A         on line 50 of style/general.scss\A         from line 6 of style/tocompile.scss"; }
