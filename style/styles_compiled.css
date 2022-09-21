@@ -1,5 +1,5 @@
 /*
-Error: wrong number of arguments (1 for 4) for `hsla'
+Error: wrong number of arguments (1 for 3) for `hsl'
         on line 41 of style/general.scss
         from line 6 of style/tocompile.scss
 
@@ -79,4 +79,4 @@ style/tocompile.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 4) for `hsla'\A         on line 41 of style/general.scss\A         from line 6 of style/tocompile.scss"; }
+  content: "Error: wrong number of arguments (1 for 3) for `hsl'\A         on line 41 of style/general.scss\A         from line 6 of style/tocompile.scss"; }
