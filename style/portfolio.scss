@@ -47,3 +47,9 @@
   font-size: var(--font-size-h5);
   line-height: var(--line-height-h5);
 }
+
+/* Project List Grid */
+.et_pb_portfolio_grid .et_pb_module_header {
+	font-size: var(--font-size-paragraph) !important;
+	line-height: var(--line-height-paragraph);
+}

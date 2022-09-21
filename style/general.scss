@@ -54,5 +54,5 @@ img {
 .et_pb_divider_2::before, 
 .et_pb_divider_0::before, 
 .et_pb_divider_1::before {
-	border-top-color: hsla(0, 0%, 0%, 25%); /* override */ // TODO: Make colors based on variable */
+	border-top-color: hsla(0, 0%, 0%, 25%) !important; /* override */ // TODO: Make colors based on variable */
 }

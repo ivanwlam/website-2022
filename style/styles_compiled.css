@@ -285,7 +285,7 @@ img {
 .et_pb_divider_2::before,
 .et_pb_divider_0::before,
 .et_pb_divider_1::before {
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: rgba(0, 0, 0, 0.25) !important;
   /* override */ }
 
 .layout-portfolio-body-row-heading-main .et_pb_module p {
@@ -316,5 +316,10 @@ img {
 .et_pb_portfolio .et_pb_ajax_pagination_container h3 {
   font-size: var(--font-size-h5);
   line-height: var(--line-height-h5); }
+
+/* Project List Grid */
+.et_pb_portfolio_grid .et_pb_module_header {
+  font-size: var(--font-size-paragraph) !important;
+  line-height: var(--line-height-paragraph); }
 
 /*# sourceMappingURL=styles_compiled.css.map */
