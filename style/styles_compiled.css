@@ -339,4 +339,10 @@ p {
   font-size: var(--font-size-super-paragraph) !important;
   line-height: var(--line-height-super-paragraph); }
 
+/* Images */
+.layout-portfolio-body-row img,
+.layout-portfolio-body-row video {
+  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+
 /*# sourceMappingURL=styles_compiled.css.map */
