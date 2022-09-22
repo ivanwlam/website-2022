@@ -161,11 +161,13 @@ h6 {
   font-size: var(--font-size-h6);
   line-height: var(--line-height-h6); }
 
-p, li {
+p, li,
+.et_pb_text_inner {
   font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph); }
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li,
+.et_pb_text_inner {
   max-width: 55ch; }
 
 .heading-eyebrow,
@@ -292,7 +294,8 @@ img {
   margin-top: 5rem;
   margin-bottom: 5rem; }
 
-.layout-portfolio-body-row-heading-main .et_pb_module p {
+.layout-portfolio-body-row-heading-main .et_pb_module p,
+.layout-portfolio-body-row-heading-main .et_pb_module .et_pb_text_inner {
   /* Paragraph of high-level headings */
   font-size: var(--font-size-super-paragraph); }
 
