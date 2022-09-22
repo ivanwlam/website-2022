@@ -301,10 +301,13 @@ p {
   margin-top: 5rem;
   margin-bottom: 5rem; }
 
+.layout-body-row-super-blurb .et_pb_module p,
+.layout-body-row-super-blurb .et_pb_module .et_pb_text_inner,
 .layout-portfolio-body-row-heading-main .et_pb_module p,
 .layout-portfolio-body-row-heading-main .et_pb_module .et_pb_text_inner {
   /* Paragraph of high-level headings */
-  font-size: var(--font-size-super-paragraph); }
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph); }
 
 .layout-portfolio-body-row {
   display: flex;
