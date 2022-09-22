@@ -2,6 +2,10 @@ img {
 	border-radius: var(--border-radius-small);
 }
 
+p {
+  margin-bottom: 2em;
+}
+
 .layout-widget-about h2 + p{
   font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph);

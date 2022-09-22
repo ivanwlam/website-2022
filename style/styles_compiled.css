@@ -164,7 +164,8 @@ h6 {
 p, li,
 .et_pb_text_inner {
   font-size: var(--font-size-paragraph);
-  line-height: var(--line-height-paragraph); }
+  line-height: var(--line-height-paragraph);
+  letter-spacing: -0.1px; }
 
 h1, h2, h3, h4, h5, h6, p, li,
 .et_pb_text_inner {
@@ -193,7 +194,9 @@ h1, h2, h3, h4, h5, h6, p, li,
   line-height: var(--line-height-sub-paragraph);
   font-weight: var(--font-weight-extra-bold); }
 
-.heading-eyebrow {
+.heading-eyebrow,
+.heading-eyebrow .et_pb_text_inner,
+.heading-eyebrow p {
   margin-bottom: 0 !important;
   /* override */ }
 
@@ -243,6 +246,9 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
 
 img {
   border-radius: var(--border-radius-small); }
+
+p {
+  margin-bottom: 2em; }
 
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
