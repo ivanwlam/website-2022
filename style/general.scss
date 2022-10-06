@@ -6,6 +6,11 @@ p {
   margin-bottom: 2em;
 }
 
+li {
+  margin-bottom: 1em;
+}
+
+
 .layout-widget-about h2 + p{
   font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph);
@@ -15,6 +20,10 @@ p {
 
 .et_pb_section {
   background-color: var(--color-bg-default);
+}
+
+.et_pb_divider {
+  margin-bottom: 5rem;
 }
 
 /* Content Layout */
