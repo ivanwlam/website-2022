@@ -135,6 +135,11 @@ h1, h2, h3, h4, h5, h6, p, li,
   margin-bottom: 0 !important; /* override */
 }
 
+.et_pb_image + .heading-eyebrow {
+  /* Add spacing above eyebrow headlines only if it's right after an image */
+	margin-top: 2em;
+}
+
 .heading-metadata {
   margin-bottom: 0 !important /* override */
 }

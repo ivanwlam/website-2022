@@ -23,10 +23,15 @@ li {
 }
 
 .et_pb_divider {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important; /* override */
 }
 
 /* Content Layout */
+
+.et_pb_section {
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 @media (max-width: 1599px) { /* for 1600px screen width breakpoint */
 	.layout-portfolio-body-row.layout-portfolio-body-row-1-1 {
