@@ -311,7 +311,7 @@ body .et_pb_section {
   .layout-portfolio-body-row-1-1-1 > .et_pb_column {
     --column-count: 2;
     --flex-basis: calc((100% / var(--column-count)) - var(--column-margin-right));
-    flex: 0 1 calc(--flex-basis);
+    flex: 0 1 var(--flex-basis);
     /* */ } }
 @media (max-width: 1200px) {
   /* for 1280px screen width breakpoint */
