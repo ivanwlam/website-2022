@@ -5,11 +5,29 @@
 }
 
 .et_pb_row .et_pb_module .et_pb_row.layout-portfolio-hero-row,
-.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-meta {
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-meta
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-text-only {
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
+
+.layout-portfolio-body-row {
+	display: flex;
+	align-items: center;
+}
+
+.layout-portfolio-body-row-columns-align-top {
+  /* Make rows where there are multiple columns to align at the top */
+  align-items: stretch;
+}
+
+
+/* Typography */
+.et_pb_title_container h1 {
+	font-size: var(--font-size-h1);
+	margin-top: 0.5em;
+}
 
 .layout-body-row-super-blurb .et_pb_module p,
 .layout-body-row-super-blurb .et_pb_module .et_pb_text_inner, 
@@ -18,17 +36,6 @@
   /* Paragraph of high-level headings */
 	font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph);
-}
-
-.layout-portfolio-body-row {
-	display: flex;
-	align-items: center;
-}
-
-
-.et_pb_title_container h1 {
-	font-size: var(--font-size-h1);
-	margin-top: 0.5em;
 }
 
 
