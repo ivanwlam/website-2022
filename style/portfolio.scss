@@ -74,6 +74,19 @@
 	line-height: var(--line-height-super-paragraph);
 }
 
+/* Projects Gallery Grid */
+@media screen and (min-width: 767px) and (max-width: 1599px) {
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item {
+    margin-right: 2rem;
+    width: calc((100% - (1 * 2rem)) / 2);
+  }
+
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item:nth-child(2n) {
+    margin-right: 0;
+  }
+  
+}
+
 
 /* Images */
 
