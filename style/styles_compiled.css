@@ -386,12 +386,15 @@ body .et_pb_section {
   line-height: var(--line-height-super-paragraph); }
 
 /* Projects Gallery Grid */
+.single .et_pb_portfolio_grid_items .et_pb_post.project.type-project {
+  margin-bottom: 3rem; }
+
 @media screen and (min-width: 767px) {
   .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item {
     --margin-right: 2rem;
-    margin-right: var(--margin-right);
     --columns: 2;
     --gutters: calc(var(--columns) - 1);
+    margin-right: var(--margin-right);
     width: calc((100% - (var(--gutters) * var(--margin-right))) / var(--columns)); } }
 @media screen and (min-width: 767px) and (max-width: 1599px) {
   .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item:nth-child(2n) {
