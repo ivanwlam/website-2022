@@ -408,7 +408,8 @@ body .et_pb_section {
     margin-right: var(--margin-right);
     width: calc((100% - (var(--gutters) * var(--margin-right))) / var(--columns)); } }
 @media screen and (min-width: 767px) and (max-width: 1599px) {
-  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item:nth-child(2n) {
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item:nth-child(2n),
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item:nth-child(2n) {
     margin-right: 0; } }
 @media screen and (min-width: 1599px) {
   body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_grid_item {
