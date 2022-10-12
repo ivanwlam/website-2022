@@ -351,6 +351,10 @@ body .et_pb_section {
   font-size: var(--font-size-h1);
   margin-top: 0.5em; }
 
+.text-hero-body, .text-hero-body * {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4); }
+
 .layout-body-row-super-blurb .et_pb_module p,
 .layout-body-row-super-blurb .et_pb_module .et_pb_text_inner,
 .layout-portfolio-body-row-heading-main .et_pb_module p,
