@@ -1,3 +1,7 @@
+body {
+  color: var(--color-text);
+}
+
 img, video {
 	border-radius: var(--border-radius-small);
 }
@@ -19,7 +23,7 @@ li {
 }
 
 .et_pb_section {
-  background-color: var(--color-bg-default);
+  background-color: var(--color-bg);
 }
 
 .et_pb_divider {
@@ -30,7 +34,7 @@ li {
 
 .page.et_pb_pagebuilder_layout #main-content {
   padding-bottom: 10rem;
-  background-color: var(--color-bg-default);
+  background-color: var(--color-bg);
 }
 
 body .et_pb_section {
