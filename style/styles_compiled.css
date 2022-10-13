@@ -391,6 +391,7 @@ body .et_pb_section {
   line-height: var(--line-height-super-paragraph); }
 
 /* Projects Gallery Grid */
+.et_pb_portfolio .et_pb_portfolio_item,
 .et_pb_portfolio_grid .et_pb_portfolio_item {
   margin-bottom: 3rem; }
 
