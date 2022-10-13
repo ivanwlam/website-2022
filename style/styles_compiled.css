@@ -86,11 +86,11 @@
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
   */
-  --type-scale-base: 1.32;
-  --type-scale-mobile-wide: 1.25;
-  --type-scale-tablet: 1.5;
-  --type-scale-desktop-small: 2;
-  --type-scale-desktop: 2.5;
+  --type-scale-base: 1.15;
+  --type-scale-mobile-wide: calc(104/100);
+  --type-scale-tablet: calc(108/100);
+  --type-scale-desktop-small: calc(111/100);
+  --type-scale-desktop: calc(113/100);
   --type-scale-responsive: 1; }
 
 @media screen and (min-width: 480px) {
@@ -108,7 +108,6 @@
 :root {
   --type-scale: calc(var(--type-scale-base) * var(--type-scale-responsive));
   --font-size-paragraph: calc(1em * var(--type-scale-responsive));
-  /* TODO: Make dynamic */
   --font-size-h6: var(--font-size-paragraph);
   --font-size-h5: calc(var(--type-scale) * var(--font-size-h6));
   --font-size-h4: calc(var(--type-scale) * var(--font-size-h5));
@@ -145,7 +144,7 @@ body, h4, h5, h6, p, li {
 body {
   font-weight: 400;
   /* override */
-  font-size: 16px; }
+  font-size: var(--font-size-paragraph); }
 
 h1, h2, h3 {
   font-family: -apple-system-ui-serif, ui-serif, "Roboto Serif", Georgia, serif !important;

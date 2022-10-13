@@ -4,11 +4,11 @@
   https://type-scale.com
   */
   // --type-scale-base:            1.32;
-  --type-scale-base:            1.32;
-  --type-scale-mobile-wide:     1.25; // 0.4;
-  --type-scale-tablet:          1.5; // 0.5;
-  --type-scale-desktop-small:   2; // 0.6;
-  --type-scale-desktop:         2.5; //0.8;
+  --type-scale-base:            1.15;
+  --type-scale-mobile-wide:     calc(104/100); // 0.4;
+  --type-scale-tablet:          calc(108/100); // 0.5;
+  --type-scale-desktop-small:   calc(111/100); // 0.6;
+  --type-scale-desktop:         calc(113/100); //0.8;
   --type-scale-responsive:      1;
 }
 
@@ -41,7 +41,7 @@
 
   --type-scale: calc(var(--type-scale-base) * var(--type-scale-responsive));
 
-  --font-size-paragraph:        calc(1em * var(--type-scale-responsive)); /* TODO: Make dynamic */
+  --font-size-paragraph:        calc(1em * var(--type-scale-responsive));
 
   --font-size-h6:               var(--font-size-paragraph);
   --font-size-h5:               calc(var(--type-scale) * var(--font-size-h6));
@@ -78,7 +78,7 @@ body, h4, h5, h6, p, li {
 
 body {
 	font-weight: 400; /* override */
-  font-size: 16px;
+  font-size: var(--font-size-paragraph);
 }
 
 h1, h2, h3 {
