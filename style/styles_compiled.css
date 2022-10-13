@@ -391,7 +391,7 @@ body .et_pb_section {
   line-height: var(--line-height-super-paragraph); }
 
 /* Projects Gallery Grid */
-.et_pb_portfolio_grid_items .et_pb_post.project.type-project {
+.et_pb_portfolio_grid .et_pb_portfolio_item {
   margin-bottom: 3rem; }
 
 @media screen and (min-width: 767px) {

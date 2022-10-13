@@ -84,11 +84,15 @@
 
 /* Projects Gallery Grid */
 .et_pb_portfolio_grid_items .et_pb_post.project.type-project {
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
 }
 
 .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
 
+}
+
+.et_pb_portfolio_grid .et_pb_portfolio_item {
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 767px) {
