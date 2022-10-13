@@ -392,7 +392,7 @@ body .et_pb_section {
 
 /* Projects Gallery Grid */
 .et_pb_portfolio .et_pb_portfolio_item,
-.et_pb_portfolio_grid .et_pb_portfolio_item {
+.et_pb_portfolio_grid_items .et_pb_post.project.type-project {
   margin-bottom: 3rem; }
 
 @media screen and (min-width: 767px) {
