@@ -276,6 +276,10 @@ li {
   /* override */ }
 
 /* Content Layout */
+.page.et_pb_pagebuilder_layout #main-content {
+  padding-bottom: 10rem;
+  background-color: var(--color-bg-default); }
+
 body .et_pb_section {
   padding-top: 0;
   padding-bottom: 0; }
