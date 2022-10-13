@@ -390,6 +390,7 @@ body .et_pb_section {
   line-height: var(--line-height-h5); }
 
 /* Project List Grid */
+.et_pb_portfolio .et_pb_module_header,
 .et_pb_portfolio_grid .et_pb_module_header {
   font-size: var(--font-size-super-paragraph) !important;
   line-height: var(--line-height-super-paragraph); }
