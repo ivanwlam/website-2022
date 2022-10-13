@@ -5,10 +5,10 @@
   */
   // --type-scale-base:            1.32;
   --type-scale-base:            1.15;
-  --type-scale-mobile-wide:     calc(104/100); // 0.4;
-  --type-scale-tablet:          calc(108/100); // 0.5;
-  --type-scale-desktop-small:   calc(111/100); // 0.6;
-  --type-scale-desktop:         calc(113/100); //0.8;
+  --type-scale-mobile-wide:     calc(104/100);
+  --type-scale-tablet:          calc(108/100);
+  --type-scale-desktop-small:   calc(111/100);
+  --type-scale-desktop:         calc(113/100);
   --type-scale-responsive:      1;
 }
 
@@ -138,6 +138,10 @@ p, li,
 h1, h2, h3, h4, h5, h6, p, li,
 .et_pb_text_inner {
 	max-width: 55ch;
+}
+
+.et_pb_text_inner:has(> h1, > h2, > h3) {
+  max-width: none;
 }
 
 

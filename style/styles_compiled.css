@@ -195,6 +195,9 @@ h1, h2, h3, h4, h5, h6, p, li,
 .et_pb_text_inner {
   max-width: 55ch; }
 
+.et_pb_text_inner:has(> h1, > h2, > h3) {
+  max-width: none; }
+
 .heading-eyebrow,
 .heading-eyebrow h2,
 .heading-eyebrow h3,
