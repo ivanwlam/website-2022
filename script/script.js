@@ -36,7 +36,7 @@
 	const getValidVisitorCookieString = function (minutes) {
 	  let expiryDate = getDaysFromMinutes(minutes);
 	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";secure;";
-	  // console.log("cookieValue", cookieValue);
+	  console.log("cookieValue", cookieValue);
 	  return cookieValue;
 	};
 
