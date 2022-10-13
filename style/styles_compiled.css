@@ -48,6 +48,7 @@
   --color-bg-accent: var(--color-bg-accent-on-light);
   --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
   --color-text: var(--color-text-dark-on-light);
+  --color-text-highlight: var(--color-text-dark-on-light-emphasis);
   --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
   --color-text-link: var(--color-text-link-on-light);
   --color-text-accent: var(--color-text-accent-on-light);
@@ -63,7 +64,10 @@
     --color-bg-accent: var(--color-bg-accent-on-light);
     --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
     --color-text: var(--color-text-dark-on-light);
+    --color-text-highlight: var(--color-text-dark-on-light-emphasis);
     --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+    --color-text-link: var(--color-text-link-on-light);
+    --color-text-accent: var(--color-text-accent-on-light);
     --color-line: var(--color-line-dark-on-light);
     --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
     --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis);
@@ -80,6 +84,7 @@
     --color-bg-accent: var(--color-bg-accent-on-dark);
     --color-bg-accent-highlight: var(--color-bg-accent-on-dark-highlight);
     --color-text: var(--color-text-light-on-dark);
+    --color-text-highlight: var(--color-text-light-on-dark-emphasis);
     --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
     --color-text-link: var(--color-text-link-on-dark);
     --color-text-accent: var(--color-text-accent-on-dark);
@@ -247,6 +252,13 @@ h1, h2, h3, h4, h5, h6, p, li,
 .heading-metadata {
   margin-bottom: 0 !important; }
 
+/* COLORS */
+body {
+  color: var(--color-text); }
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-highlight); }
+
 :root {
   --border-radius-small: 0.25rem;
   --border-radius-medium: 0.5rem;
@@ -288,9 +300,6 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   padding: var(--spacing-large);
   /* override */
   border: 1px solid var(--color-line); }
-
-body {
-  color: var(--color-text); }
 
 img, video {
   border-radius: var(--border-radius-small); }
