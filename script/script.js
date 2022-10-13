@@ -41,7 +41,8 @@
 	};
 
 	const vv_setC = function (minutes) {
-	  document.cookie = getValidVisitorCookieString(minutes);
+    document.cookie = getValidVisitorCookieString(minutes);
+    console.log("Running: vv_setC");
 	};
  
 // setValidVisitorCookie(cookieMinutes);
