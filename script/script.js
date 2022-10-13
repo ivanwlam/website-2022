@@ -37,7 +37,7 @@ const getValidVisitorCookieString = function (minutes) {
     // Let cookie apply across pages in domain: Add "domain=.example.com;path=/": https://stackoverflow.com/questions/5671451/creating-a-javascript-cookie-on-a-domain-and-reading-it-across-sub-domains
 
 	  let expiryDate = getDaysFromMinutes(minutes);
-	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";secure;domain=.example.com;path=/";
+	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";domain=.example.com;path=/;secure";
 	  console.log("cookieValue", cookieValue);
 	  return cookieValue;
 	};
