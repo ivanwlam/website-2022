@@ -3,9 +3,45 @@
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
   */
-  --type-scale:                 1.32;
+  // --type-scale-base:            1.32;
+  --type-scale-base:            1.32;
+  --type-scale-mobile-wide:     1.25; // 0.4;
+  --type-scale-tablet:          1.5; // 0.5;
+  --type-scale-desktop-small:   2; // 0.6;
+  --type-scale-desktop:         2.5; //0.8;
+  --type-scale-responsive:      1;
+}
 
-  --font-size-paragraph:        20px; /* TODO: Make dynamic */
+
+@media screen and (min-width: 480px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-mobile-wide);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-tablet);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-desktop-small);
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-desktop);
+  }
+}
+
+:root {
+
+  --type-scale: calc(var(--type-scale-base) * var(--type-scale-responsive));
+
+  --font-size-paragraph:        calc(1em * var(--type-scale-responsive)); /* TODO: Make dynamic */
 
   --font-size-h6:               var(--font-size-paragraph);
   --font-size-h5:               calc(var(--type-scale) * var(--font-size-h6));
@@ -34,6 +70,7 @@
   --font-weight-extra-bold:       800;
   
 }
+
 
 body, h4, h5, h6, p, li {
   font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
