@@ -379,9 +379,6 @@ body .et_pb_section {
 /* Sample Project Grid */
 .et_pb_portfolio .et_pb_ajax_pagination_container {
   display: flex;
-  --column-gap: var(--spacing-extra-large);
-  column-gap: var(--column-gap);
-  margin-right: calc(-1 * var(--column-gap));
   flex-wrap: wrap; }
 
 .et_pb_portfolio .et_pb_ajax_pagination_container h3 {
@@ -400,8 +397,6 @@ body .et_pb_section {
 @media screen and (min-width: 767px) {
   .et_pb_portfolio .et_pb_ajax_pagination_container {
     /* Reset from default */
-    column-gap: 0;
-    margin-right: auto;
     flex-wrap: nowrap; }
 
   body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
