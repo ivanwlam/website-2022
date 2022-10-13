@@ -155,10 +155,13 @@
   --line-height-sub-paragraph: 1.7;
   /* TODO: Make dynamic */
   --font-weight-bold: 700;
-  --font-weight-extra-bold: 800; }
+  --font-weight-extra-bold: 800;
+  --font-family-sans-serif: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-family-serif: -apple-system-ui-serif, ui-serif, "Roboto Serif", Georgia, serif;
+  --font-family-default: var(--font-family-sans-serif); }
 
 body, h4, h5, h6, p, li {
-  font-family: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif; }
+  font-family: var(--font-family-default) !important; }
 
 body {
   font-weight: 400;
@@ -166,7 +169,7 @@ body {
   font-size: var(--font-size-paragraph); }
 
 h1, h2, h3 {
-  font-family: -apple-system-ui-serif, ui-serif, "Roboto Serif", Georgia, serif !important;
+  font-family: var(--font-family-serif) !important;
   font-weight: 600; }
 
 h1 {
