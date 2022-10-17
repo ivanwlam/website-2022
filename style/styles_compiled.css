@@ -385,8 +385,16 @@ body .et_pb_section {
   /* override */ }
 
 .et_pb_row .et_pb_module .et_pb_row {
-  margin-top: 10rem;
-  margin-bottom: 10rem; }
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  @media screen and (min-width: 768px) {
+    .et_pb_row .et_pb_module .et_pb_row {
+      margin-top: 7rem;
+      margin-bottom: 7rem; } }
+  @media screen and (min-width: 1000px) {
+    .et_pb_row .et_pb_module .et_pb_row {
+      margin-top: 10rem;
+      margin-bottom: 10rem; } }
 
 .et_pb_row .et_pb_module .et_pb_row.layout-portfolio-hero-row,
 .et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-meta,
