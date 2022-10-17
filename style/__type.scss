@@ -4,7 +4,7 @@
   https://type-scale.com
   */
   // --type-scale-base:            1.32;
-  --type-scale-base:            1.15;
+  --type-scale-base:            1.18;
   --type-scale-mobile-wide:     calc(104/100);
   --type-scale-tablet:          calc(108/100);
   --type-scale-desktop-small:   calc(111/100);
@@ -141,7 +141,7 @@ p, li,
 .et_pb_text_inner {
   font-size:    var(--font-size-paragraph);
   line-height:  var(--line-height-paragraph);
-  letter-spacing: -0.15px;
+  letter-spacing: calc(0px / 100);
 }
 
 h1, h2, h3, h4, h5, h6, p, li,
