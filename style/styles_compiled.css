@@ -378,9 +378,6 @@ body .et_pb_section {
   .layout-portfolio-body-row-1-1-1 > .et_pb_column {
     --column-count: 1; } }
 /* Lines */
-.et_pb_divider_2::before,
-.et_pb_divider_0::before,
-.et_pb_divider_1::before,
 .et_pb_divider::before {
   border-top-color: var(--color-line) !important;
   /* override */ }
