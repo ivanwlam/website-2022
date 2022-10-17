@@ -519,10 +519,17 @@ body .et_pb_section {
   .et_pb_image_wrap img, .et_pb_code_inner video {
     border-radius: 0;
     /* override */ } }
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   .et_pb_image_wrap img, .et_pb_code_inner video {
-    border: 2px solid var(--color-line);
-    border-radius: var(--border-radius-medium); } }
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: var(--color-line); } }
+  @media screen and (prefers-color-scheme: dark) and (min-width: 480px) {
+    .et_pb_image_wrap img, .et_pb_code_inner video {
+      border-width: 2px;
+      border-radius: var(--border-radius-medium); } }
+
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
 .caption.et_pb_module .et_pb_text_inner {
