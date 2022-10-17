@@ -188,6 +188,15 @@
 }
 }
 
+@media (prefers-color-scheme: dark) {
+  // Add border to media in dark mode to make them stand out (in case they're in dark background)
+  
+  .et_pb_image_wrap img, .et_pb_code_inner video {
+    border: 2px solid var(--color-line);
+    border-radius: var(--border-radius-medium);
+  }
+}
+
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
 .caption.et_pb_module .et_pb_text_inner {
