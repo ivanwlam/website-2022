@@ -162,8 +162,10 @@ h1, h2, h3, h4, h5, h6, p, li,
 .heading-metadata h3{
 	text-transform: uppercase;
   color: var(--color-text-secondary-default);
+}
 
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+  .heading-eyebrow:not(:has(+ div h2, + div h3, + div h4)) {
     color: var(--color-text-highlight);
   }
 }
