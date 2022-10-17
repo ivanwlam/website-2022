@@ -380,8 +380,9 @@ body .et_pb_section {
 /* Lines */
 .et_pb_divider_2::before,
 .et_pb_divider_0::before,
-.et_pb_divider_1::before {
-  border-top-color: rgba(0, 0, 0, 0.25) !important;
+.et_pb_divider_1::before,
+.et_pb_divider::before {
+  border-top-color: var(--color-line) !important;
   /* override */ }
 
 .et_pb_row .et_pb_module .et_pb_row {
