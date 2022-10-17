@@ -503,6 +503,14 @@ body .et_pb_section {
 .et_pb_code.et_pb_module {
   margin-bottom: 0.5rem !important; }
 
+@media screen and (max-width: 480px) {
+  .et_pb_image .et_pb_image_wrap, .et_pb_code_inner:has(> video) {
+    max-width: 100vw !important;
+    width: 100vw;
+    margin-left: -10vw; }
+
+  .et_pb_image_wrap img, .et_pb_code_inner video {
+    border-radius: 0; } }
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
 .caption.et_pb_module .et_pb_text_inner {
