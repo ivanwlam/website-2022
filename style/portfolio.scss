@@ -195,7 +195,8 @@
     border-top-width: 2px;
     border-bottom-width: 2px;
     border-style: solid;
-    border-color: var(--color-line);
+    // border-color: var(--color-line);
+    border-color: var(--color-line-opaque);
 
     @media screen and (min-width: 480px) {
       border-width: 2px;  
