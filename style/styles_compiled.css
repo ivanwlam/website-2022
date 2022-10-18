@@ -339,6 +339,9 @@ p {
 li {
   margin-bottom: 1em; }
 
+.page-title h1 {
+  font-size: var(--font-size-super-heading); }
+
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph);
@@ -354,8 +357,11 @@ li {
 
 /* Content Layout */
 .page.et_pb_pagebuilder_layout #main-content {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   background-color: var(--color-bg); }
+  @media screen and (min-width: 1000px) {
+    .page.et_pb_pagebuilder_layout #main-content {
+      padding-bottom: 10rem; } }
 
 body .et_pb_section {
   padding-top: 0;

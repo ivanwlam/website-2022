@@ -16,6 +16,9 @@ li {
   margin-bottom: 1em;
 }
 
+.page-title h1 {
+  font-size: var(--font-size-super-heading);
+}
 
 .layout-widget-about h2 + p{
   font-size: var(--font-size-super-paragraph);
@@ -35,8 +38,12 @@ li {
 /* Content Layout */
 
 .page.et_pb_pagebuilder_layout #main-content {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   background-color: var(--color-bg);
+
+  @media screen and (min-width: 1000px) {
+    padding-bottom: 10rem;
+  }
 }
 
 body .et_pb_section {
