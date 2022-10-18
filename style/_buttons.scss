@@ -10,6 +10,7 @@ body .et_pb_button.et_pb_bg_layout_light:hover /* Override */ {
 .et_pb_button,
 .et_pb_button.et_pb_bg_layout_light {
   background-color: var(--color-bg-button);
+  padding: 0.6em 2em;
 }
 
 body .et_pb_button:hover, /* Override */
