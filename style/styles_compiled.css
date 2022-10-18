@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6, p, li,
   color: var(--color-text-secondary-default); }
 
 @media (prefers-color-scheme: dark) {
-  .heading-eyebrow:not(:has(+ div h2, + div h3, + div h4)) {
+  .heading-eyebrow:not(:has(+ div h1, + div h2, + div h3, + div h4)) {
     color: var(--color-text-highlight); } }
 .heading-eyebrow:has(+ .et_pb_post_title) .et_pb_text_inner {
   font-size: var(--font-size-super-paragraph); }
