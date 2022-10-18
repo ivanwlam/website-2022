@@ -170,6 +170,10 @@ h1, h2, h3, h4, h5, h6, p, li,
   }
 }
 
+.heading-eyebrow:has(+ .et_pb_post_title) .et_pb_text_inner {
+  font-size: var(--font-size-super-paragraph);
+}
+
 .heading-eyebrow,
 .heading-eyebrow h2,
 .heading-eyebrow h3,

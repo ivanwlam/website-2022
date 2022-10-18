@@ -248,6 +248,9 @@ h1, h2, h3, h4, h5, h6, p, li,
 @media (prefers-color-scheme: dark) {
   .heading-eyebrow:not(:has(+ div h2, + div h3, + div h4)) {
     color: var(--color-text-highlight); } }
+.heading-eyebrow:has(+ .et_pb_post_title) .et_pb_text_inner {
+  font-size: var(--font-size-super-paragraph); }
+
 .heading-eyebrow,
 .heading-eyebrow h2,
 .heading-eyebrow h3,
@@ -453,8 +456,7 @@ body .et_pb_section {
 
 /* Typography */
 .et_pb_title_container h1 {
-  font-size: var(--font-size-h1);
-  margin-top: 0.5em; }
+  font-size: var(--font-size-h1); }
 
 .text-hero-body, .text-hero-body * {
   font-size: var(--font-size-h4);
