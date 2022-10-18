@@ -327,6 +327,9 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   /* override */
   border: 1px solid var(--color-line); }
 
+body {
+  background-color: var(--color-bg); }
+
 img, video {
   border-radius: var(--border-radius-small); }
 
