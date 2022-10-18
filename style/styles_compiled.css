@@ -420,6 +420,17 @@ body .et_pb_section {
   /* Make rows where there are multiple columns to align at the top */
   align-items: stretch; }
 
+/* Metadata headings */
+.layout-portfolio-body-row-meta .heading-eyebrow {
+  margin-bottom: 1rem !important;
+  /* Override */ }
+
+.layout-portfolio-body-row-meta .heading-eyebrow .et_pb_text_inner {
+  /* Add underline to headings */
+  display: inline-block;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0 1em 0.5em 0; }
+
 /* Typography */
 .et_pb_title_container h1 {
   font-size: var(--font-size-h1);
