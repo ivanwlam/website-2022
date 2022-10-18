@@ -1,86 +1,582 @@
-/*
-Error: wrong number of arguments (1 for 3) for `hsl'
-        on line 56 of style/general.scss
-        from line 6 of style/tocompile.scss
+:root {
+  --color-hue-blue: 202;
+  --color-hue-green: 119;
+  --color-hue-neutral: 0;
+  --color-hue-link: var(--color-hue-blue);
+  --color-hue-accent: var(--color-hue-green);
+  --color-saturation-neutral: 0%;
+  --color-saturation-default: 100%;
+  --color-hs-neutral: var(--color-hue-neutral) var(--color-saturation-neutral);
+  --color-hsl-black: var(--color-hs-neutral) 0%;
+  --color-hsl-white: var(--color-hs-neutral) 100%;
+  --color-hsl-accent-on-light: var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-dark: var(--color-hue-accent) var(--color-saturation-default) 35%;
+  --color-link-on-light: hsl(var(--color-hue-link) var(--color-saturation-default) 35%);
+  --color-link-on-dark: hsl(var(--color-hue-link) var(--color-saturation-default) 50%);
+  --color-accent-on-light: hsl(var(--color-hsl-accent-on-light));
+  --color-accent-on-dark: hsl(var(--color-hsl-accent-on-dark));
+  --color-accent: var(--color-accent-on-light);
+  --color-bg-light: hsl(var(--color-hs-neutral) 95%);
+  --color-bg-light-highlight: hsl(var(--color-hs-neutral) 100%);
+  --color-bg-dark: hsl(var(--color-hs-neutral) 15%);
+  --color-bg-dark-highlight: hsl(var(--color-hs-neutral) 5%);
+  --color-bg-accent-on-light: hsl(var(--color-hue-accent) var(--color-saturation-default) 25%);
+  --color-bg-accent-on-light-highlight: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-dark: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-dark-highlight: hsl(var(--color-hue-accent) var(--color-saturation-default) 35%);
+  --color-text-dark-on-light: hsl(var(--color-hs-neutral) 25%);
+  --color-text-dark-on-light-emphasis: hsl(var(--color-hs-neutral) 5%);
+  --color-text-dark-on-light-deemphasis: hsl(var(--color-hs-neutral) 40%);
+  --color-text-light-on-dark: hsl(var(--color-hs-neutral) 75%);
+  --color-text-light-on-dark-emphasis: hsl(var(--color-hs-neutral) 95%);
+  --color-text-light-on-dark-deemphasis: hsl(var(--color-hs-neutral) 55%);
+  --color-text-link-on-light: var(--color-link-on-light);
+  --color-text-link-on-dark: var(--color-link-on-dark);
+  --color-text-accent-on-light: var(--color-accent-on-light);
+  --color-text-accent-on-dark: var(--color-accent-on-dark);
+  --color-line-dark-on-light: hsla(var(--color-hsl-black) / 35%);
+  --color-line-dark-on-light-emphasis: hsla(var(--color-hsl-black) / 75%);
+  --color-line-dark-on-light-deemphasis: hsla(var(--color-hsl-black) / 15%);
+  --color-line-dark-on-light-opaque: hsl(var(--color-hs-neutral) 61%);
+  --color-line-dark-on-light-emphasis-opaque: hsl(var(--color-hs-neutral) 24%);
+  --color-line-dark-on-light-deemphasis-opaque: hsl(var(--color-hs-neutral) 81%);
+  --color-line-light-on-dark: hsla(var(--color-hsl-white) / 35%);
+  --color-line-light-on-dark-emphasis: hsla(var(--color-hsl-white) / 60%);
+  --color-line-light-on-dark-deemphasis: hsla(var(--color-hsl-white) / 20%);
+  --color-line-light-on-dark-opaque: hsl(var(--color-hs-neutral) 45%);
+  --color-line-light-on-dark-emphasis-opaque: hsl(var(--color-hs-neutral) 66%);
+  --color-line-light-on-dark-deemphasis-opaque: hsl(var(--color-hs-neutral) 31%);
+  --color-line-accent-on-light: hsla(var(--color-hsl-accent-on-light) / 100%);
+  --color-line-accent-on-dark-light: hsla(var(--color-hsl-accent-on-dark) / 100%);
+  --color-line-accent-on-light-opaque: hsl(var(--color-hs-neutral) 100%);
+  --color-line-accent-on-dark-light-opaque: hsl(var(--color-hs-neutral) 0%);
+  /*  */
+  --color-bg: var(--color-bg-light);
+  --color-bg-highlight: var(--color-bg-light-highlight);
+  --color-bg-accent: var(--color-bg-accent-on-light);
+  --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
+  --color-text: var(--color-text-dark-on-light);
+  --color-text-highlight: var(--color-text-dark-on-light-emphasis);
+  --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+  --color-text-link: var(--color-text-link-on-light);
+  --color-text-accent: var(--color-text-accent-on-light);
+  --color-line: var(--color-line-dark-on-light);
+  --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
+  --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis);
+  --color-line-accent: var(--color-line-accent-on-light);
+  --color-line-opaque: var(--color-line-dark-on-light-opaque);
+  --color-line-emphasis-opaque: var(--color-line-dark-on-light-emphasis-opaque);
+  --color-line-deemphasis-opaque: var(--color-line-dark-on-light-deemphasis-opaque); }
 
-Backtrace:
-style/general.scss:56
-style/tocompile.scss:6
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:127:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:182:in `perform_arg'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `block in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each_with_index'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `each'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/funcall.rb:129:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `_perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 3) for `hsl'\A         on line 56 of style/general.scss\A         from line 6 of style/tocompile.scss"; }
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: var(--color-bg-light);
+    --color-bg-highlight: var(--color-bg-light-highlight);
+    --color-bg-accent: var(--color-bg-accent-on-light);
+    --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
+    --color-text: var(--color-text-dark-on-light);
+    --color-text-highlight: var(--color-text-dark-on-light-emphasis);
+    --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+    --color-text-link: var(--color-text-link-on-light);
+    --color-text-accent: var(--color-text-accent-on-light);
+    --color-line: var(--color-line-dark-on-light);
+    --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
+    --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis);
+    --color-line-opaque: var(--color-line-dark-on-light-opaque);
+    --color-line-emphasis-opaque: var(--color-line-dark-on-light-emphasis-opaque);
+    --color-line-deemphasis-opaque: var(--color-line-dark-on-light-deemphasis-opaque);
+    --color-bg-button: var(--color-bg-accent-on-light);
+    --color-bg-button-hover: var(--color-bg-accent-on-light-highlight);
+    --color-text-button: hsla(var(--color-hsl-white) / 95%);
+    --color-bg-form-field: var(--color-bg-light-highlight);
+    --color-text-form-field: var(--color-text-dark-on-light);
+    --color-border-form-field: var(--color-line-dark-on-light); } }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-bg-dark);
+    --color-bg-highlight: var(--color-bg-dark-highlight);
+    --color-bg-accent: var(--color-bg-accent-on-dark);
+    --color-bg-accent-highlight: var(--color-bg-accent-on-dark-highlight);
+    --color-text: var(--color-text-light-on-dark);
+    --color-text-highlight: var(--color-text-light-on-dark-emphasis);
+    --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
+    --color-text-link: var(--color-text-link-on-dark);
+    --color-text-accent: var(--color-text-accent-on-dark);
+    --color-line: var(--color-line-light-on-dark);
+    --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
+    --color-line-deemphasis: var(--color-line-light-on-dark-deemphasis);
+    --color-line-accent: var(--color-line-accent-on-dark);
+    --color-line-opaque: var(--color-line-light-on-dark-opaque);
+    --color-line-emphasis-opaque: var(--color-line-light-on-dark-emphasis-opaque);
+    --color-line-deemphasis-opaque: var(--color-line-light-on-dark-deemphasis-opaque); } }
+:root {
+  --color-bg-button: var(--color-bg-accent);
+  --color-bg-button-hover: var(--color-bg-accent-highlight);
+  --color-text-button: var(--color-text-light-on-dark-emphasis);
+  --color-bg-form-field: var(--color-bg-highlight);
+  --color-text-form-field: var(--color-text);
+  --color-border-form-field: var(--color-line); }
+
+:root {
+  /* Scale: 1.414 (Augmented Fourth) 
+  https://type-scale.com
+  */
+  --type-scale-base: 1.18;
+  --type-scale-mobile-wide: calc(104/100);
+  --type-scale-tablet: calc(108/100);
+  --type-scale-desktop-small: calc(111/100);
+  --type-scale-desktop: calc(113/100);
+  --type-scale-responsive: 1; }
+
+@media screen and (min-width: 480px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-mobile-wide); } }
+@media screen and (min-width: 768px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-tablet); } }
+@media screen and (min-width: 1000px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-desktop-small); } }
+@media screen and (min-width: 1450px) {
+  :root {
+    --type-scale-responsive: var(--type-scale-desktop); } }
+:root {
+  --type-scale: calc(var(--type-scale-base) * var(--type-scale-responsive));
+  --font-size-base: 16px;
+  --font-size-paragraph: calc(var(--font-size-base) * var(--type-scale-responsive));
+  --font-size-h6: var(--font-size-paragraph);
+  --font-size-h5: calc(var(--type-scale) * var(--font-size-h6));
+  --font-size-h4: calc(var(--type-scale) * var(--font-size-h5));
+  --font-size-h3: calc(var(--type-scale) * var(--font-size-h4));
+  --font-size-h2: calc(var(--type-scale) * var(--font-size-h3));
+  --font-size-h1: calc(var(--type-scale) * var(--font-size-h2));
+  --font-size-super-heading: calc(var(--type-scale) * var(--font-size-h1));
+  --font-size-super-paragraph: calc(var(--type-scale) * var(--font-size-paragraph));
+  --font-size-sub-paragraph: calc(var(--font-size-paragraph) / var(--type-scale));
+  --line-height-h1: 1.3;
+  /* TODO: Make dynamic */
+  --line-height-h2: 1.3;
+  /* TODO: Make dynamic */
+  --line-height-h3: 1.3;
+  /* TODO: Make dynamic */
+  --line-height-h4: 1.3;
+  /* TODO: Make dynamic */
+  --line-height-h5: 1.5;
+  /* TODO: Make dynamic */
+  --line-height-h6: 1.5;
+  /* TODO: Make dynamic */
+  --line-height-paragraph: 1.7;
+  /* TODO: Make dynamic */
+  --line-height-super-paragraph: 1.7;
+  /* TODO: Make dynamic */
+  --line-height-sub-paragraph: 1.7;
+  /* TODO: Make dynamic */
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-family-sans-serif: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-family-serif: -apple-system-ui-serif, ui-serif, "Roboto Serif", Georgia, serif;
+  --font-family-default: var(--font-family-sans-serif); }
+
+body, h4, h5, h6, p, li {
+  font-family: var(--font-family-default) !important; }
+
+body {
+  font-weight: 400;
+  /* override */
+  font-size: var(--font-size-paragraph); }
+
+h1, h2, h3 {
+  font-family: var(--font-family-serif) !important;
+  font-weight: 600; }
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1); }
+
+h2,
+.et_pb_column_1_3 h2,
+.et_pb_column_1_4 h2,
+.et_pb_column_1_5 h2,
+.et_pb_column_1_6 h2,
+.et_pb_column_2_5 h2 {
+  font-size: var(--font-size-h2) !important;
+  line-height: var(--line-height-h2); }
+
+h3,
+.et_pb_column_1_3 h3,
+.et_pb_column_1_4 h3,
+.et_pb_column_1_5 h3,
+.et_pb_column_1_6 h3,
+.et_pb_column_2_5 h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3); }
+
+h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4); }
+
+h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5); }
+
+h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6); }
+
+p, li,
+.et_pb_text_inner {
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph);
+  letter-spacing: calc(0px / 100); }
+
+h1, h2, h3, h4, h5, h6, p, li,
+.et_pb_text_inner {
+  max-width: 55ch; }
+
+.et_pb_text_inner:has(> h1, > h2, > h3) {
+  max-width: none; }
+
+.heading-eyebrow,
+.heading-eyebrow h2,
+.heading-eyebrow h3,
+.heading-eyebrow h4,
+.heading-metadata,
+.heading-metadata h3 {
+  text-transform: uppercase;
+  color: var(--color-text-secondary-default); }
+
+@media (prefers-color-scheme: dark) {
+  .heading-eyebrow:not(:has(+ div h1, + div h2, + div h3, + div h4)) {
+    color: var(--color-text-highlight); } }
+.heading-eyebrow:has(+ .et_pb_post_title) .et_pb_text_inner {
+  font-size: var(--font-size-super-paragraph); }
+
+.heading-eyebrow,
+.heading-eyebrow h2,
+.heading-eyebrow h3,
+.heading-eyebrow h4 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  font-weight: var(--font-weight-bold); }
+
+.heading-metadata,
+.heading-metadata h3 {
+  font-size: var(--font-size-sub-paragraph);
+  line-height: var(--line-height-sub-paragraph);
+  font-weight: var(--font-weight-extra-bold); }
+
+.heading-eyebrow,
+.heading-eyebrow .et_pb_text_inner,
+.heading-eyebrow p {
+  margin-bottom: 0 !important;
+  /* override */ }
+
+.et_pb_image + .heading-eyebrow {
+  /* Add spacing above eyebrow headlines only if it's right after an image */
+  margin-top: 2em; }
+
+.heading-metadata {
+  margin-bottom: 0 !important; }
+
+/* COLORS */
+body {
+  color: var(--color-text); }
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-highlight); }
+
+@media (prefers-color-scheme: dark) {
+  strong {
+    color: var(--color-text-highlight); } }
+:root {
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
+  --border-radius-button: var(--border-radius-medium);
+  --spacing-small: 0.25rem;
+  --spacing-medium: 0.5rem;
+  --spacing-large: 1rem;
+  --spacing-extra-large: 2rem;
+  --spacing-extra-extra-large: 4rem; }
+
+.et_pb_button,
+body .et_pb_button:hover,
+.et_pb_button.et_pb_bg_layout_light,
+body .et_pb_button.et_pb_bg_layout_light:hover {
+  border: none;
+  border-radius: var(--border-radius-button) !important;
+  /* override */
+  color: var(--color-text-button); }
+
+.et_pb_button,
+.et_pb_button.et_pb_bg_layout_light {
+  background-color: var(--color-bg-button);
+  padding: 0.6em 2em; }
+
+body .et_pb_button:hover,
+body .et_pb_button.et_pb_bg_layout_light:hover {
+  background-color: var(--color-bg-button-hover); }
+
+.et_pb_contact p input,
+.et_pb_contact p textarea {
+  background-color: var(--color-bg-form-field);
+  /* override */
+  border-radius: var(--border-radius-medium);
+  /* override */
+  color: var(--color-text-form-field);
+  /* override */
+  font-size: var(--font-size-paragraph);
+  /* override */
+  padding: var(--spacing-large);
+  /* override */
+  border: 1px solid var(--color-line); }
+
+body, body.custom-background {
+  background-color: var(--color-bg) !important; }
+
+img, video {
+  border-radius: var(--border-radius-small); }
+
+p {
+  margin-bottom: 1em; }
+
+li {
+  margin-bottom: 1em; }
+
+.page-title h1 {
+  font-size: var(--font-size-super-heading); }
+
+.layout-widget-about h2 + p {
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph);
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+.et_pb_section {
+  background-color: var(--color-bg); }
+
+.et_pb_divider {
+  margin-bottom: 5rem !important;
+  /* override */ }
+
+/* Content Layout */
+.page.et_pb_pagebuilder_layout #main-content {
+  padding-bottom: 5rem;
+  background-color: var(--color-bg); }
+  @media screen and (min-width: 1000px) {
+    .page.et_pb_pagebuilder_layout #main-content {
+      padding-bottom: 10rem; } }
+
+body .et_pb_section {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.section-hero {
+  background-image: linear-gradient(180deg, #69da67 0%, #4d9d81 33%, #397293 75%, #2577a7 100%) !important; }
+
+.layout-portfolio-body-row-1-1-1 > .et_pb_column {
+  --column-margin-right: 5.5%;
+  /* copied from existing */ }
+
+@media (max-width: 1599px) {
+  /* for 1600px screen width breakpoint */
+  .layout-portfolio-body-row.layout-portfolio-body-row-1-1 {
+    display: block;
+    /* Override */ }
+
+  .layout-portfolio-body-row-1-1 > .et_pb_column {
+    width: 100%;
+    /* override */ }
+
+  .layout-portfolio-body-row-1-1 > .et_pb_column:last-of-type {
+    margin-top: 2rem; } }
+@media (max-width: 1450px) {
+  /* for 1440px screen width breakpoint */
+  .layout-portfolio-body-row.layout-portfolio-body-row-2-3 {
+    display: block;
+    /* Override */ }
+
+  .layout-portfolio-body-row-2-3 > .et_pb_column {
+    width: 100%;
+    /* override */ }
+
+  .layout-portfolio-body-row-2-3 > .et_pb_column:last-of-type {
+    margin-top: 2rem; }
+
+  .layout-portfolio-body-row-1-1-1 {
+    flex-wrap: wrap; }
+
+  .layout-portfolio-body-row-1-1-1 > .et_pb_column {
+    --column-count: 2;
+    --flex-basis: calc((100% / var(--column-count)) - var(--column-margin-right));
+    flex: 0 1 var(--flex-basis);
+    /* */
+    margin-bottom: 3rem; } }
+@media (max-width: 1200px) {
+  /* for 1280px screen width breakpoint */
+  .layout-portfolio-body-row-1-1-1 > .et_pb_column {
+    --column-count: 1; } }
+/* Lines */
+.et_pb_divider::before {
+  border-top-color: var(--color-line) !important;
+  /* override */ }
+
+.et_pb_row .et_pb_module .et_pb_row {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+  @media screen and (min-width: 768px) {
+    .et_pb_row .et_pb_module .et_pb_row {
+      margin-top: 7rem;
+      margin-bottom: 7rem; } }
+  @media screen and (min-width: 1000px) {
+    .et_pb_row .et_pb_module .et_pb_row {
+      margin-top: 10rem;
+      margin-bottom: 10rem; } }
+
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-hero-row,
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-meta,
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-text-only {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.layout-portfolio-body-row {
+  display: flex;
+  align-items: center; }
+
+.layout-portfolio-body-row-columns-align-top {
+  /* Make rows where there are multiple columns to align at the top */
+  align-items: stretch; }
+
+/* Metadata headings */
+.layout-portfolio-body-row-meta .heading-eyebrow {
+  margin-bottom: 1rem !important;
+  /* Override */ }
+
+.layout-portfolio-body-row-meta .heading-eyebrow .et_pb_text_inner {
+  /* Add underline to headings */
+  display: inline-block;
+  border-bottom: 1px solid var(--color-line);
+  padding: 0 1em 0.5em 0; }
+
+/* Typography */
+.et_pb_title_container h1 {
+  font-size: var(--font-size-h1); }
+
+.text-hero-body, .text-hero-body * {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4); }
+
+.layout-body-row-super-blurb .et_pb_module p,
+.layout-body-row-super-blurb .et_pb_module .et_pb_text_inner,
+.layout-portfolio-body-row-heading-main .et_pb_module p,
+.layout-portfolio-body-row-heading-main .et_pb_module .et_pb_text_inner {
+  /* Paragraph of high-level headings */
+  font-size: var(--font-size-super-paragraph);
+  line-height: var(--line-height-super-paragraph); }
+
+/* Portfolio Stats */
+.layout-portfolio-stats .et_pb_column {
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: var(--border-radius-large); }
+
+.text-portfolio-stat-value p {
+  font-size: var(--font-size-super-heading); }
+
+.text-portfolio-stat-value {
+  font-size: 96px; }
+
+/* Sample Project Grid */
+.et_pb_portfolio .et_pb_ajax_pagination_container {
+  display: flex;
+  flex-wrap: wrap; }
+
+.et_pb_portfolio .et_pb_ajax_pagination_container h3 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5); }
+
+/* Project List Grid */
+.et_pb_portfolio .et_pb_module_header,
+.et_pb_portfolio_grid .et_pb_module_header {
+  font-size: var(--font-size-h4) !important;
+  line-height: var(--line-height-h4); }
+
+/* Projects Gallery Grid */
+.et_pb_portfolio .et_pb_portfolio_item,
+.et_pb_portfolio_grid_items .et_pb_post.project.type-project {
+  margin-bottom: 3rem; }
+
+@media screen and (min-width: 767px) {
+  .et_pb_portfolio .et_pb_ajax_pagination_container {
+    /* Reset from default */
+    flex-wrap: nowrap; }
+
+  body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --margin-right: var(--spacing-extra-large); }
+
+  body.page-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --margin-right: var(--spacing-extra-large); }
+
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --columns: 2;
+    --gutters: calc(var(--columns) - 1);
+    margin-right: var(--margin-right);
+    width: calc((100% - (var(--gutters) * var(--margin-right))) / var(--columns)); } }
+@media screen and (min-width: 1000px) {
+  body.page-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --margin-right: var(--spacing-extra-extra-large); } }
+@media screen and (min-width: 767px) and (max-width: 1599px) {
+  .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item:nth-child(2n) {
+    margin-right: 0; } }
+@media screen and (min-width: 1599px) {
+  body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --columns: 4; }
+
+  body.page-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
+    --columns: 3; }
+
+  body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item:nth-child(4n),
+  body.page-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item:nth-child(3n) {
+    margin-right: 0; } }
+/* Images */
+.layout-portfolio-hero-row img,
+.layout-portfolio-body-row img,
+.layout-portfolio-body-row video,
+.et_pb_title_featured_container img {
+  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.et_pb_image.et_pb_module,
+.et_pb_code.et_pb_module {
+  margin-bottom: 0.5rem !important; }
+
+@media screen and (max-width: 480px) {
+  .et_pb_image .et_pb_image_wrap, .et_pb_code_inner:has(> video) {
+    max-width: 100vw !important;
+    /* override */
+    width: 100vw !important;
+    /* override */
+    margin-left: -10vw;
+    /* override */ }
+
+  .et_pb_image_wrap img, .et_pb_code_inner video {
+    border-radius: 0;
+    /* override */ } }
+@media screen and (prefers-color-scheme: dark) {
+  .et_pb_image_wrap img, .et_pb_code_inner video {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: var(--color-line-opaque); } }
+  @media screen and (prefers-color-scheme: dark) and (min-width: 480px) {
+    .et_pb_image_wrap img, .et_pb_code_inner video {
+      border-width: 1px;
+      border-radius: var(--border-radius-medium); } }
+
+/* Image Captions */
+.et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
+.caption.et_pb_module .et_pb_text_inner {
+  font-size: var(--font-size-sub-paragraph);
+  font-style: italic;
+  max-width: fit-content; }
+
+/*# sourceMappingURL=styles_compiled.css.map */
