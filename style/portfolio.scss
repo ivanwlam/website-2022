@@ -192,10 +192,8 @@
   // Add border to media in dark mode to make them stand out (in case they're in dark background)
   
   .et_pb_image_wrap img, .et_pb_code_inner video {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
+    border-width: 1px 0;
     border-style: solid;
-    // border-color: var(--color-line);
     border-color: var(--color-line-opaque);
 
     @media screen and (min-width: 480px) {
