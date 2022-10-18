@@ -527,13 +527,13 @@ body .et_pb_section {
     /* override */ } }
 @media screen and (prefers-color-scheme: dark) {
   .et_pb_image_wrap img, .et_pb_code_inner video {
-    border-top-width: 2px;
-    border-bottom-width: 2px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     border-style: solid;
     border-color: var(--color-line-opaque); } }
   @media screen and (prefers-color-scheme: dark) and (min-width: 480px) {
     .et_pb_image_wrap img, .et_pb_code_inner video {
-      border-width: 2px;
+      border-width: 1px;
       border-radius: var(--border-radius-medium); } }
 
 /* Image Captions */
