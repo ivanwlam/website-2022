@@ -18,7 +18,9 @@
   --color-hs-neutral:                       var(--color-hue-neutral) var(--color-saturation-neutral);
   --color-hsl-black:                        var(--color-hs-neutral) 0%;
   --color-hsl-white:                        var(--color-hs-neutral) 100%;
-  --color-hsl-accent-on-light:              var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-light-text:         var(--color-hue-accent) var(--color-saturation-default) 21%;
+  --color-hsl-accent-on-light-graphic:      var(--color-hue-accent) var(--color-saturation-default) 30%;
+  --color-hsl-accent-on-light:              var(--color-hsl-accent-on-light-text);
   --color-hsl-accent-on-dark:               var(--color-hue-accent) var(--color-saturation-default) 35%;
 
 
@@ -29,7 +31,11 @@
   --color-accent-on-light:                  hsl(var(--color-hsl-accent-on-light));
   --color-accent-on-dark:                   hsl(var(--color-hsl-accent-on-dark));
 
+  --color-accent-on-light-graphic:          hsl(var(--color-hsl-accent-on-light-graphic));
+  --color-accent-on-dark-graphic:           hsl(var(--color-hsl-accent-on-dark));
+
   --color-accent:                           var(--color-accent-on-light);
+  --color-accent-graphic:                   var(--color-accent-on-light-graphic);
 
 
   // ELEMENT TYPES
@@ -39,10 +45,10 @@
   --color-bg-dark:                          hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight:                hsl(var(--color-hs-neutral) 5%);
 
-  --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 25%);
-  --color-bg-accent-on-light-highlight:     hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
+  --color-bg-accent-on-light-highlight:     hsl(var(--color-hue-accent) var(--color-saturation-default) 33%);
   --color-bg-accent-on-dark:                hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
-  --color-bg-accent-on-dark-highlight:      hsl(var(--color-hue-accent) var(--color-saturation-default) 35%);
+  --color-bg-accent-on-dark-highlight:      hsl(var(--color-hue-accent) var(--color-saturation-default) 33%);
 
 
   --color-text-dark-on-light:               hsl(var(--color-hs-neutral) 25%);
