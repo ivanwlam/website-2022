@@ -364,6 +364,11 @@ li {
   margin-bottom: 5rem !important;
   /* override */ }
 
+/* Sticky Header */
+.et_pb_row .et_pb_module .et_pb_row.et_pb_sticky_module {
+  margin-top: 0;
+  margin-bottom: 0; }
+
 /* Content Layout */
 .page.et_pb_pagebuilder_layout #main-content {
   padding-bottom: 5rem;
