@@ -37,14 +37,19 @@
   --color-line-dark-on-light: hsla(var(--color-hsl-black) / 35%);
   --color-line-dark-on-light-emphasis: hsla(var(--color-hsl-black) / 75%);
   --color-line-dark-on-light-deemphasis: hsla(var(--color-hsl-black) / 15%);
+  --color-line-dark-on-light-opaque: hsl(var(--color-hs-neutral) 61%);
+  --color-line-dark-on-light-emphasis-opaque: hsl(var(--color-hs-neutral) 24%);
+  --color-line-dark-on-light-deemphasis-opaque: hsl(var(--color-hs-neutral) 81%);
   --color-line-light-on-dark: hsla(var(--color-hsl-white) / 35%);
   --color-line-light-on-dark-emphasis: hsla(var(--color-hsl-white) / 60%);
   --color-line-light-on-dark-deemphasis: hsla(var(--color-hsl-white) / 20%);
   --color-line-light-on-dark-opaque: hsl(var(--color-hs-neutral) 45%);
-  --color-line-light-on-dark-emphasis-opaque: hsl(var(--color-hs-neutral) / 66%);
-  --color-line-light-on-dark-deemphasis-opaque: hsl(var(--color-hs-neutral) / 31%);
+  --color-line-light-on-dark-emphasis-opaque: hsl(var(--color-hs-neutral) 66%);
+  --color-line-light-on-dark-deemphasis-opaque: hsl(var(--color-hs-neutral) 31%);
   --color-line-accent-on-light: hsla(var(--color-hsl-accent-on-light) / 100%);
   --color-line-accent-on-dark-light: hsla(var(--color-hsl-accent-on-dark) / 100%);
+  --color-line-accent-on-light-opaque: hsl(var(--color-hs-neutral) 100%);
+  --color-line-accent-on-dark-light-opaque: hsl(var(--color-hs-neutral) 0%);
   /*  */
   --color-bg: var(--color-bg-light);
   --color-bg-highlight: var(--color-bg-light-highlight);
@@ -59,7 +64,9 @@
   --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
   --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis);
   --color-line-accent: var(--color-line-accent-on-light);
-  --color-line-opaque: var(--color-line-dark-on-light-opaque); }
+  --color-line-opaque: var(--color-line-dark-on-light-opaque);
+  --color-line-emphasis-opaque: var(--color-line-dark-on-light-emphasis-opaque);
+  --color-line-deemphasis-opaque: var(--color-line-dark-on-light-deemphasis-opaque); }
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -76,6 +83,8 @@
     --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
     --color-line-deemphasis: var(--color-line-dark-on-light-deemphasis);
     --color-line-opaque: var(--color-line-dark-on-light-opaque);
+    --color-line-emphasis-opaque: var(--color-line-dark-on-light-emphasis-opaque);
+    --color-line-deemphasis-opaque: var(--color-line-dark-on-light-deemphasis-opaque);
     --color-bg-button: var(--color-bg-accent-on-light);
     --color-bg-button-hover: var(--color-bg-accent-on-light-highlight);
     --color-text-button: hsla(var(--color-hsl-white) / 95%);
@@ -97,7 +106,9 @@
     --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
     --color-line-deemphasis: var(--color-line-light-on-dark-deemphasis);
     --color-line-accent: var(--color-line-accent-on-dark);
-    --color-line-opaque: var(--color-line-light-on-dark-opaque); } }
+    --color-line-opaque: var(--color-line-light-on-dark-opaque);
+    --color-line-emphasis-opaque: var(--color-line-light-on-dark-emphasis-opaque);
+    --color-line-deemphasis-opaque: var(--color-line-light-on-dark-deemphasis-opaque); } }
 :root {
   --color-bg-button: var(--color-bg-accent);
   --color-bg-button-hover: var(--color-bg-accent-highlight);
