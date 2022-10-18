@@ -51,6 +51,14 @@ body .et_pb_section {
 	padding-bottom: 0;
 }
 
+.section-hero {
+  background-image: linear-gradient(180deg,
+    hsl(119deg 61% 63%) 0%, 
+    hsl(159deg 34% 46%) 33%, 
+    hsl(202deg 44% 40%) 75%, 
+    hsl(202deg 64% 40%) 100%) !important;
+}
+
 .layout-portfolio-body-row-1-1-1 > .et_pb_column {
   --column-margin-right: 5.5%; /* copied from existing */
 }
@@ -101,9 +109,6 @@ body .et_pb_section {
 }
 
 /* Lines */
-// .et_pb_divider_2::before, 
-// .et_pb_divider_0::before, 
-// .et_pb_divider_1::before,
 .et_pb_divider::before {
 	border-top-color: var(--color-line) !important; /* override */ // TODO: Make colors based on variable */
 }
