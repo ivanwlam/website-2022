@@ -315,8 +315,19 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
 
 .et_pb_button,
 .et_pb_button.et_pb_bg_layout_light {
-  background-color: var(--color-bg-button);
-  padding: 0.6em 2em; }
+  background-color: var(--color-bg-button); }
+
+.et_pb_button,
+.et_pb_button.et_pb_bg_layout_light,
+.et_pb_button:hover,
+.et_pb_module .et_pb_button:hover {
+  padding: 0.6em 2em;
+  /* override */ }
+
+.et_pb_button:after,
+.et_pb_button:before {
+  display: none;
+  /* override */ }
 
 body .et_pb_button:hover,
 body .et_pb_button.et_pb_bg_layout_light:hover {

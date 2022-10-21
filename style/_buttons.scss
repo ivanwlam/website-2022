@@ -10,8 +10,21 @@ body .et_pb_button.et_pb_bg_layout_light:hover /* Override */ {
 .et_pb_button,
 .et_pb_button.et_pb_bg_layout_light {
   background-color: var(--color-bg-button);
-  padding: 0.6em 2em;
 }
+
+.et_pb_button,
+.et_pb_button.et_pb_bg_layout_light,
+.et_pb_button:hover, 
+.et_pb_module .et_pb_button:hover {
+  padding: 0.6em 2em; /* override */
+}
+
+.et_pb_button:after, 
+.et_pb_button:before {
+  // Hide button arrow on hover (May need to specify if I have other buttons with diff icons )
+  display: none; /* override */
+}
+
 
 body .et_pb_button:hover, /* Override */
 body .et_pb_button.et_pb_bg_layout_light:hover /* Override */ {
