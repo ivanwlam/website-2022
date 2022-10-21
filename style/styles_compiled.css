@@ -297,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   --border-radius-small: 0.25rem;
   --border-radius-medium: 0.5rem;
   --border-radius-large: 1rem;
+  --border-radius: var(--border-radius-small);
   --border-radius-button: var(--border-radius-medium);
   --spacing-small: 0.25rem;
   --spacing-medium: 0.5rem;
@@ -348,7 +349,9 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   border: 1px solid var(--color-line); }
 
 body, body.custom-background {
-  background-color: var(--color-bg) !important; }
+  background-color: var(--color-bg) !important;
+  font-size: 16px;
+  /* To set 1rem size */ }
 
 img, video {
   border-radius: var(--border-radius-small); }
