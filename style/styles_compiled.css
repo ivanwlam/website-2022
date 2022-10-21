@@ -178,6 +178,7 @@
   /* TODO: Make dynamic */
   --font-weight-normal-dark: 450;
   --font-weight-bold: 700;
+  --font-weight-bold-dark: 750;
   --font-weight-extra-bold: 800;
   --font-family-sans-serif: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
   --font-family-serif: -apple-system-ui-serif, ui-serif, "Roboto Serif", Georgia, serif;
@@ -192,7 +193,7 @@ body {
   font-size: var(--font-size-paragraph); }
   @media (prefers-color-scheme: dark) {
     body {
-      font-weight: 450; } }
+      font-weight: var(--font-weight-normal-dark); } }
 
 h1, h2, h3 {
   font-family: var(--font-family-serif) !important;
@@ -296,7 +297,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (prefers-color-scheme: dark) {
   strong {
-    color: var(--color-text-highlight); } }
+    color: var(--color-text-highlight);
+    font-weight: var(--font-weight-bold-dark); } }
 :root {
   --border-radius-small: 0.25rem;
   --border-radius-medium: 0.5rem;
