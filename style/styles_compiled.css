@@ -147,7 +147,7 @@
     --type-scale-responsive: var(--type-scale-desktop); } }
 :root {
   --type-scale: calc(var(--type-scale-base) * var(--type-scale-responsive));
-  --font-size-base: 16px;
+  --font-size-base: 17px;
   --font-size-paragraph: calc(var(--font-size-base) * var(--type-scale-responsive));
   --font-size-h6: var(--font-size-paragraph);
   --font-size-h5: calc(var(--type-scale) * var(--font-size-h6));
