@@ -63,10 +63,11 @@
   --line-height-h5:               1.5; /* TODO: Make dynamic */
   --line-height-h6:               1.5; /* TODO: Make dynamic */
   --line-height-paragraph:        1.6; /* TODO: Make dynamic */
-  --line-height-super-paragraph:  1.7; /* TODO: Make dynamic */
+  --line-height-super-paragraph:  1.6; /* TODO: Make dynamic */
   --line-height-sub-paragraph:    1.7; /* TODO: Make dynamic */
 
 
+  --font-weight-normal-dark:      450;
   --font-weight-bold:             700;
   --font-weight-extra-bold:       800;
   
@@ -88,6 +89,10 @@ body, h4, h5, h6, p, li {
 body {
 	font-weight: 400; /* override */
   font-size: var(--font-size-paragraph);
+
+  @media (prefers-color-scheme: dark) {
+    font-weight: 450;
+  }
 }
 
 h1, h2, h3 {

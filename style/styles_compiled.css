@@ -172,10 +172,11 @@
   /* TODO: Make dynamic */
   --line-height-paragraph: 1.6;
   /* TODO: Make dynamic */
-  --line-height-super-paragraph: 1.7;
+  --line-height-super-paragraph: 1.6;
   /* TODO: Make dynamic */
   --line-height-sub-paragraph: 1.7;
   /* TODO: Make dynamic */
+  --font-weight-normal-dark: 450;
   --font-weight-bold: 700;
   --font-weight-extra-bold: 800;
   --font-family-sans-serif: -apple-system, "Roboto", "Helvetica", "Arial", sans-serif;
@@ -189,6 +190,9 @@ body {
   font-weight: 400;
   /* override */
   font-size: var(--font-size-paragraph); }
+  @media (prefers-color-scheme: dark) {
+    body {
+      font-weight: 450; } }
 
 h1, h2, h3 {
   font-family: var(--font-family-serif) !important;
