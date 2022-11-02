@@ -14,16 +14,18 @@
   --color-icon-selected:  var(--color-text-light-on-dark-emphasis);
   
   /* TODO Add to site */
-  --size-icon-scheme-trigger:     1.5rem;
-  --size-icon-scheme-controls:    1.75rem;
+  // --size-icon-scheme-trigger:     1.5rem;
+  // --size-icon-scheme-controls:    1.75rem;
+
+  --size-icon-scheme-trigger:     calc(var(--multiplier-browser-offset) * 1.5rem);
+  --size-icon-scheme-controls:     calc(var(--multiplier-browser-offset) * 1.75rem);
+
+
   --padding-icon-scheme-trigger:  calc(0.25 * var(--size-icon-scheme-trigger));
   --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
-
-  --size-icon-scheme-trigger:     calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-trigger));
-  --size-icon-scheme-controls:     calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-controls));
   
-  --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
-  --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
+  // --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
+  // --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
 
 
   --size-target-icon-scheme-trigger: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
