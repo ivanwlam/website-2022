@@ -1,4 +1,5 @@
-// Relevant
+@import '__misc-foundation';
+
 :root {
   /* Temporary */
   // --color-text-light-on-dark: white;
@@ -276,7 +277,7 @@ svg.scheme-icon {
   opacity: 1;
 }
 
-$breakpoint-mobile-header: 480px; /* TODO: Get actual value */
+// $breakpoint-mobile-header: 480px; /* TODO: Get variable from misc-foundation */
 
 @media screen and (max-width: $breakpoint-mobile-header) {
   #scheme-component {

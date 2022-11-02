@@ -310,9 +310,9 @@ h1, h2, h3, h4, h5, h6 {
   --spacing-medium: 0.5rem;
   --spacing-large: 1rem;
   --spacing-extra-large: 2rem;
-  --spacing-extra-extra-large: 4rem;
-  /* TODO: Temporary, Update */ }
+  --spacing-extra-extra-large: 4rem; }
 
+/* TODO: Temporary, Update */
 .et_pb_button,
 body .et_pb_button:hover,
 .et_pb_button.et_pb_bg_layout_light,
@@ -617,6 +617,20 @@ body .et_pb_section {
   max-width: fit-content; }
 
 :root {
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
+  --radius-round: 99999rem;
+  --border-radius: var(--border-radius-small);
+  --border-radius-button: var(--border-radius-medium);
+  --spacing-small: 0.25rem;
+  --spacing-medium: 0.5rem;
+  --spacing-large: 1rem;
+  --spacing-extra-large: 2rem;
+  --spacing-extra-extra-large: 4rem; }
+
+/* TODO: Temporary, Update */
+:root {
   /* Temporary */
   --color-bg-hover-on-dark: hsla(0 0% 100% / 20%);
   /* TODO: Add to actual site */
@@ -837,7 +851,6 @@ svg.scheme-icon {
 #module-scheme-controls li:hover .label-control {
   opacity: 1; }
 
-/* TODO: Get actual value */
 @media screen and (max-width: 480px) {
   #scheme-component {
     width: auto;
