@@ -48,7 +48,6 @@ const setSchemePref = () => {
  }
 
 const onClick_colorSchemeControl = (e) => {
-  console.log("click", e);
   setSchemePrefToTargetValue(e);
   setSchemePref();
 }

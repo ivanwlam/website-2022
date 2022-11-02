@@ -751,7 +751,9 @@ svg.scheme-icon {
   position: relative;
   width: var(--size-target-icon-scheme-controls);
   text-align: center;
-  background-color: var(--color-bg-light-highlight); }
+  background-color: var(--color-bg-light-highlight);
+  margin-bottom: 0;
+  /* override */ }
 
 #module-scheme-controls li,
 #module-scheme-controls li * {
@@ -874,5 +876,8 @@ svg.scheme-icon {
     box-shadow: none;
     border-radius: 0;
     margin-top: 0; } }
+/* DEBUG */
+.et_pb_row_1 {
+  background-color: var(--color-bg); }
 
 /*# sourceMappingURL=styles_compiled.css.map */
