@@ -157,6 +157,7 @@ svg.scheme-icon {
   width: var(--size-target-icon-scheme-controls);
   text-align: center;
   background-color: var(--color-bg-light-highlight);
+  margin-bottom: 0; /* override */
 }
 
 #module-scheme-controls li, 
