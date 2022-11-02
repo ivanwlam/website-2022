@@ -708,7 +708,9 @@ svg.scheme-icon {
   opacity: 0;
   padding: var(--padding-icon-scheme-trigger);
   --color-icon-fill: var(--color-text);
-  width: var(--size-icon-scheme-trigger); }
+  width: var(--size-icon-scheme-trigger);
+  width: calc(1.5 * var(--size-icon-scheme-trigger));
+  /* Browser offset, not sure why */ }
 
 [data-scheme-pref='light'] #scheme-trigger svg.scheme-light,
 [data-scheme-pref='auto'] #scheme-trigger svg.scheme-auto,
@@ -816,6 +818,7 @@ svg.scheme-icon {
 
 #module-scheme-controls li input:checked + label svg {
   --color-icon-fill: var(--color-text-light-on-dark);
+  --color-icon-fill: var(--color-text-light-on-dark-emphasis);
   transition-duration: var(--duration-icon-scheme-on); }
 
 #module-scheme-controls li input:checked + label svg.icon-on {
