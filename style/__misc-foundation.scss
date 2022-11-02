@@ -2,7 +2,8 @@
   --border-radius-small:          0.25rem;
   --border-radius-medium:         0.5rem;
   --border-radius-large:          1rem;
-
+  --radius-round:                 99999rem;
+  
   --border-radius:                var(--border-radius-small);
   --border-radius-button:         var(--border-radius-medium);
 
@@ -12,5 +13,8 @@
   --spacing-large:                1rem;
   --spacing-extra-large:          2rem;
   --spacing-extra-extra-large:    4rem;
+
+  $breakpoint-tablet:             480px; /* TODO: Temporary, Update */
+  $breakpoint-mobile-header:      $breakpoint-tablet;
 
 }

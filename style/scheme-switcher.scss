@@ -1,0 +1,303 @@
+// Relevant
+:root {
+  /* Temporary */
+  // --color-text-light-on-dark: white;
+  // --color-text-dark-on-light: black;
+  // --color-bg-dark: hsl(0 0% 0%);
+  --color-bg-hover-on-dark: hsla(0 0% 100% / 20%); /* TODO: Add to actual site */
+  
+  // --color-bg-light: hsl(0 0% 95%);
+  // --color-bg-light-highlight: hsl(0 0% 100%);
+  --color-bg-hover-on-light: hsla(0 0% 0% / 15%);/* TODO: Add to actual site */
+ 
+  // --color-text: var(--color-text-dark-on-light);
+  // --color-bg: var(--color-bg-light);
+  --color-bg-hover: var(--color-bg-hover-on-light); /* TODO: Add to actual site? */
+  
+  
+  /* TODO Add to site */
+  --size-icon-scheme-trigger:     1.5rem;
+  --size-icon-scheme-controls:    1.75rem;
+  // --size-icon-scheme: var(--size-icon-scheme-trigger);
+  --padding-icon-scheme-trigger: calc(0.25 * var(--size-icon-scheme-trigger));
+  --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
+  // --padding-icon-scheme: calc(0.25 * var(--size-icon-scheme));
+  
+  --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
+  --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
+  
+  
+  --duration-icon-scheme-on: 0.2s;
+  --duration-icon-scheme-off: 0.1s;
+}
+
+[data-scheme-pref='light'] {
+  --color-text:           var(--color-text-dark-on-light);
+  --color-bg:             var(--color-bg-light);
+  --color-bg-hover:       var(--color-bg-hover-on-light);
+}
+
+[data-scheme-pref='dark'] {
+  --color-text:           var(--color-text-light-on-dark);
+  --color-bg:             var(--color-bg-dark);
+  --color-bg-hover:       var(--color-bg-hover-on-dark);
+}
+
+[data-scheme-pref='auto'] {
+  @media (prefers-color-scheme: light) {
+    --color-text:         var(--color-text-dark-on-light);
+    --color-bg:           var(--color-bg-light);
+    --color-bg-hover:     var(--color-bg-hover-on-light);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    --color-text:         var(--color-text-light-on-dark);
+    --color-bg:           var(--color-bg-dark);
+    --color-bg-hover:     var(--color-bg-hover-on-dark);
+  }
+}
+
+#scheme-component {
+  background-color: red; /* Debug */
+  background-color: transparent;
+  display: inline-block;
+  width: var(--size-target-icon-scheme-trigger);
+  height: var(--size-target-icon-scheme-trigger);
+  position: relative;
+  
+  /* Adjustable in use */
+  margin-left: 10rem;
+}
+
+#scheme-component:hover {
+  width: auto;
+  height: auto;
+  transform: translateX(-50%);
+  left: calc(var(--size-target-icon-scheme-trigger)/2);
+}
+
+#scheme-trigger {
+  width: var(--size-target-icon-scheme-trigger);
+  height: var(--size-target-icon-scheme-trigger);
+  background-color: transparent;
+  border-radius: var(--radius-round);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  display: block;
+  
+}
+
+
+#scheme-component:hover #scheme-trigger,
+#scheme-component #scheme-trigger:focus-within{
+  background-color: var(--color-bg-hover);  
+}
+
+svg.scheme-icon {
+  background-color: transparent;
+}
+
+
+#scheme-trigger svg {
+  position: absolute;
+  opacity: 0;
+  padding: var(--padding-icon-scheme-trigger);
+  --color-icon-fill: var(--color-text);
+  width: var(--size-icon-scheme-trigger);
+}
+
+[data-scheme-pref='light'] #scheme-trigger svg.scheme-light,
+[data-scheme-pref='auto'] #scheme-trigger svg.scheme-auto,
+[data-scheme-pref='dark'] #scheme-trigger svg.scheme-dark{
+  opacity: 1;
+}
+
+
+#module-scheme-controls {
+  --padding-vertical: calc(0.375 * var(--size-icon-scheme-controls));
+  --padding-horizontal: calc(0.75 * var(--size-icon-scheme-controls));
+  --gap-between-targets: calc(0.5 * var(--size-icon-scheme-controls));
+  --color-bg-module: var(--color-bg-light-highlight);
+  --color-fg-module: var(--color-text-dark-on-light);
+  --color-icon-fill: var(--color-fg-module);
+  
+  background-color: var(--color-bg-module);
+  padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal);
+  border-radius: var(--border-radius-container-default);
+  display: inline-flex;
+  display: none;
+  gap: var(--gap-between-targets);
+  color: var(--color-fg-module);
+  // box-shadow: 0px 1px 4px hsla(0 0% 0% / 20%); /* TODO: Use preset shadow config */
+  box-shadow: var(--shadow);
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 1rem 0 0 0;
+}
+
+
+#scheme-component:hover #module-scheme-controls,
+#scheme-component:focus-within #module-scheme-controls {
+  display: inline-flex;
+}
+
+#module-scheme-controls li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  width: var(--size-target-icon-scheme-controls);
+  text-align: center;
+  background-color: var(--color-bg-light-highlight);
+}
+
+#module-scheme-controls li, 
+#module-scheme-controls li * {
+  cursor: pointer;
+}
+
+#module-scheme-controls li input[type=radio] {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  transform: translate(-5%, -5%);
+  appearance: none;
+  display: inline-block;
+  padding: 1rem;
+}
+
+#module-scheme-controls li input[type=radio]:focus {
+  outline: 2px auto lightblue;  /* lightblue = Fallback */
+  outline-color: invert; /* Fallback */
+  outline-color: currentColor;
+}
+
+#module-scheme-controls li label {
+  background-color: var(--color-bg-light-highlight);
+}
+
+#module-scheme-controls li button {
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+#module-scheme-controls li span.buttonBg {
+  border-radius: var(--radius-round);
+  display: inline-block;
+  padding: var(--padding-icon-scheme-controls);
+  width: var(--size-icon-scheme-controls);
+  height: var(--size-icon-scheme-controls);
+  transition-duration:  var(--duration-icon-scheme-off);
+  
+  transform: scale(0);
+  opacity: 1;
+}
+
+#module-scheme-controls li input:not(:checked)+label:hover span.buttonBg {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#module-scheme-controls li input:checked+label span.buttonBg {
+  background-color: var(--color-bg-dark);
+  fill: var(--text-light-on-dark);
+  transform: scale(1);
+  opacity: 1;
+  transition-duration: var(--duration-icon-scheme-on);
+}
+
+
+#module-scheme-controls li svg {
+  --color-icon-fill: var(--color-text-dark-on-light);
+  width: var(--size-icon-scheme-controls);
+  
+  position: absolute;
+  left: var(--padding-icon-scheme-controls);
+  top: var(--padding-icon-scheme-controls);
+}
+
+#module-scheme-controls li svg.icon-on {
+  opacity: 0;
+}
+
+#module-scheme-controls li svg,
+#module-scheme-controls li svg * {
+  transition-duration: var(--duration-icon-scheme-off);
+}
+
+#module-scheme-controls li input:checked+label svg {
+  --color-icon-fill: var(--color-text-light-on-dark);
+  transition-duration: var(--duration-icon-scheme-on);
+}
+
+#module-scheme-controls li input:checked+label svg.icon-on {
+  opacity: 1;
+}
+#module-scheme-controls li input:checked+label svg.icon-off {
+  opacity: 0;
+}
+
+#scheme-trigger svg.scheme-dark,
+#module-scheme-controls li input:checked+label svg.icon-on.scheme-dark{
+  /* Glow around the moon against dark background */
+  filter: drop-shadow(0px 0px 1rem var(--color-icon-fill));
+}
+
+#module-scheme-controls .label-control {
+  display: inline-block;
+  margin-top: 0.25em;
+  max-width: 125%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: "";
+  opacity: 0;
+  font-size: calc(0.6 * var(--size-icon-scheme-controls));
+}
+
+#module-scheme-controls li:hover .label-control {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: inherit;
+}
+
+#module-scheme-controls li input:checked+label .label-control {
+  font-weight: var(--font-weight-bold);
+}
+
+#module-scheme-controls li input:checked+label .label-control,
+#module-scheme-controls li:hover .label-control {
+  // text-decoration: underline; // Not needed if not all labels are showing.
+  opacity: 1;
+}
+
+$breakpoint-mobile-header: 480px; /* TODO: Get actual value */
+
+@media screen and (max-width: $breakpoint-mobile-header) {
+  #scheme-component {
+    width: auto;
+    position: static;
+  }
+  
+  #scheme-component:hover {
+    transform: none;
+  }
+  
+  #scheme-trigger {
+    display: none;
+  }
+  
+  #module-scheme-controls {
+    position: relative;
+    display: inline-flex;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
+  }
+  
+}

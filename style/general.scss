@@ -121,3 +121,11 @@ body .et_pb_section {
 .et_pb_divider::before {
 	border-top-color: var(--color-line) !important; /* override */ // TODO: Make colors based on variable */
 }
+
+/* Shadows */
+
+:root {
+  --color-shadow: hsla(0 0% 0% / 20%)
+  --shadow: 0px 1px 4px var(--color-shadow);
+
+}
