@@ -1,6 +1,8 @@
 @import '__misc-foundation';
 
 :root {
+  --multiplier-browser-offset: 1.5;
+
   /* Temporary */
   --color-bg-hover-on-dark: hsla(0 0% 100% / 20%); /* TODO: Add to actual site */
   
@@ -16,9 +18,16 @@
   --size-icon-scheme-controls:    1.75rem;
   --padding-icon-scheme-trigger:  calc(0.25 * var(--size-icon-scheme-trigger));
   --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
+
+  --size-icon-scheme-trigger:     calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-trigger));
+  --size-icon-scheme-controls:     calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-controls));
   
   --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
   --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
+
+
+  --size-target-icon-scheme-trigger: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
+  --size-target-icon-scheme-controls: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
   
   
   --duration-icon-scheme-on: 0.2s;
@@ -99,7 +108,7 @@ svg.scheme-icon {
   padding: var(--padding-icon-scheme-trigger);
   --color-icon-fill: var(--color-fg);
   width: var(--size-icon-scheme-trigger);
-  width: calc(1.5 * var(--size-icon-scheme-trigger)); /* Browser offset, not sure why */
+  // width: calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-trigger)); /* Browser offset, not sure why */
 }
 
 [data-scheme-pref='light'] #scheme-trigger svg.scheme-light,
