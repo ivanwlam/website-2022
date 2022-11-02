@@ -38,12 +38,14 @@
 
 [data-scheme-pref='light'] {
   --color-fg:             var(--color-text-dark-on-light);
+  --color-fg-emphasis:    var(--color-fg);
   --color-bg:             var(--color-bg-light);
   --color-bg-hover:       var(--color-bg-hover-on-light);
 }
 
 [data-scheme-pref='dark'] {
   --color-fg:             var(--color-text-light-on-dark);
+  --color-fg-emphasis:    var(--color-text-light-on-dark-emphasis);
   --color-bg:             var(--color-bg-dark);
   --color-bg-hover:       var(--color-bg-hover-on-dark);
 }
@@ -51,12 +53,14 @@
 [data-scheme-pref='auto'] {
   @media (prefers-color-scheme: light) {
     --color-fg:           var(--color-text-dark-on-light);
+    --color-fg-emphasis:  var(--color-fg);
     --color-bg:           var(--color-bg-light);
     --color-bg-hover:     var(--color-bg-hover-on-light);
   }
   
   @media (prefers-color-scheme: dark) {
     --color-fg:           var(--color-text-light-on-dark);
+    --color-fg-emphasis:  var(--color-text-light-on-dark-emphasis);
     --color-bg:           var(--color-bg-dark);
     --color-bg-hover:     var(--color-bg-hover-on-dark);
   }
@@ -108,7 +112,7 @@ svg.scheme-icon {
   position: absolute;
   opacity: 0;
   padding: var(--padding-icon-scheme-trigger);
-  --color-icon-fill: var(--color-fg);
+  --color-icon-fill: var(--color-fg-emphasis);
   width: var(--size-icon-scheme-trigger);
   // width: calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-trigger)); /* Browser offset, not sure why */
 }
@@ -118,6 +122,19 @@ svg.scheme-icon {
 [data-scheme-pref='dark'] #scheme-trigger svg.scheme-dark{
   opacity: 1;
 }
+
+
+/*
+#scheme-trigger svg.scheme-dark {
+  --color-icon-fill: var(--color-icon-selected);
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-scheme-pref='auto'] #scheme-trigger svg.scheme-auto {
+    --color-icon-fill: var(--color-icon-selected);
+  }
+}
+*/
 
 
 #module-scheme-controls {
@@ -199,8 +216,10 @@ svg.scheme-icon {
   border-radius: var(--radius-round);
   display: inline-block;
   padding: var(--padding-icon-scheme-controls);
-  width: var(--size-icon-scheme-controls);
-  height: var(--size-icon-scheme-controls);
+  // width: var(--size-icon-scheme-controls);
+  // height: var(--size-icon-scheme-controls);
+  width: var(--size-target-icon-scheme-controls);
+  height: var(--size-target-icon-scheme-controls);
   transition-duration:  var(--duration-icon-scheme-off);
   
   transform: scale(0);
@@ -214,7 +233,7 @@ svg.scheme-icon {
 
 #module-scheme-controls li input:checked+label span.buttonBg {
   background-color: var(--color-bg-dark);
-  fill: var(--text-light-on-dark);
+  // fill: var(--text-light-on-dark);
   transform: scale(1);
   opacity: 1;
   transition-duration: var(--duration-icon-scheme-on);
@@ -315,6 +334,6 @@ svg.scheme-icon {
 
 /* DEBUG */
 
-.et_pb_row_1 {
+body .et_pb_row_1 {
   background-color: var(--color-bg);
 }
