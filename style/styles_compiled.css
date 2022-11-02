@@ -646,8 +646,8 @@ body .et_pb_section {
   --size-icon-scheme-controls: calc(var(--multiplier-browser-offset) * 1.75rem);
   --padding-icon-scheme-trigger: calc(0.25 * var(--size-icon-scheme-trigger));
   --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
-  --size-target-icon-scheme-trigger: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
-  --size-target-icon-scheme-controls: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
+  --size-target-icon-scheme-trigger: calc((var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
+  --size-target-icon-scheme-controls: calc((var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
   --duration-icon-scheme-on: 0.2s;
   --duration-icon-scheme-off: 0.1s; }
 

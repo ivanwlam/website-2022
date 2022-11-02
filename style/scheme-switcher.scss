@@ -28,8 +28,8 @@
   // --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
 
 
-  --size-target-icon-scheme-trigger: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
-  --size-target-icon-scheme-controls: calc(var(--multiplier-browser-offset) * (var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
+  --size-target-icon-scheme-trigger: calc((var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
+  --size-target-icon-scheme-controls: calc((var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
   
   
   --duration-icon-scheme-on: 0.2s;
