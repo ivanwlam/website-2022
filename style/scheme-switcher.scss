@@ -2,27 +2,20 @@
 
 :root {
   /* Temporary */
-  // --color-text-light-on-dark: white;
-  // --color-text-dark-on-light: black;
-  // --color-bg-dark: hsl(0 0% 0%);
   --color-bg-hover-on-dark: hsla(0 0% 100% / 20%); /* TODO: Add to actual site */
   
-  // --color-bg-light: hsl(0 0% 95%);
-  // --color-bg-light-highlight: hsl(0 0% 100%);
   --color-bg-hover-on-light: hsla(0 0% 0% / 15%);/* TODO: Add to actual site */
  
-  // --color-text: var(--color-text-dark-on-light);
-  // --color-bg: var(--color-bg-light);
   --color-bg-hover: var(--color-bg-hover-on-light); /* TODO: Add to actual site? */
   
+  --color-icon-control:   var(--color-text-dark-on-light);
+  --color-icon-selected:  var(--color-text-light-on-dark-emphasis);
   
   /* TODO Add to site */
   --size-icon-scheme-trigger:     1.5rem;
   --size-icon-scheme-controls:    1.75rem;
-  // --size-icon-scheme: var(--size-icon-scheme-trigger);
-  --padding-icon-scheme-trigger: calc(0.25 * var(--size-icon-scheme-trigger));
+  --padding-icon-scheme-trigger:  calc(0.25 * var(--size-icon-scheme-trigger));
   --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
-  // --padding-icon-scheme: calc(0.25 * var(--size-icon-scheme));
   
   --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
   --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
@@ -33,26 +26,26 @@
 }
 
 [data-scheme-pref='light'] {
-  --color-text:           var(--color-text-dark-on-light);
+  --color-fg:             var(--color-text-dark-on-light);
   --color-bg:             var(--color-bg-light);
   --color-bg-hover:       var(--color-bg-hover-on-light);
 }
 
 [data-scheme-pref='dark'] {
-  --color-text:           var(--color-text-light-on-dark);
+  --color-fg:             var(--color-text-light-on-dark);
   --color-bg:             var(--color-bg-dark);
   --color-bg-hover:       var(--color-bg-hover-on-dark);
 }
 
 [data-scheme-pref='auto'] {
   @media (prefers-color-scheme: light) {
-    --color-text:         var(--color-text-dark-on-light);
+    --color-fg:           var(--color-text-dark-on-light);
     --color-bg:           var(--color-bg-light);
     --color-bg-hover:     var(--color-bg-hover-on-light);
   }
   
   @media (prefers-color-scheme: dark) {
-    --color-text:         var(--color-text-light-on-dark);
+    --color-fg:           var(--color-text-light-on-dark);
     --color-bg:           var(--color-bg-dark);
     --color-bg-hover:     var(--color-bg-hover-on-dark);
   }
@@ -104,7 +97,7 @@ svg.scheme-icon {
   position: absolute;
   opacity: 0;
   padding: var(--padding-icon-scheme-trigger);
-  --color-icon-fill: var(--color-text);
+  --color-icon-fill: var(--color-fg);
   width: var(--size-icon-scheme-trigger);
   width: calc(1.5 * var(--size-icon-scheme-trigger)); /* Browser offset, not sure why */
 }
@@ -216,7 +209,8 @@ svg.scheme-icon {
 
 
 #module-scheme-controls li svg {
-  --color-icon-fill: var(--color-text-dark-on-light);
+  // --color-icon-fill: var(--color-text-dark-on-light);
+  --color-icon-fill: var(--color-icon-control);
   width: var(--size-icon-scheme-controls);
   
   position: absolute;
@@ -234,8 +228,8 @@ svg.scheme-icon {
 }
 
 #module-scheme-controls li input:checked+label svg {
-  --color-icon-fill: var(--color-text-light-on-dark);
-  --color-icon-fill: var(--color-text-light-on-dark-emphasis);
+  // --color-icon-fill: var(--color-text-light-on-dark);
+  --color-icon-fill: var(--color-icon-selected);
   transition-duration: var(--duration-icon-scheme-on);
 }
 

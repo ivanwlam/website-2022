@@ -638,6 +638,8 @@ body .et_pb_section {
   /* TODO: Add to actual site */
   --color-bg-hover: var(--color-bg-hover-on-light);
   /* TODO: Add to actual site? */
+  --color-icon-control: var(--color-text-dark-on-light);
+  --color-icon-selected: var(--color-text-light-on-dark-emphasis);
   /* TODO Add to site */
   --size-icon-scheme-trigger: 1.5rem;
   --size-icon-scheme-controls: 1.75rem;
@@ -649,23 +651,23 @@ body .et_pb_section {
   --duration-icon-scheme-off: 0.1s; }
 
 [data-scheme-pref='light'] {
-  --color-text: var(--color-text-dark-on-light);
+  --color-fg: var(--color-text-dark-on-light);
   --color-bg: var(--color-bg-light);
   --color-bg-hover: var(--color-bg-hover-on-light); }
 
 [data-scheme-pref='dark'] {
-  --color-text: var(--color-text-light-on-dark);
+  --color-fg: var(--color-text-light-on-dark);
   --color-bg: var(--color-bg-dark);
   --color-bg-hover: var(--color-bg-hover-on-dark); }
 
 @media (prefers-color-scheme: light) {
   [data-scheme-pref='auto'] {
-    --color-text: var(--color-text-dark-on-light);
+    --color-fg: var(--color-text-dark-on-light);
     --color-bg: var(--color-bg-light);
     --color-bg-hover: var(--color-bg-hover-on-light); } }
 @media (prefers-color-scheme: dark) {
   [data-scheme-pref='auto'] {
-    --color-text: var(--color-text-light-on-dark);
+    --color-fg: var(--color-text-light-on-dark);
     --color-bg: var(--color-bg-dark);
     --color-bg-hover: var(--color-bg-hover-on-dark); } }
 
@@ -707,7 +709,7 @@ svg.scheme-icon {
   position: absolute;
   opacity: 0;
   padding: var(--padding-icon-scheme-trigger);
-  --color-icon-fill: var(--color-text);
+  --color-icon-fill: var(--color-fg);
   width: var(--size-icon-scheme-trigger);
   width: calc(1.5 * var(--size-icon-scheme-trigger));
   /* Browser offset, not sure why */ }
@@ -803,7 +805,7 @@ svg.scheme-icon {
   transition-duration: var(--duration-icon-scheme-on); }
 
 #module-scheme-controls li svg {
-  --color-icon-fill: var(--color-text-dark-on-light);
+  --color-icon-fill: var(--color-icon-control);
   width: var(--size-icon-scheme-controls);
   position: absolute;
   left: var(--padding-icon-scheme-controls);
@@ -817,8 +819,7 @@ svg.scheme-icon {
   transition-duration: var(--duration-icon-scheme-off); }
 
 #module-scheme-controls li input:checked + label svg {
-  --color-icon-fill: var(--color-text-light-on-dark);
-  --color-icon-fill: var(--color-text-light-on-dark-emphasis);
+  --color-icon-fill: var(--color-icon-selected);
   transition-duration: var(--duration-icon-scheme-on); }
 
 #module-scheme-controls li input:checked + label svg.icon-on {
