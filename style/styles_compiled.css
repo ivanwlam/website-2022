@@ -306,6 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   --radius-round: 99999rem;
   --border-radius: var(--border-radius-small);
   --border-radius-button: var(--border-radius-medium);
+  --border-radius-container: var(--border-radius-medium);
   --spacing-small: 0.25rem;
   --spacing-medium: 0.5rem;
   --spacing-large: 1rem;
@@ -623,6 +624,7 @@ body .et_pb_section {
   --radius-round: 99999rem;
   --border-radius: var(--border-radius-small);
   --border-radius-button: var(--border-radius-medium);
+  --border-radius-container: var(--border-radius-medium);
   --spacing-small: 0.25rem;
   --spacing-medium: 0.5rem;
   --spacing-large: 1rem;
