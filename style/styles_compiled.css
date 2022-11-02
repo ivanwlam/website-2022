@@ -730,7 +730,6 @@ svg.scheme-icon {
   background-color: var(--color-bg-module);
   padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal);
   border-radius: var(--border-radius-container);
-  display: inline-flex;
   display: none;
   gap: var(--gap-between-targets);
   color: var(--color-fg-module);
@@ -738,7 +737,9 @@ svg.scheme-icon {
   position: relative;
   transform: translateX(-50%);
   left: 50%;
-  margin: 1rem 0 0 0; }
+  margin: 1rem 0 0 0;
+  display: inline-flex;
+  /* Debug */ }
 
 #scheme-component:hover #module-scheme-controls,
 #scheme-component:focus-within #module-scheme-controls {
