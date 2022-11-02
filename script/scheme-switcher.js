@@ -68,6 +68,7 @@ const updateColorSchemeControlWithPref = () => {
 }
 
 const runFeature_ColorSchemeControl = () => {
+  console.log("Running: runFeature_ColorSchemeControl");
   // Set early so no page flashes and that CSS is made aware
   reflectSchemePref();
 
@@ -76,6 +77,8 @@ const runFeature_ColorSchemeControl = () => {
     reflectSchemePref();
     setUpColorSchemeControls();
     updateColorSchemeControlWithPref();
+
+    console.log("End of runFeature_ColorSchemeControl");
   }
 }
 
