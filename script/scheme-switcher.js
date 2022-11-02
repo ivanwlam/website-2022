@@ -62,7 +62,9 @@ const setUpColorSchemeControls = () => {
 
 const updateColorSchemeControlWithPref = () => {
   const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
-  document.querySelector(colorSchemeControlSelector).setAttribute("checked","checked");
+  if (document.querySelector(colorSchemeControlSelector)) {
+    document.querySelector(colorSchemeControlSelector).setAttribute("checked", "checked");
+  }
 }
 
 const runFeature_ColorSchemeControl = () => {
