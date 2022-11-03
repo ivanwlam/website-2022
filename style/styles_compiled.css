@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --color-hue-blue: 202;
   --color-hue-green: 119;
@@ -861,7 +860,7 @@ svg.scheme-icon {
 #scheme-trigger svg.scheme-dark,
 #module-scheme-controls li input:checked + label svg.icon-on.scheme-dark {
   /* Glow around the moon against dark background */
-  filter: drop-shadow(0px 0px 1rem var(--color-icon-fill)); }
+  filter: drop-shadow(0px 0px 0.25rem var(--color-icon-fill)); }
 
 #module-scheme-controls .label-control {
   display: inline-block;
@@ -907,8 +906,11 @@ body .et_pb_row_1 {
   background-color: var(--color-bg);
   border-bottom: 1px solid black; }
 
-/* TODO: Hover when header is sticky doesn't…
-
+/* TODO: 
+- 11/2/22: On load, the checked state is not reflected from CSS (even though HTML shows "checked" attribute.
+- 11/2/22: Finish migrating variables.
+- 11/2/22: Fix colors (text, bg, etc.) by color mode (by consolidating variables)
+- 11/2/22: On controls hover, the span.buttonBg don't show.
 */
 
 /*# sourceMappingURL=styles_compiled.css.map */
