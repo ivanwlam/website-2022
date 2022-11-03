@@ -64,7 +64,7 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
 const setUpColorSchemeControls = () => {
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
     el.addEventListener("click", onClick_colorSchemeControl);
-    el.addEventListener("change", onClick_colorSchemeControl);
+    // el.addEventListener("change", onClick_colorSchemeControl);
     el.removeAttribute("checked");
   });
 }
