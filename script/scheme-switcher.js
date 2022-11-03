@@ -81,7 +81,6 @@ const updateColorSchemeControlWithPref = () => {
   // }
 }
 
-// const runFeature_ColorSchemeControl = () => {
 console.log("Running: scheme-switcher scripts");
 // Set early so no page flashes and that CSS is made aware
 reflectSchemePref();
@@ -92,12 +91,9 @@ window.onload = () => {
   setUpColorSchemeControls();
   setTimeout(() => {
     updateColorSchemeControlWithPref();
-  }, 1000);
+  }, 1000); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
 
 }
-
-
-// }
 
 
 console.log("End of scheme-switcher.js");
