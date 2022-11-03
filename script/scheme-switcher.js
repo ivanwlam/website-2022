@@ -81,11 +81,6 @@ const runFeature_ColorSchemeControl = () => {
     setUpColorSchemeControls();
     // updateColorSchemeControlWithPref();
 
-    const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
-    if (document.querySelector(colorSchemeControlSelector)) {
-      document.querySelector(colorSchemeControlSelector).setAttribute("checked", "checked");
-    }
-    
     console.log("End of runFeature_ColorSchemeControl");
   }
 }
