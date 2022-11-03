@@ -810,7 +810,7 @@ svg.scheme-icon {
   transform: scale(0);
   opacity: 0; }
 
-#module-scheme-controls li input:not(:checked):hover + label span.buttonBg {
+#module-scheme-controls li:hover input:not(:checked) + label span.buttonBg {
   transform: scale(1);
   opacity: 1; }
 
