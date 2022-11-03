@@ -67,7 +67,7 @@
 }
 
 body .header-sticky {
-  z-index: 2; /* Have it show above content before sticking to top */
+  z-index: 3; /* Have it show above content before sticking to top */
 }
 
 #scheme-component {
@@ -368,3 +368,7 @@ body .et_pb_row_1 {
   background-color: var(--color-bg);
   border-bottom: 1px solid black;
 }
+
+/* TODO: Hover when header is sticky doesn't…
+
+*/

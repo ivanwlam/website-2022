@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-hue-blue: 202;
   --color-hue-green: 119;
@@ -678,7 +679,7 @@ body .et_pb_section {
     --color-bg-hover: var(--color-bg-hover-on-dark); } }
 
 body .header-sticky {
-  z-index: 2;
+  z-index: 3;
   /* Have it show above content before sticking to top */ }
 
 #scheme-component {
@@ -905,5 +906,9 @@ svg.scheme-icon {
 body .et_pb_row_1 {
   background-color: var(--color-bg);
   border-bottom: 1px solid black; }
+
+/* TODO: Hover when header is sticky doesn't…
+
+*/
 
 /*# sourceMappingURL=styles_compiled.css.map */
