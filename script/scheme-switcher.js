@@ -74,7 +74,8 @@ const updateColorSchemeControlWithPref = () => {
   console.log("radio input element", document.querySelector(colorSchemeControlSelector));
   // if (document.querySelector(colorSchemeControlSelector) ) {
     console.log("radio input element: before", document.querySelector(colorSchemeControlSelector));
-    document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
+    // document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
+    document.querySelector(colorSchemeControlSelector)?.click();
     console.log("radio input element: after", document.querySelector(colorSchemeControlSelector));
   
   // }
