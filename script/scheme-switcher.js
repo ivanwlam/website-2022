@@ -75,13 +75,13 @@ const runFeature_ColorSchemeControl = () => {
   // Set early so no page flashes and that CSS is made aware
   reflectSchemePref();
 
-  window.onload = () => {
+  body.onload = () => {
     // Set after the buttons exist
     reflectSchemePref();
     setUpColorSchemeControls();
-    setTimeout(() => {
+    // setTimeout(() => {
       updateColorSchemeControlWithPref();
-    }, 1000);
+    // }, 1000);
 
     console.log("End of runFeature_ColorSchemeControl");
   }
