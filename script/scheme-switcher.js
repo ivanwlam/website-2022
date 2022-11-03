@@ -79,7 +79,9 @@ const runFeature_ColorSchemeControl = () => {
     // Set after the buttons exist
     reflectSchemePref();
     setUpColorSchemeControls();
-    // updateColorSchemeControlWithPref();
+    setTimeout(() => {
+      updateColorSchemeControlWithPref();
+    }, 1000);
 
     console.log("End of runFeature_ColorSchemeControl");
   }
