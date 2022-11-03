@@ -66,6 +66,10 @@
   }
 }
 
+body .header-sticky {
+  z-index: 2; /* Have it show above content before sticking to top */
+}
+
 #scheme-component {
   background-color: red; /* Debug */
   background-color: transparent;
@@ -92,7 +96,7 @@
   // background-color: red;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #scheme-component:hover div#scheme-component-wrapper {
@@ -179,7 +183,7 @@ svg.scheme-icon {
   margin-top: var(--gap-between-trigger-and-module);
   margin-left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
 
   // display: inline-flex; /* Debug */
 }
