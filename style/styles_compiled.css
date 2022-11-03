@@ -778,8 +778,8 @@ svg.scheme-icon {
   width: 110%;
   height: 110%;
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: 0;
+  left: -10%;
   transform: translate(-5%, -5%);
   appearance: none;
   display: inline-block;
