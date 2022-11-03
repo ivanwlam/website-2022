@@ -93,9 +93,9 @@ window.onload = () => {
   // Set after the buttons exist
   reflectSchemePref();
   setUpColorSchemeControls();
-  setTimeout(() => {
-    updateColorSchemeControlWithPref();
-  }, 100); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
+  // setTimeout(() => {
+    // updateColorSchemeControlWithPref();
+  // }, 100); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
 
 }
 
@@ -106,13 +106,40 @@ console.log("End of scheme-switcher.js");
 
 /* Site-specific modifications */
 
-const windowResized = () => {
-  console.log("Sticky header resized");
 
-  setUpColorSchemeControls();
+function waitForElm(selector) {
+  return new Promise(resolve => {
+      if (document.querySelector(selector)) {
+          return resolve(document.querySelector(selector));
+      }
+
+      const observer = new MutationObserver(mutations => {
+          if (document.querySelector(selector)) {
+              resolve(document.querySelector(selector));
+              observer.disconnect();
+          }
+      });
+
+      observer.observe(document.body, {
+          childList: true,
+          subtree: true
+      });
+  });
+}
+
+const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
+waitForElm(colorSchemeControlSelector).then((el) => {
   updateColorSchemeControlWithPref();
-}
+});
 
-window.onresize = () => {
-  // windowResized();
-}
+
+// const windowResized = () => {
+//   console.log("Sticky header resized");
+
+//   setUpColorSchemeControls();
+//   updateColorSchemeControlWithPref();
+// }
+
+// window.onresize = () => {
+//   windowResized();
+// }
