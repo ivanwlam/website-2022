@@ -297,11 +297,11 @@ svg.scheme-icon {
   text-overflow: inherit;
 }
 
-#module-scheme-controls li input:checked+label .label-control {
+#module-scheme-controls li input[checked=checked]+label .label-control {
   font-weight: var(--font-weight-bold);
 }
 
-#module-scheme-controls li input:checked+label .label-control,
+#module-scheme-controls li input[checked=checked]+label .label-control,
 #module-scheme-controls li:hover .label-control {
   // text-decoration: underline; // Not needed if not all labels are showing.
   opacity: 1;

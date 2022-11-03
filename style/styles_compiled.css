@@ -866,10 +866,10 @@ svg.scheme-icon {
   overflow: visible;
   text-overflow: inherit; }
 
-#module-scheme-controls li input:checked + label .label-control {
+#module-scheme-controls li input[checked=checked] + label .label-control {
   font-weight: var(--font-weight-bold); }
 
-#module-scheme-controls li input:checked + label .label-control,
+#module-scheme-controls li input[checked=checked] + label .label-control,
 #module-scheme-controls li:hover .label-control {
   opacity: 1; }
 
