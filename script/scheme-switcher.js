@@ -63,6 +63,8 @@ const updateColorSchemeControlWithPref = () => {
   const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
   if (document.querySelector(colorSchemeControlSelector)) {
     document.querySelector(colorSchemeControlSelector).setAttribute("checked", "checked");
+  } else {
+    console.log("Cannot find radio input", document.querySelector(colorSchemeControlSelector));
   }
 }
 
