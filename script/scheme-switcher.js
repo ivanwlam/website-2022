@@ -99,3 +99,16 @@ window.onload = () => {
 console.log("End of scheme-switcher.js");
 
 // runFeature_ColorSchemeControl();
+
+/* Site-specific modifications */
+
+const stickyHeaderResized = () => {
+  console.log("Sticky header resized");
+
+  updateColorSchemeControlWithPref();
+}
+
+body.onload = () => {
+  document.querySelector("body .header-sticky").addEventListener("resize", stickyHeaderResized);
+
+}
