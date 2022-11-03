@@ -62,21 +62,24 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
 }
 
 const setUpColorSchemeControls = () => {
+  console.debug("Before setup");
+  console.debug(document.querySelectorAll(".color-scheme-control"));
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
     el.addEventListener("click", onClick_colorSchemeControl);
-    // el.addEventListener("change", onClick_colorSchemeControl);
     el.removeAttribute("checked");
   });
+  console.debug("after setup");
+  console.debug(document.querySelectorAll(".color-scheme-control"));
 }
 
 const updateColorSchemeControlWithPref = () => {
   const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
-  console.log("radio input element", document.querySelector(colorSchemeControlSelector));
+  console.debug("radio input element", document.querySelector(colorSchemeControlSelector));
   // if (document.querySelector(colorSchemeControlSelector) ) {
-    console.log("radio input element: before", document.querySelector(colorSchemeControlSelector));
+    console.debug("radio input element: before", document.querySelector(colorSchemeControlSelector));
     document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
     document.querySelector(colorSchemeControlSelector)?.click();
-    console.log("radio input element: after", document.querySelector(colorSchemeControlSelector));
+    console.debug("radio input element: after", document.querySelector(colorSchemeControlSelector));
   
   // }
 }
