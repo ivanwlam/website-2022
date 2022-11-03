@@ -371,6 +371,7 @@ body .et_pb_row_1 {
 
 /* TODO: 
 - 11/2/22: On load, the checked state is not reflected from CSS (even though HTML shows "checked" attribute.
+- resizing window width removes the checked state
 - 11/2/22: Finish migrating variables.
 - 11/2/22: Fix colors (text, bg, etc.) by color mode (by consolidating variables)
 - 11/2/22: On controls hover, the span.buttonBg don't show.

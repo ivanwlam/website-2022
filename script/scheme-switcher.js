@@ -53,10 +53,10 @@ const onClick_colorSchemeControl = (e) => {
 }
 
 const verifyThatColorSchemeControlIsChecked = (e) => {
-  console.log("verifying scheme control change");
-  console.log("control value:", e.target.value);
+  console.debug("verifying scheme control change");
+  console.debug("control value:", e.target.value);
   if (e.target.value == true) {
-    console.log("control is checked", e.target);
+    console.debug("control is checked", e.target);
     onClick_colorSchemeControl(e);
   }
 }
@@ -81,7 +81,7 @@ const updateColorSchemeControlWithPref = () => {
   // }
 }
 
-console.log("Running: scheme-switcher scripts");
+console.debug("Running: scheme-switcher scripts");
 // Set early so no page flashes and that CSS is made aware
 reflectSchemePref();
 
@@ -96,7 +96,7 @@ window.onload = () => {
 }
 
 
-console.log("End of scheme-switcher.js");
+console.debug("End of scheme-switcher.js");
 
 // runFeature_ColorSchemeControl();
 
@@ -104,7 +104,7 @@ console.log("End of scheme-switcher.js");
 
 
 // const windowResized = () => {
-//   console.log("Sticky header resized");
+//   console.debug("Sticky header resized");
 
 //   setUpColorSchemeControls();
 //   updateColorSchemeControlWithPref();
