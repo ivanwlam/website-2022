@@ -108,4 +108,6 @@ const stickyHeaderResized = () => {
   updateColorSchemeControlWithPref();
 }
 
-window.onresize("resize", stickyHeaderResized);
+window.onresize = () => {
+  stickyHeaderResized();
+}
