@@ -89,9 +89,9 @@ window.onload = () => {
   // Set after the buttons exist
   reflectSchemePref();
   setUpColorSchemeControls();
-  // setTimeout(() => {
+  setTimeout(() => {
     updateColorSchemeControlWithPref();
-  // }, 2500);
+  }, 2500);
 
 }
 
