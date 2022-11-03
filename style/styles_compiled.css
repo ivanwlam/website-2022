@@ -685,6 +685,7 @@ body .et_pb_section {
   width: var(--size-target-icon-scheme-trigger);
   height: var(--size-target-icon-scheme-trigger);
   position: relative;
+  --gap-between-trigger-and-module: 1rem;
   /* Adjustable in use */
   margin-left: 10rem; }
 
@@ -696,7 +697,7 @@ body .et_pb_section {
 
 #scheme-component:hover div#scheme-component-wrapper {
   width: 200%;
-  height: calc(100% + (1.1 * 1rem));
+  height: calc(100% + (1.1 * var(--gap-between-trigger-and-module)));
   margin-left: -50%; }
 
 #scheme-trigger {
@@ -754,11 +755,8 @@ svg.scheme-icon {
   color: var(--color-fg-module);
   box-shadow: var(--shadow);
   position: relative;
-  transform: translateX(-50%);
-  left: 50%;
-  margin: 1rem 0 0 0;
   position: absolute;
-  margin-top: 1rem;
+  margin-top: var(--gap-between-trigger-and-module);
   margin-left: 50%;
   transform: translateX(-50%); }
 
