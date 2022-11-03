@@ -81,8 +81,8 @@
 #scheme-component:hover {
   width: auto;
   height: auto;
-  transform: translateX(-50%);
-  left: calc(var(--size-target-icon-scheme-trigger)/2);
+  // transform: translateX(-50%);
+  // left: calc(var(--size-target-icon-scheme-trigger)/2);
 }
 
 #scheme-trigger {
@@ -157,6 +157,11 @@ svg.scheme-icon {
   transform: translateX(-50%);
   left: 50%;
   margin: 1rem 0 0 0;
+
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
 
   // display: inline-flex; /* Debug */
 }
