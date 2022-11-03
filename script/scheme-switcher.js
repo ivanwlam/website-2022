@@ -85,6 +85,15 @@ const updateColorSchemeControlWithPref = () => {
 
     console.log("End of runFeature_ColorSchemeControl");
   }
+
+body.onload = () => {
+    
+  setUpColorSchemeControls();
+  setTimeout(() => {
+    updateColorSchemeControlWithPref();
+  }, 1000);
+}
+
 // }
 
 
