@@ -70,7 +70,7 @@ const updateColorSchemeControlWithPref = () => {
   }
 }
 
-const runFeature_ColorSchemeControl = () => {
+// const runFeature_ColorSchemeControl = () => {
   console.log("Running: runFeature_ColorSchemeControl");
   // Set early so no page flashes and that CSS is made aware
   reflectSchemePref();
@@ -79,14 +79,14 @@ const runFeature_ColorSchemeControl = () => {
     // Set after the buttons exist
     reflectSchemePref();
     setUpColorSchemeControls();
-    setTimeout(() => {
+    // setTimeout(() => {
       updateColorSchemeControlWithPref();
-    }, 500);
+    // }, 500);
 
     console.log("End of runFeature_ColorSchemeControl");
   }
-}
+// }
 
 
 
-runFeature_ColorSchemeControl();
+// runFeature_ColorSchemeControl();
