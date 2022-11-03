@@ -108,7 +108,4 @@ const stickyHeaderResized = () => {
   updateColorSchemeControlWithPref();
 }
 
-body.onload = () => {
-  document.querySelector("body .header-sticky").addEventListener("resize", stickyHeaderResized);
-
-}
+window.onresize("resize", stickyHeaderResized);
