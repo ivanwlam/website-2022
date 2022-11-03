@@ -633,7 +633,6 @@ body .et_pb_section {
 
 /* TODO: Temporary, Update */
 :root {
-  --multiplier-browser-offset: 1.5;
   /* Temporary */
   --color-bg-hover-on-dark: hsla(0 0% 100% / 20%);
   /* TODO: Add to actual site */
@@ -644,12 +643,12 @@ body .et_pb_section {
   --color-icon-control: var(--color-text-dark-on-light);
   --color-icon-selected: var(--color-text-light-on-dark-emphasis);
   /* TODO Add to site */
-  --size-icon-scheme-trigger: calc(var(--multiplier-browser-offset) * 1.5rem);
-  --size-icon-scheme-controls: calc(1 * 1.75rem);
+  --size-icon-scheme-trigger: 1.5rem;
+  --size-icon-scheme-controls: 1.75rem;
   --padding-icon-scheme-trigger: calc(0.25 * var(--size-icon-scheme-trigger));
   --padding-icon-scheme-controls: calc(0.25 * var(--size-icon-scheme-controls));
-  --size-target-icon-scheme-trigger: calc((var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger))));
-  --size-target-icon-scheme-controls: calc((var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls))));
+  --size-target-icon-scheme-trigger: calc(var(--size-icon-scheme-trigger) + (2 * var(--padding-icon-scheme-trigger)));
+  --size-target-icon-scheme-controls: calc(var(--size-icon-scheme-controls) + (2 * var(--padding-icon-scheme-controls)));
   --duration-icon-scheme-on: 0.2s;
   --duration-icon-scheme-off: 0.1s; }
 
@@ -702,6 +701,7 @@ body .et_pb_section {
   border-radius: var(--radius-round);
   margin-left: auto;
   margin-right: auto;
+  padding: var(--padding-icon-scheme-trigger);
   cursor: pointer;
   display: block; }
 
@@ -715,7 +715,6 @@ svg.scheme-icon {
 #scheme-trigger svg {
   position: absolute;
   opacity: 0;
-  padding: var(--padding-icon-scheme-trigger);
   --color-icon-fill: var(--color-fg-emphasis);
   width: var(--size-icon-scheme-trigger); }
 
@@ -752,9 +751,7 @@ svg.scheme-icon {
   position: relative;
   transform: translateX(-50%);
   left: 50%;
-  margin: 1rem 0 0 0;
-  display: inline-flex;
-  /* Debug */ }
+  margin: 1rem 0 0 0; }
 
 #scheme-component:hover #module-scheme-controls,
 #scheme-component:focus-within #module-scheme-controls {
@@ -892,6 +889,7 @@ svg.scheme-icon {
     margin-top: 0; } }
 /* DEBUG */
 body .et_pb_row_1 {
-  background-color: var(--color-bg); }
+  background-color: var(--color-bg);
+  border-bottom: 1px solid black; }
 
 /*# sourceMappingURL=styles_compiled.css.map */
