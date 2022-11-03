@@ -71,31 +71,24 @@ const updateColorSchemeControlWithPref = () => {
 }
 
 // const runFeature_ColorSchemeControl = () => {
-  console.log("Running: runFeature_ColorSchemeControl");
-  // Set early so no page flashes and that CSS is made aware
+console.log("Running: scheme-switcher scripts");
+// Set early so no page flashes and that CSS is made aware
+reflectSchemePref();
+
+window.onload = () => {
+  // Set after the buttons exist
   reflectSchemePref();
-
-  window.onload = () => {
-    // Set after the buttons exist
-    reflectSchemePref();
-    setUpColorSchemeControls();
-    // setTimeout(() => {
-      updateColorSchemeControlWithPref();
-    // }, 500);
-
-    console.log("End of runFeature_ColorSchemeControl");
-  }
-
-body.onload = () => {
-    
   setUpColorSchemeControls();
   setTimeout(() => {
     updateColorSchemeControlWithPref();
-  }, 1000);
+  }, 2500);
+
 }
+
 
 // }
 
 
+console.log("End of scheme-switcher.js");
 
 // runFeature_ColorSchemeControl();
