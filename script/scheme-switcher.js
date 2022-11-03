@@ -102,7 +102,7 @@ console.log("End of scheme-switcher.js");
 
 /* Site-specific modifications */
 
-const stickyHeaderResized = () => {
+const windowResized = () => {
   console.log("Sticky header resized");
 
   setUpColorSchemeControls();
@@ -110,5 +110,5 @@ const stickyHeaderResized = () => {
 }
 
 window.onresize = () => {
-  stickyHeaderResized();
+  // windowResized();
 }
