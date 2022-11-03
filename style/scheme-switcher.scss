@@ -223,12 +223,13 @@ svg.scheme-icon {
   width: var(--size-target-icon-scheme-controls);
   height: var(--size-target-icon-scheme-controls);
   transition-duration:  var(--duration-icon-scheme-off);
-  
+  background-color: var(--color-bg-hover);
+
   transform: scale(0);
-  opacity: 1;
+  opacity: 0;
 }
 
-#module-scheme-controls li input:not(:checked)+label:hover span.buttonBg {
+#module-scheme-controls li input:not(:checked):hover+label span.buttonBg {
   transform: scale(1);
   opacity: 1;
 }
