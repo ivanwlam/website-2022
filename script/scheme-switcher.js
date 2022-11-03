@@ -95,7 +95,7 @@ window.onload = () => {
   setUpColorSchemeControls();
   setTimeout(() => {
     updateColorSchemeControlWithPref();
-  }, 1000); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
+  }, 100); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
 
 }
 
