@@ -62,15 +62,11 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
 }
 
 const setUpColorSchemeControls = () => {
-  console.debug("Before setup");
-  console.debug(document.querySelectorAll(".color-scheme-control"));
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
     el.removeAttribute("checked");
     el.checked = false;
     el.addEventListener("click", onClick_colorSchemeControl);
   });
-  console.debug("after setup");
-  console.debug(document.querySelectorAll(".color-scheme-control"));
 }
 
 const updateColorSchemeControlWithPref = () => {
@@ -94,7 +90,7 @@ window.onload = () => {
   reflectSchemePref();
   setUpColorSchemeControls();
   // setTimeout(() => {
-    // updateColorSchemeControlWithPref();
+    updateColorSchemeControlWithPref();
   // }, 100); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
 
 }
@@ -105,32 +101,6 @@ console.log("End of scheme-switcher.js");
 // runFeature_ColorSchemeControl();
 
 /* Site-specific modifications */
-
-
-function waitForElm(selector) {
-  return new Promise(resolve => {
-      if (document.querySelector(selector)) {
-          return resolve(document.querySelector(selector));
-      }
-
-      const observer = new MutationObserver(mutations => {
-          if (document.querySelector(selector)) {
-              resolve(document.querySelector(selector));
-              observer.disconnect();
-          }
-      });
-
-      observer.observe(document.body, {
-          childList: true,
-          subtree: true
-      });
-  });
-}
-
-const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
-waitForElm(colorSchemeControlSelector).then((el) => {
-  updateColorSchemeControlWithPref();
-});
 
 
 // const windowResized = () => {
