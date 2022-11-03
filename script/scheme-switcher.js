@@ -52,9 +52,16 @@ const onClick_colorSchemeControl = (e) => {
   setSchemePref();
 }
 
+const verifyColorSchemeControlChecked = (e) => {
+  if (e.target.value == true) {
+    onClick_colorSchemeControl(e);
+  }
+}
+
 const setUpColorSchemeControls = () => {
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
-    el.addEventListener('click', onClick_colorSchemeControl);
+    el.addEventListener("click", onClick_colorSchemeControl);
+    el.addEventListener("change", verifyColorSchemeControlChecked);
     el.removeAttribute("checked");
   });
 }
