@@ -691,14 +691,15 @@ body .et_pb_section {
 
 #scheme-component-wrapper {
   position: absolute;
-  background-color: red;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  z-index: 1; }
 
 #scheme-component:hover div#scheme-component-wrapper {
-  width: 200%;
+  width: 300%;
   height: calc(100% + (1.1 * var(--gap-between-trigger-and-module)));
-  margin-left: -50%; }
+  margin-left: 50%;
+  transform: translateX(-50%); }
 
 #scheme-trigger {
   width: var(--size-target-icon-scheme-trigger);
@@ -758,7 +759,8 @@ svg.scheme-icon {
   position: absolute;
   margin-top: var(--gap-between-trigger-and-module);
   margin-left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  z-index: 1; }
 
 #scheme-component:hover #module-scheme-controls,
 #scheme-component:focus-within #module-scheme-controls {
