@@ -62,7 +62,7 @@ const setUpColorSchemeControls = () => {
 const updateColorSchemeControlWithPref = () => {
   const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
   console.log("radio input element", document.querySelector(colorSchemeControlSelector));
-  if (document.querySelector(colorSchemeControlSelector)) {
+  if (document.querySelector(colorSchemeControlSelector) ) {
     console.log("radio input element: before", document.querySelector(colorSchemeControlSelector));
     document.querySelector(colorSchemeControlSelector).setAttribute("checked", "checked");
     console.log("radio input element: after", document.querySelector(colorSchemeControlSelector));
@@ -78,7 +78,11 @@ const runFeature_ColorSchemeControl = () => {
   window.onload = () => {
     // Set after the buttons exist
     reflectSchemePref();
-    setUpColorSchemeControls();
+    const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
+    if (document.querySelector(colorSchemeControlSelector)) {
+      document.querySelector(colorSchemeControlSelector).setAttribute("checked", "checked");
+    }
+    // setUpColorSchemeControls();
     updateColorSchemeControlWithPref();
 
     console.log("End of runFeature_ColorSchemeControl");
