@@ -65,7 +65,7 @@ const setUpColorSchemeControls = () => {
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
     el.addEventListener("click", onClick_colorSchemeControl);
     el.addEventListener("change", onClick_colorSchemeControl);
-    // el.removeAttribute("checked");
+    el.removeAttribute("checked");
   });
 }
 
@@ -74,8 +74,8 @@ const updateColorSchemeControlWithPref = () => {
   console.log("radio input element", document.querySelector(colorSchemeControlSelector));
   // if (document.querySelector(colorSchemeControlSelector) ) {
     console.log("radio input element: before", document.querySelector(colorSchemeControlSelector));
-    // document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
-    document.querySelector(colorSchemeControlSelector)?.click();
+    document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
+    // document.querySelector(colorSchemeControlSelector)?.click();
     console.log("radio input element: after", document.querySelector(colorSchemeControlSelector));
   
   // }
