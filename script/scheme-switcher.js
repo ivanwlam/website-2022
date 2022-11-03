@@ -65,8 +65,9 @@ const setUpColorSchemeControls = () => {
   console.debug("Before setup");
   console.debug(document.querySelectorAll(".color-scheme-control"));
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
-    el.addEventListener("click", onClick_colorSchemeControl);
     el.removeAttribute("checked");
+    el.checked = false;
+    el.addEventListener("click", onClick_colorSchemeControl);
   });
   console.debug("after setup");
   console.debug(document.querySelectorAll(".color-scheme-control"));
