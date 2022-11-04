@@ -1,4 +1,4 @@
-	const vv_cMin = 60 * 24 * 7;
+	const vv_cMin = 60 * 24 * 7 *1;
 	const redirectUrl = "/wordpress.php/portfolio-home-2022-06/";
 	
 	const vv_setC_unhide = function () {
