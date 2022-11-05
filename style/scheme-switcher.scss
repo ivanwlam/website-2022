@@ -223,7 +223,7 @@ svg.scheme-icon {
   padding: 1rem;
 }
 
-#module-scheme-controls li input[type=radio]:focus {
+#module-scheme-controls li input[type=radio]:focus-visible {
   outline: 2px auto lightblue;  /* lightblue = Fallback */
   outline-color: invert; /* Fallback */
   outline-color: currentColor;
