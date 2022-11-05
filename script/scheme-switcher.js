@@ -95,6 +95,21 @@ window.onload = () => {
 
 }
 
+window.onresize = () => {
+  /* Need to implement a delay after window resize to update the switcher */
+
+  /* TODO: 11/4/22: Preferably:
+    1) the update happens as soon as it's ready and not with a hard-coded time
+    2) the update only happens after the resizing stops, and not constantly.
+    */
+  setTimeout(() => {
+    console.debug("timeout to update controls");
+    setUpColorSchemeControls();
+    updateColorSchemeControlWithPref();
+    console.debug("end of timeout");
+  }, 500);
+
+}
 
 console.debug("End of scheme-switcher.js");
 
