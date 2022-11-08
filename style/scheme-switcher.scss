@@ -70,7 +70,7 @@ body .header-sticky {
   z-index: 3; /* Have it show above content before sticking to top */
 }
 
-#scheme-component {
+.scheme-component {
   background-color: red; /* Debug */
   background-color: transparent;
   display: inline-block;
@@ -84,14 +84,7 @@ body .header-sticky {
   margin-left: 10rem;
 }
 
-#scheme-component:hover {
-  // width: auto;
-  // height: auto;
-  // transform: translateX(-50%);
-  // left: calc(var(--size-target-icon-scheme-trigger)/2);
-}
-
-#scheme-component-wrapper {
+.scheme-component-wrapper {
   position: absolute;
   // background-color: red;
   width: 100%;
@@ -99,14 +92,14 @@ body .header-sticky {
   z-index: 2;
 }
 
-#scheme-component:hover div#scheme-component-wrapper {
+.scheme-component:hover div.scheme-component-wrapper {
   width: 300%;
   height: calc(100% + (1.1 * var(--gap-between-trigger-and-module)));
   margin-left: 50%;
   transform: translateX(-50%);
 }
 
-#scheme-trigger {
+.scheme-trigger {
   width: var(--size-target-icon-scheme-trigger);
   height: var(--size-target-icon-scheme-trigger);
   background-color: transparent;
@@ -120,8 +113,8 @@ body .header-sticky {
 }
 
 
-#scheme-component:hover #scheme-trigger,
-#scheme-component #scheme-trigger:focus-within{
+.scheme-component:hover .scheme-trigger,
+.scheme-component .scheme-trigger:focus-within{
   background-color: var(--color-bg-hover);  
 }
 
@@ -130,7 +123,7 @@ svg.scheme-icon {
 }
 
 
-#scheme-trigger svg {
+.scheme-trigger svg {
   position: absolute;
   opacity: 0;
   --color-icon-fill: var(--color-fg-emphasis);
@@ -138,27 +131,27 @@ svg.scheme-icon {
   // width: calc(var(--multiplier-browser-offset) * var(--size-icon-scheme-trigger)); /* Browser offset, not sure why */
 }
 
-[data-scheme-pref='light'] #scheme-trigger svg.scheme-light,
-[data-scheme-pref='auto'] #scheme-trigger svg.scheme-auto,
-[data-scheme-pref='dark'] #scheme-trigger svg.scheme-dark{
+[data-scheme-pref='light'] .scheme-trigger svg.scheme-light,
+[data-scheme-pref='auto'] .scheme-trigger svg.scheme-auto,
+[data-scheme-pref='dark'] .scheme-trigger svg.scheme-dark{
   opacity: 1;
 }
 
 
 /*
-#scheme-trigger svg.scheme-dark {
+.scheme-trigger svg.scheme-dark {
   --color-icon-fill: var(--color-icon-selected);
 }
 
 @media (prefers-color-scheme: dark) {
-  [data-scheme-pref='auto'] #scheme-trigger svg.scheme-auto {
+  [data-scheme-pref='auto'] .scheme-trigger svg.scheme-auto {
     --color-icon-fill: var(--color-icon-selected);
   }
 }
 */
 
 
-#module-scheme-controls {
+.module-scheme-controls {
   --padding-vertical: calc(0.375 * var(--size-icon-scheme-controls));
   --padding-horizontal: calc(0.75 * var(--size-icon-scheme-controls));
   --gap-between-targets: calc(0.5 * var(--size-icon-scheme-controls));
@@ -189,12 +182,12 @@ svg.scheme-icon {
 }
 
 
-#scheme-component:hover #module-scheme-controls,
-#scheme-component:focus-within #module-scheme-controls {
+.scheme-component:hover .module-scheme-controls,
+.scheme-component:focus-within .module-scheme-controls {
   display: inline-flex;
 }
 
-#module-scheme-controls li {
+.module-scheme-controls li {
   list-style: none;
   display: inline-block;
   position: relative;
@@ -204,12 +197,12 @@ svg.scheme-icon {
   margin-bottom: 0; /* override */
 }
 
-#module-scheme-controls li, 
-#module-scheme-controls li * {
+.module-scheme-controls li, 
+.module-scheme-controls li * {
   cursor: pointer;
 }
 
-#module-scheme-controls li input[type=radio] {
+.module-scheme-controls li input[type=radio] {
   width: 110%;
   height: 110%;
   position: absolute;
@@ -223,17 +216,17 @@ svg.scheme-icon {
   padding: 1rem;
 }
 
-#module-scheme-controls li input[type=radio]:focus-visible {
+.module-scheme-controls li input[type=radio]:focus-visible {
   outline: 2px auto lightblue;  /* lightblue = Fallback */
   outline-color: invert; /* Fallback */
   outline-color: currentColor;
 }
 
-#module-scheme-controls li label {
+.module-scheme-controls li label {
   background-color: var(--color-bg-light-highlight);
 }
 
-#module-scheme-controls li button {
+.module-scheme-controls li button {
   background: none;
   border: none;
   font: inherit;
@@ -241,7 +234,7 @@ svg.scheme-icon {
   margin: 0;
 }
 
-#module-scheme-controls li span.buttonBg {
+.module-scheme-controls li span.buttonBg {
   border-radius: var(--radius-round);
   display: inline-block;
   padding: var(--padding-icon-scheme-controls);
@@ -256,12 +249,12 @@ svg.scheme-icon {
   opacity: 0;
 }
 
-#module-scheme-controls li:hover input:not(:checked)+label span.buttonBg {
+.module-scheme-controls li:hover input:not(:checked)+label span.buttonBg {
   transform: scale(1);
   opacity: 1;
 }
 
-#module-scheme-controls li input:checked+label span.buttonBg {
+.module-scheme-controls li input:checked+label span.buttonBg {
   background-color: var(--color-bg-dark);
   // fill: var(--text-light-on-dark);
   transform: scale(1);
@@ -270,7 +263,7 @@ svg.scheme-icon {
 }
 
 
-#module-scheme-controls li svg {
+.module-scheme-controls li svg {
   // --color-icon-fill: var(--color-text-dark-on-light);
   --color-icon-fill: var(--color-icon-control);
   width: var(--size-icon-scheme-controls);
@@ -280,35 +273,35 @@ svg.scheme-icon {
   top: var(--padding-icon-scheme-controls);
 }
 
-#module-scheme-controls li svg.icon-on {
+.module-scheme-controls li svg.icon-on {
   opacity: 0;
 }
 
-#module-scheme-controls li svg,
-#module-scheme-controls li svg * {
+.module-scheme-controls li svg,
+.module-scheme-controls li svg * {
   transition-duration: var(--duration-icon-scheme-off);
 }
 
-#module-scheme-controls li input:checked+label svg {
+.module-scheme-controls li input:checked+label svg {
   // --color-icon-fill: var(--color-text-light-on-dark);
   --color-icon-fill: var(--color-icon-selected);
   transition-duration: var(--duration-icon-scheme-on);
 }
 
-#module-scheme-controls li input:checked+label svg.icon-on {
+.module-scheme-controls li input:checked+label svg.icon-on {
   opacity: 1;
 }
-#module-scheme-controls li input:checked+label svg.icon-off {
+.module-scheme-controls li input:checked+label svg.icon-off {
   opacity: 0;
 }
 
-#scheme-trigger svg.scheme-dark,
-#module-scheme-controls li input:checked+label svg.icon-on.scheme-dark{
+.scheme-trigger svg.scheme-dark,
+.module-scheme-controls li input:checked+label svg.icon-on.scheme-dark{
   /* Glow around the moon against dark background */
   filter: drop-shadow(0px 0px 0.25rem var(--color-icon-fill));
 }
 
-#module-scheme-controls .label-control {
+.module-scheme-controls .label-control {
   display: inline-block;
   margin-top: 0.25em;
   max-width: 125%;
@@ -319,18 +312,18 @@ svg.scheme-icon {
   font-size: calc(0.6 * var(--size-icon-scheme-controls));
 }
 
-#module-scheme-controls li:hover .label-control {
+.module-scheme-controls li:hover .label-control {
   white-space: normal;
   overflow: visible;
   text-overflow: inherit;
 }
 
-#module-scheme-controls li input:checked+label .label-control {
+.module-scheme-controls li input:checked+label .label-control {
   font-weight: var(--font-weight-bold);
 }
 
-#module-scheme-controls li input:checked+label .label-control,
-#module-scheme-controls li:hover .label-control {
+.module-scheme-controls li input:checked+label .label-control,
+.module-scheme-controls li:hover .label-control {
   // text-decoration: underline; // Not needed if not all labels are showing.
   opacity: 1;
 }
@@ -338,20 +331,20 @@ svg.scheme-icon {
 // $breakpoint-mobile-header: 480px; /* TODO: Get variable from misc-foundation */
 
 @media screen and (max-width: $breakpoint-mobile-header) {
-  #scheme-component {
+  .scheme-component {
     width: auto;
     position: static;
   }
   
-  #scheme-component:hover {
+  .scheme-component:hover {
     transform: none;
   }
   
-  #scheme-trigger {
+  .scheme-trigger {
     display: none;
   }
   
-  #module-scheme-controls {
+  .module-scheme-controls {
     position: relative;
     display: inline-flex;
     box-shadow: none;
