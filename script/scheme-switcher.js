@@ -79,6 +79,8 @@ const updateColorSchemeControlWithPref = () => {
     console.debug("radio input element: after", document.querySelector(colorSchemeControlSelector));
   
   // }
+
+  /* TODO 11/8/22: Adjust to allow for multiple instances of the scheme component and therefore multiple radio input for the same value */
 }
 
 console.debug("Running: scheme-switcher scripts");

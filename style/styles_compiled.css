@@ -689,9 +689,7 @@ body .header-sticky {
   width: var(--size-target-icon-scheme-trigger);
   height: var(--size-target-icon-scheme-trigger);
   position: relative;
-  --gap-between-trigger-and-module: 1rem;
-  /* Adjustable in use */
-  margin-left: 10rem; }
+  --gap-between-trigger-and-module: 1rem; }
 
 .scheme-component-wrapper {
   position: absolute;
@@ -753,7 +751,8 @@ svg.scheme-icon {
   --color-fg-module: var(--color-text-dark-on-light);
   --color-icon-fill: var(--color-fg-module);
   background-color: var(--color-bg-module);
-  padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal);
+  padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal) !important;
+  /* !important overrides Divi */
   border-radius: var(--border-radius-container);
   display: none;
   gap: var(--gap-between-targets);
@@ -901,6 +900,11 @@ svg.scheme-icon {
     box-shadow: none;
     border-radius: 0;
     margin-top: 0; } }
+/* SITE-SPECIFIC OVERRIDES */
+.scheme-component {
+  /* Adjustable in use */
+  margin-left: 80%; }
+
 /* DEBUG */
 body .et_pb_row_1 {
   background-color: var(--color-bg);

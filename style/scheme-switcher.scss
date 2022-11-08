@@ -79,9 +79,6 @@ body .header-sticky {
   position: relative;
 
   --gap-between-trigger-and-module: 1rem;
-  
-  /* Adjustable in use */
-  margin-left: 10rem;
 }
 
 .scheme-component-wrapper {
@@ -160,7 +157,7 @@ svg.scheme-icon {
   --color-icon-fill: var(--color-fg-module);
   
   background-color: var(--color-bg-module);
-  padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal);
+  padding: var(--padding-vertical) var(--padding-horizontal) 0.5em var(--padding-horizontal) !important; /* !important overrides Divi */;
   border-radius: var(--border-radius-container);
   display: none;
   gap: var(--gap-between-targets);
@@ -354,6 +351,13 @@ svg.scheme-icon {
   
 }
 
+
+/* SITE-SPECIFIC OVERRIDES */
+
+.scheme-component {
+  /* Adjustable in use */
+  margin-left: 80%;
+}
 
 /* DEBUG */
 
