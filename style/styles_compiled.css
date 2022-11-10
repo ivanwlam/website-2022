@@ -470,6 +470,9 @@ body .et_pb_section {
 .et_pb_section_0_tb_header {
   background-color: var(--color-bg-highlight); }
 
+.header-custom.et_pb_code.et_pb_module {
+  margin-bottom: 0; }
+
 header .header-custom > .et_pb_code_inner {
   height: var(--height-header);
   transition-duration: 300ms;
@@ -701,8 +704,8 @@ header nav ul.nav-list > li {
   background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
-.et_pb_image.et_pb_module,
-.et_pb_code.et_pb_module {
+.single-project .et_pb_post_content .et_pb_image.et_pb_module,
+.single-project .et_pb_post_content .et_pb_code.et_pb_module {
   margin-bottom: 0.5rem !important; }
 
 @media screen and (max-width: 480px) {
