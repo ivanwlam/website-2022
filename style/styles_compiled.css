@@ -466,8 +466,9 @@ body .et_pb_section {
   /* Move to general.scss */
   --width-content-mobile: 80vw;
   --width-content-tablet: 90vw;
-  --width-content-tablet: 1440px;
-  /* TODO: get real value */ }
+  --width-content-desktop: 80vw;
+  /* TODO: get real value */
+  --width-content-desktop-wide: 1536px; }
 
 @media screen and (max-width: 768px) {
   :root {
@@ -475,6 +476,12 @@ body .et_pb_section {
 @media screen and (min-width: 768px) and (max-width: 980px) {
   :root {
     --width-content: var(--width-content-tablet); } }
+@media screen and (min-width: 980px) and (max-width: 1920px) {
+  :root {
+    --width-content: var(--width-content-desktop); } }
+@media screen and (min-width: 1920px) {
+  :root {
+    --width-content: var(--width-content-desktop-wide); } }
 @media screen and (max-width: 980px) {
   :root {
     --height-header: var(--height-header-mobile); } }
@@ -534,8 +541,6 @@ header nav {
   justify-content: flex-end; }
 
 header nav:has(.nav-list.isOpen) {
-  margin-right: -10vw;
-  /* TODO: Make variable based on content width */
   margin-right: calc(-1 * var(--margin-content)); }
 
 header nav button.button-menu {

@@ -7,7 +7,8 @@
   /* Move to general.scss */
   --width-content-mobile: 80vw;
   --width-content-tablet: 90vw;
-  --width-content-tablet: 1440px; /* TODO: get real value */
+  --width-content-desktop: 80vw; /* TODO: get real value */
+  --width-content-desktop-wide: 1536px;
 
 }
 
@@ -20,6 +21,18 @@
 @media screen and (min-width:768px) and (max-width:980px) {
   :root{
     --width-content: var(--width-content-tablet);
+  }
+}
+
+@media screen and (min-width:980px) and (max-width:1920px) {
+  :root{
+    --width-content: var(--width-content-desktop);
+  }
+}
+
+@media screen and (min-width:1920px) {
+  :root{
+    --width-content: var(--width-content-desktop-wide);
   }
 }
 
@@ -99,7 +112,7 @@ header nav {
 }
 
 header nav:has(.nav-list.isOpen) {
-  margin-right: -10vw; /* TODO: Make variable based on content width */
+  // margin-right: -10vw; /* TODO: Make variable based on content width */
   margin-right: calc(-1 * var(--margin-content));
 }
 
