@@ -468,7 +468,8 @@ body .et_pb_section {
   :root {
     --height-header: var(--height-header-mobile); } }
 .et_pb_section_0_tb_header {
-  background-color: var(--color-bg-highlight); }
+  background-color: var(--color-bg);
+  color: var(--color-fg); }
 
 .header-custom.et_pb_code.et_pb_module {
   margin-bottom: 0; }
@@ -523,6 +524,10 @@ header nav button.button-menu {
 
 header nav > button.button-menu {
   display: none; }
+
+/* Opened state */
+header nav .nav-list + button.button-menu {
+  right: calc((var(--height-header) - var(--size-button)) / 2); }
 
 header nav button.button-menu .icon-close {
   display: none; }
