@@ -111,10 +111,6 @@ header nav {
   justify-content: flex-end;
 }
 
-header nav:has(.nav-list.isOpen) {
-  // margin-right: -10vw; /* TODO: Make variable based on content width */
-  margin-right: calc(-1 * var(--margin-content));
-}
 
 header nav button.button-menu {
   --size-button: 2rem;
@@ -174,6 +170,10 @@ header nav ul.nav-list > li {
     & .logo-full {
       display: none;
     }
+  }
+  
+  header nav:has(.nav-list.isOpen) {
+    margin-right: calc(-1 * var(--margin-content));
   }
   
   header nav ul.nav-list {
