@@ -1,0 +1,163 @@
+:root {
+  --height-header-desktop: 4rem;
+  --height-header-mobile: 3rem;
+  --height-header: var(--height-header-desktop);
+}
+
+@media screen and (max-width:980px) {
+  :root {
+    --height-header: var(--height-header-mobile);
+  }
+}
+
+
+header {
+  background-color: black; /* TODO: Use variable */
+  position: fixed; /* Demo */
+  height: var(--height-header);
+  top: 0; /* demo */
+  width: 100%; /* demo */
+  
+  transition-duration: 300ms; /* TODO: use variable */
+  
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* use variable */
+}
+
+.breadcrumb {
+  display: inline-block;
+  line-height: var(--height-header);
+  margin-left: 1rem; /* temporary */
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo .logo-square {
+  display: none;
+}
+
+.logo .logo-full {
+  display: block;
+}
+
+
+.case-study-title {
+  display: none;
+  
+  body.single-project.below-fold & {
+    display: inline-block;
+  }
+}
+
+.case-study-title::before {
+  content: ">";
+}
+
+header nav {
+  background-color: orange; /* debug */
+  display: inline-block;
+  line-height: var(--height-header);
+  margin-right: 2rem; /* demo */
+
+  /* Flex child */
+  // flex-grow: 1;
+  
+  /* Flex parent */
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav button.button-menu {
+  --size-button: 2rem;
+  width: var(--size-button);
+  height: var(--size-button);
+  border: 0;
+  position: absolute;
+  top: calc((var(--height-header) - var(--size-button)) / 2);
+  // right: 2rem;
+}
+
+header nav > button.button-menu {
+  display: none;
+}
+
+header nav button.button-menu .icon-close {
+  display: none;
+}
+
+header nav ul.isOpen+button.button-menu {
+  & .icon-close {
+    display: inline; /* temporary */
+  }
+  
+  & .icon-hamburger {
+    display: none;
+  }
+}
+
+header nav ul.nav-list {
+  display: inline-block;
+  line-height: var(--height-header);
+  display: flex;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 1em;
+  background-color: maroon;
+
+}
+
+
+/* Mobile/Tablet */
+@media screen and (max-width: 980px) {
+  
+  body.home.above-fold .logo,
+  body.single-project .logo {
+    & .logo-square {
+      display: block;
+    }
+
+    & .logo-full {
+      display: none;
+    }
+  }
+  
+  header nav ul.nav-list {
+    // display: none; /* Temp */
+    background-color: blue;
+    width: 20rem;
+    height: 100vh;
+    padding-top: var(--height-header);
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    transition-duration: 300ms;
+    flex-direction: column;
+  }
+  
+  header nav ul.nav-list.isOpen {
+    transform: translateX(0%);
+  }
+  
+  header nav ul.nav-list li {
+    display: block;
+    border-top: 1px solid gray; /* temp. Use variables */
+    background-color: green;
+    padding: 0 1rem; /* temporary */
+  }
+  
+  header nav button.button-menu {
+    display: inline-block;
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  header nav ul.nav-list {
+    width: 100%;
+  }
+}
