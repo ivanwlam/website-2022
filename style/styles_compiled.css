@@ -462,7 +462,9 @@ body .et_pb_section {
 :root {
   --height-header-desktop: 4rem;
   --height-header-mobile: 3rem;
-  --height-header: var(--height-header-desktop); }
+  --height-header: var(--height-header-desktop);
+  --width-content-tablet: 90%;
+  --width-content-mobile: 80%; }
 
 @media screen and (max-width: 980px) {
   :root {
@@ -510,12 +512,14 @@ header nav {
   display: inline-block;
   line-height: var(--height-header);
   width: auto;
+  position: relative;
+  transition-duration: 300ms;
+  /* TODO: Use variable */
   /* Flex parent */
   display: flex;
   justify-content: flex-end; }
 
 header nav:has(.nav-list.isOpen) {
-  position: relative;
   margin-right: -10vw;
   /* TODO: Make variable based on content width */ }
 
