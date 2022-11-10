@@ -467,8 +467,10 @@ body .et_pb_section {
 @media screen and (max-width: 980px) {
   :root {
     --height-header: var(--height-header-mobile); } }
+.et_pb_section_0_tb_header {
+  background-color: var(--color-bg-highlight); }
+
 header .header-custom > .et_pb_code_inner {
-  background-color: var(--color-bg-highlight);
   height: var(--height-header);
   transition-duration: 300ms;
   /* TODO: use variable */

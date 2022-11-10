@@ -10,9 +10,13 @@
   }
 }
 
+.et_pb_section_0_tb_header {
+  background-color: var(--color-bg-highlight);
+}
+
 
 header .header-custom > .et_pb_code_inner {
-  background-color: var(--color-bg-highlight);
+  // background-color: var(--color-bg-highlight);
   // position: fixed; /* Demo */
   height: var(--height-header);
   // top: 0; /* demo */
