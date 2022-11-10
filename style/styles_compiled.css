@@ -544,7 +544,7 @@ header nav ul.nav-list {
   line-height: var(--height-header);
   display: flex; }
 
-header nav ul li {
+header nav ul.nav-list > li {
   display: inline-block;
   padding: 0 1em;
   background-color: maroon; }
@@ -572,7 +572,7 @@ header nav ul li {
   header nav ul.nav-list.isOpen {
     transform: translateX(0%); }
 
-  header nav ul.nav-list li {
+  header nav ul.nav-list > li {
     display: block;
     border-top: 1px solid gray;
     /* temp. Use variables */
