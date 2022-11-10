@@ -4,9 +4,23 @@
   --height-header: var(--height-header-desktop);
 
 
-  --width-content-tablet: 90%;
+  /* Move to general.scss */
   --width-content-mobile: 80%;
+  --width-content-tablet: 90%;
+  --width-content-tablet: 1440px; /* TODO: get real value */
 
+}
+
+@media screen and (max-width:768px) {
+  :root{
+    --width-content: var(--width-content-mobile);
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:980px) {
+  :root{
+    --width-content: var(--width-content-tablet);
+  }
 }
 
 @media screen and (max-width:980px) {
@@ -14,6 +28,12 @@
     --height-header: var(--height-header-mobile);
   }
 }
+
+:root {
+  --margin-content: calc((100% - var(--width-content)) / 2); /* TODO: Make sure desktop content width works too */
+}
+
+/* TODO: Set --width-content depending on window width, then set --margin-content based on content width, then replace margin-right of "header nav:has(.nav-list.isOpen)"  */
 
 .et_pb_section_0_tb_header {
   background-color: var(--color-bg);
@@ -80,6 +100,7 @@ header nav {
 
 header nav:has(.nav-list.isOpen) {
   margin-right: -10vw; /* TODO: Make variable based on content width */
+  margin-right: calc(-1 * var(--margin-content));
 }
 
 header nav button.button-menu {
