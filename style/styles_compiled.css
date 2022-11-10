@@ -464,8 +464,8 @@ body .et_pb_section {
   --height-header-mobile: 3rem;
   --height-header: var(--height-header-desktop);
   /* Move to general.scss */
-  --width-content-mobile: 80%;
-  --width-content-tablet: 90%;
+  --width-content-mobile: 80vw;
+  --width-content-tablet: 90vw;
   --width-content-tablet: 1440px;
   /* TODO: get real value */ }
 
