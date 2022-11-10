@@ -559,7 +559,8 @@ header nav ul.nav-list > li {
     padding-top: var(--height-header);
     position: absolute;
     right: 0;
-    transform: translateX(100%);
+    transform: translateX(130%);
+    /* 130% hard code to account for mobile/tablet margins */
     transition-duration: 300ms;
     flex-direction: column; }
 
