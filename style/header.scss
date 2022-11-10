@@ -130,7 +130,7 @@ header nav > button.button-menu {
 }
 
 /* Opened state */
-header nav .nav-list+button.button-menu {
+header nav .nav-list.isOpen + button.button-menu {
   right: calc((var(--height-header) - var(--size-button)) / 2); 
 }
 
