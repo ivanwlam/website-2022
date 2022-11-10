@@ -479,7 +479,7 @@ body .et_pb_section {
   :root {
     --height-header: var(--height-header-mobile); } }
 :root {
-  --margin-content: calc((100% - var(--width-content)) / 2);
+  --margin-content: calc((100vw - var(--width-content)) / 2);
   /* TODO: Make sure desktop content width works too */ }
 
 /* TODO: Set --width-content depending on window width, then set --margin-content based on content width, then replace margin-right of "header nav:has(.nav-list.isOpen)"  */
