@@ -313,7 +313,6 @@ h1, h2, h3, h4, h5, h6 {
   --spacing-extra-large: 2rem;
   --spacing-extra-extra-large: 4rem; }
 
-/* TODO: Temporary, Update */
 .et_pb_button,
 body .et_pb_button:hover,
 .et_pb_button.et_pb_bg_layout_light,
@@ -610,7 +609,25 @@ header nav ul.nav-list > li {
     /* TODO: Use variables */ }
 
   header nav button.button-menu {
-    display: inline-block; } }
+    display: inline-block; }
+
+  /* Scheme Switcher */
+  .scheme-component {
+    width: auto;
+    position: static; }
+
+  .scheme-component:hover {
+    transform: none; }
+
+  .scheme-trigger {
+    display: none; }
+
+  .module-scheme-controls {
+    position: relative;
+    display: inline-flex;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0; } }
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }
@@ -786,7 +803,6 @@ header nav ul.nav-list > li {
   --spacing-extra-large: 2rem;
   --spacing-extra-extra-large: 4rem; }
 
-/* TODO: Temporary, Update */
 :root {
   /* Temporary */
   --color-bg-hover-on-dark: hsla(0 0% 100% / 20%);
@@ -1038,23 +1054,6 @@ svg.scheme-icon {
 .module-scheme-controls li:hover .label-control {
   opacity: 1; }
 
-@media screen and (max-width: 480px) {
-  .scheme-component {
-    width: auto;
-    position: static; }
-
-  .scheme-component:hover {
-    transform: none; }
-
-  .scheme-trigger {
-    display: none; }
-
-  .module-scheme-controls {
-    position: relative;
-    display: inline-flex;
-    box-shadow: none;
-    border-radius: 0;
-    margin-top: 0; } }
 /* SITE-SPECIFIC OVERRIDES */
 .scheme-component {
   /* Adjustable in use */
