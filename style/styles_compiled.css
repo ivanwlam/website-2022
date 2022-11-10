@@ -468,15 +468,8 @@ body .et_pb_section {
   :root {
     --height-header: var(--height-header-mobile); } }
 header .header-custom > .et_pb_code_inner {
-  background-color: black;
-  /* TODO: Use variable */
-  position: fixed;
-  /* Demo */
+  background-color: var(--color-bg-highlight);
   height: var(--height-header);
-  top: 0;
-  /* demo */
-  width: 100%;
-  /* demo */
   transition-duration: 300ms;
   /* TODO: use variable */
   display: flex;
@@ -486,9 +479,7 @@ header .header-custom > .et_pb_code_inner {
 
 .breadcrumb {
   display: inline-block;
-  line-height: var(--height-header);
-  margin-left: 1rem;
-  /* temporary */ }
+  line-height: var(--height-header); }
 
 .logo {
   display: inline-block; }
@@ -512,8 +503,6 @@ header nav {
   /* debug */
   display: inline-block;
   line-height: var(--height-header);
-  margin-right: 2rem;
-  /* demo */
   /* Flex child */
   /* Flex parent */
   display: flex;

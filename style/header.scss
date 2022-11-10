@@ -12,11 +12,11 @@
 
 
 header .header-custom > .et_pb_code_inner {
-  background-color: black; /* TODO: Use variable */
-  position: fixed; /* Demo */
+  background-color: var(--color-bg-highlight);
+  // position: fixed; /* Demo */
   height: var(--height-header);
-  top: 0; /* demo */
-  width: 100%; /* demo */
+  // top: 0; /* demo */
+  // width: 100%; /* demo */
   
   transition-duration: 300ms; /* TODO: use variable */
   
@@ -28,7 +28,7 @@ header .header-custom > .et_pb_code_inner {
 .breadcrumb {
   display: inline-block;
   line-height: var(--height-header);
-  margin-left: 1rem; /* temporary */
+  // margin-left: 1rem; /* temporary */
 }
 
 .logo {
@@ -60,7 +60,7 @@ header nav {
   background-color: orange; /* debug */
   display: inline-block;
   line-height: var(--height-header);
-  margin-right: 2rem; /* demo */
+  // margin-right: 2rem; /* demo */
 
   /* Flex child */
   // flex-grow: 1;
