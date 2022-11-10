@@ -325,32 +325,33 @@ svg.scheme-icon {
   opacity: 1;
 }
 
-// @media screen and (max-width: $breakpoint-mobile-header) {
-//   .scheme-component {
-//     width: auto;
-//     position: static;
-//   }
-  
-//   .scheme-component:hover {
-//     transform: none;
-//   }
-  
-//   .scheme-trigger {
-//     display: none;
-//   }
-  
-//   .module-scheme-controls {
-//     position: relative;
-//     display: inline-flex;
-//     box-shadow: none;
-//     border-radius: 0;
-//     margin-top: 0;
-//   }
-  
-// }
-
 
 /* SITE-SPECIFIC OVERRIDES */
+
+@media screen and (max-width: $breakpoint-desktop) {
+  .scheme-component {
+    width: auto;
+    position: static;
+  }
+  
+  .scheme-component:hover {
+    transform: none;
+  }
+  
+  .scheme-trigger {
+    display: none;
+  }
+  
+  .module-scheme-controls {
+    position: relative;
+    display: inline-flex;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
+  }
+  
+}
+
 
 .scheme-component {
   /* Adjustable in use */

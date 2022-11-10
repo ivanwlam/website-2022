@@ -203,30 +203,7 @@ header nav ul.nav-list > li {
   header nav button.button-menu {
     display: inline-block;
   }
-  
 
-  /* Scheme Switcher */
-  .scheme-component {
-    width: auto;
-    position: static;
-  }
-  
-  .scheme-component:hover {
-    transform: none;
-  }
-  
-  .scheme-trigger {
-    display: none;
-  }
-  
-  .module-scheme-controls {
-    position: relative;
-    display: inline-flex;
-    box-shadow: none;
-    border-radius: 0;
-    margin-top: 0;
-  }
-    
   
 
 }
