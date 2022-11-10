@@ -11,7 +11,7 @@
 }
 
 
-header {
+header .header-custom > .et_pb_code_inner {
   background-color: black; /* TODO: Use variable */
   position: fixed; /* Demo */
   height: var(--height-header);

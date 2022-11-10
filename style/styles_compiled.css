@@ -467,7 +467,7 @@ body .et_pb_section {
 @media screen and (max-width: 980px) {
   :root {
     --height-header: var(--height-header-mobile); } }
-header {
+header .header-custom > .et_pb_code_inner {
   background-color: black;
   /* TODO: Use variable */
   position: fixed;
