@@ -21,23 +21,18 @@
 
 
 header .header-custom > .et_pb_code_inner {
-  // background-color: var(--color-bg-highlight);
-  // position: fixed; /* Demo */
   height: var(--height-header);
-  // top: 0; /* demo */
-  // width: 100%; /* demo */
   
   transition-duration: 300ms; /* TODO: use variable */
   
   display: flex;
   justify-content: space-between;
-  gap: 1rem; /* use variable */
+  gap: 1rem; /* TODO: use variable */
 }
 
 .breadcrumb {
   display: inline-block;
   line-height: var(--height-header);
-  // margin-left: 1rem; /* temporary */
 }
 
 .logo {
@@ -69,14 +64,16 @@ header nav {
   background-color: orange; /* debug */
   display: inline-block;
   line-height: var(--height-header);
-  // margin-right: 2rem; /* demo */
+  width: auto;
 
-  /* Flex child */
-  // flex-grow: 1;
-  
   /* Flex parent */
   display: flex;
   justify-content: flex-end;
+}
+
+header nav:has(.nav-list.isOpen) {
+  position: relative;
+  margin-right: -10vw; /* TODO: Make variable based on content width */
 }
 
 header nav button.button-menu {
@@ -86,7 +83,6 @@ header nav button.button-menu {
   border: 0;
   position: absolute;
   top: calc((var(--height-header) - var(--size-button)) / 2);
-  // right: 2rem;
 }
 
 header nav > button.button-menu {
@@ -159,9 +155,9 @@ header nav ul.nav-list > li {
   
   header nav ul.nav-list > li {
     display: block;
-    border-top: 1px solid gray; /* temp. Use variables */
+    border-top: 1px solid gray; /* TODO: Use variables */
     background-color: green;
-    padding: 0 1rem; /* temporary */
+    padding: 0 1rem; /* TODO: Use variables */
   }
   
   header nav button.button-menu {

@@ -481,7 +481,7 @@ header .header-custom > .et_pb_code_inner {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  /* use variable */ }
+  /* TODO: use variable */ }
 
 .breadcrumb {
   display: inline-block;
@@ -509,10 +509,15 @@ header nav {
   /* debug */
   display: inline-block;
   line-height: var(--height-header);
-  /* Flex child */
+  width: auto;
   /* Flex parent */
   display: flex;
   justify-content: flex-end; }
+
+header nav:has(.nav-list.isOpen) {
+  position: relative;
+  margin-right: -10vw;
+  /* TODO: Make variable based on content width */ }
 
 header nav button.button-menu {
   --size-button: 2rem;
@@ -575,10 +580,10 @@ header nav ul.nav-list > li {
   header nav ul.nav-list > li {
     display: block;
     border-top: 1px solid gray;
-    /* temp. Use variables */
+    /* TODO: Use variables */
     background-color: green;
     padding: 0 1rem;
-    /* temporary */ }
+    /* TODO: Use variables */ }
 
   header nav button.button-menu {
     display: inline-block; } }
