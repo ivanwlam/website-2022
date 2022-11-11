@@ -1040,10 +1040,14 @@ svg.scheme-icon {
 @media screen and (max-width: 980px) {
   .scheme-component {
     width: auto;
-    position: static; }
+    position: static;
+    height: unset; }
 
   .scheme-component:hover {
     transform: none; }
+
+  .scheme-component-wrapper {
+    position: unset; }
 
   .scheme-trigger {
     display: none; }
@@ -1054,9 +1058,6 @@ svg.scheme-icon {
     box-shadow: none;
     border-radius: 0;
     margin-top: 0; } }
-.scheme-component {
-  /* Adjustable in use */ }
-
 /* DEBUG */
 body .et_pb_row_1 {
   background-color: var(--color-bg);

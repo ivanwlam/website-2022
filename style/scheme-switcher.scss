@@ -332,10 +332,15 @@ svg.scheme-icon {
   .scheme-component {
     width: auto;
     position: static;
+    height: unset;
   }
   
   .scheme-component:hover {
     transform: none;
+  }
+
+  .scheme-component-wrapper {
+    position: unset;
   }
   
   .scheme-trigger {
@@ -350,12 +355,6 @@ svg.scheme-icon {
     margin-top: 0;
   }
   
-}
-
-
-.scheme-component {
-  /* Adjustable in use */
-  // margin-left: 80%;
 }
 
 /* DEBUG */
