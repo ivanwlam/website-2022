@@ -197,7 +197,12 @@ header nav ul.nav-list > li {
     display: block;
     border-top: 1px solid gray; /* TODO: Use variables */
     background-color: green;
-    padding: 0 1rem; /* TODO: Use variables */
+    padding: 1rem 1rem; /* TODO: Use variables */
+    margin: 0;
+  }
+
+  header nav ul.nav-list > li:has(.scheme-component) {
+    padding-left: 0;
   }
   
   header nav button.button-menu {
