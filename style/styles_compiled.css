@@ -459,7 +459,7 @@ body .et_pb_section {
   --shadow: 0px 1px 4px var(--color-shadow); }
 
 :root {
-  --height-header-desktop: 4rem;
+  --height-header-desktop: 3rem;
   --height-header-mobile: 3rem;
   --height-header: var(--height-header-desktop);
   /* Move to general.scss */
