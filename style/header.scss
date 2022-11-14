@@ -196,7 +196,8 @@ header nav ul.nav-list > li {
   
   header nav.isOpen {
     // margin-right: calc(-1 * var(--margin-content));
-    width: 20rem; /* use variable for mobile menu width */
+    // width: 20rem; /* use variable for mobile menu width */
+    width: 100%;
     height: 100vh;
     transition-duration: 0s;
     transition-delay: 0s;
