@@ -46,6 +46,7 @@
   --color-bg-light-gradient-highlight-end:  hsl(var(--color-hs-neutral) 85%); /* TODO: Use variable for lightness */
 
   --color-bg-header-light:                  hsla(var(--color-hs-neutral) 90% / 0.8); /* TODO: Use variable for lightness and alpha */
+  --color-bg-nav-menu-light:                hsla(var(--color-hs-neutral) 100% / 0.8); /* TODO: Use variable for lightness and alpha */
 
   --color-bg-dark:                          hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight:                hsl(var(--color-hs-neutral) 5%);
@@ -54,6 +55,7 @@
   --color-bg-dark-gradient-highlight-end:   hsl(var(--color-hs-neutral) 10%); /* TODO: Use variable for lightness */
 
   --color-bg-header-dark:                   hsla(var(--color-hs-neutral) 10% / 0.8); /* TODO: Use variable for lightness */
+  --color-bg-nav-menu-dark:                 hsla(var(--color-hs-neutral) 10% / 0.8); /* TODO: Use variable for lightness and alpha */
 
   --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
   --color-bg-accent-on-light-highlight:     hsl(var(--color-hue-accent) var(--color-saturation-default) 33%);
@@ -111,7 +113,9 @@
   --color-bg-deemphasis:                  var(--color-bg-light-deemphasis);
   --color-bg-gradient-highlight-start:    var(--color-bg-light-gradient-highlight-start);
   --color-bg-gradient-highlight-end:      var(--color-bg-light-gradient-highlight-end);
+
   --color-bg-header:                      var(--color-bg-header-light);
+  --color-bg-nav-menu:                    var(--color-bg-nav-menu-light);
 
 
   --color-text:                           var(--color-text-dark-on-light);
@@ -144,7 +148,9 @@
     --color-bg-deemphasis:                var(--color-bg-light-deemphasis);
     --color-bg-gradient-highlight-start:  var(--color-bg-light-gradient-highlight-start);
     --color-bg-gradient-highlight-end:    var(--color-bg-light-gradient-highlight-end);
+
     --color-bg-header:                    var(--color-bg-header-light);
+    --color-bg-nav-menu:                  var(--color-bg-nav-menu-light);
 
 
     --color-text:                         var(--color-text-dark-on-light);
@@ -187,7 +193,9 @@
     --color-bg-deemphasis:                var(--color-bg-dark-deemphasis);
     --color-bg-gradient-highlight-start:  var(--color-bg-dark-gradient-highlight-start);
     --color-bg-gradient-highlight-end:    var(--color-bg-dark-gradient-highlight-end);
+    
     --color-bg-header:                    var(--color-bg-header-dark);
+    --color-bg-nav-menu:                  var(--color-bg-nav-menu-dark);
     
 
     --color-text:                         var(--color-text-light-on-dark);
