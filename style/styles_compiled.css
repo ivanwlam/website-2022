@@ -583,6 +583,22 @@ header nav ul.nav-list > li {
   body.single-project .logo .logo-full {
     display: none; }
 
+  header nav {
+    width: 4rem;
+    /* temporary, enough to show trigger button */
+    height: 3rem;
+    /* use variable for header height */
+    transition-delay: 300ms;
+    /* use variable for mobile menu transition duration */
+    transition-timing-function: ease-out;
+    overflow: hidden; }
+
+  header nav.isOpen {
+    width: 20rem;
+    /* use variable for mobile menu width */
+    height: 100vh;
+    transition-delay: 0s; }
+
   header nav ul.nav-list {
     background-color: blue;
     width: 20rem;
