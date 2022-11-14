@@ -645,6 +645,7 @@ header nav ul.nav-list > li {
     background-image: linear-gradient(var(--color-bg-nav-menu-gradient-start), var(--color-bg-nav-menu-gradient-end));
     backdrop-filter: blur(1rem);
     /* TODO: use variable */
+    box-shadow: -1px 0px 2px var(--color-shadow);
     width: 20rem;
     height: 100vh;
     padding-top: var(--height-header);
