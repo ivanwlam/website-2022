@@ -68,7 +68,7 @@ header .header-custom > .et_pb_code_inner {
   gap: 1rem; /* TODO: use variable */
 }
 
-.breadcrumb {
+header .breadcrumb {
   display: inline-block;
   line-height: var(--height-header);
 }
@@ -161,6 +161,10 @@ header nav ul.nav-list > li {
 /* Mobile/Tablet */
 @media screen and (max-width: $breakpoint-desktop) {
   
+  header .breadcrumb {
+    margin-left: 1rem; /* temporary, use variable */
+  }
+
   body.home.above-fold .logo,
   body.single-project .logo {
     & .logo-square {
@@ -172,7 +176,6 @@ header nav ul.nav-list > li {
     }
   }
   
-  // header nav:has(.nav-list.isOpen) {
   header nav.isOpen {
     margin-right: calc(-1 * var(--margin-content));
   }

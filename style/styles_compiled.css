@@ -505,7 +505,7 @@ header .header-custom > .et_pb_code_inner {
   gap: 1rem;
   /* TODO: use variable */ }
 
-.breadcrumb {
+header .breadcrumb {
   display: inline-block;
   line-height: var(--height-header); }
 
@@ -575,6 +575,10 @@ header nav ul.nav-list > li {
 
 /* Mobile/Tablet */
 @media screen and (max-width: 980px) {
+  header .breadcrumb {
+    margin-left: 1rem;
+    /* temporary, use variable */ }
+
   body.home.above-fold .logo .logo-square,
   body.single-project .logo .logo-square {
     display: block; }
