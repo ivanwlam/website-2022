@@ -23,8 +23,14 @@
   --color-accent-graphic: var(--color-accent-on-light-graphic);
   --color-bg-light: hsl(var(--color-hs-neutral) 95%);
   --color-bg-light-highlight: hsl(var(--color-hs-neutral) 100%);
+  --color-bg-light-deemphasis: hsl(var(--color-hs-neutral) 90%);
+  --color-bg-light-gradient-highlight-start:var(--color-bg-light-highlight);
+  --color-bg-light-gradient-highlight-end: hsl(var(--color-hs-neutral) 85%);
   --color-bg-dark: hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight: hsl(var(--color-hs-neutral) 5%);
+  --color-bg-dark-deemphasis: hsl(var(--color-hs-neutral) 10%);
+  --color-bg-dark-gradient-highlight-start: hsl(var(--color-hs-neutral) 20%);
+  --color-bg-dark-gradient-highlight-end: hsl(var(--color-hs-neutral) 10%);
   --color-bg-accent-on-light: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
   --color-bg-accent-on-light-highlight: hsl(var(--color-hue-accent) var(--color-saturation-default) 33%);
   --color-bg-accent-on-dark: hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
@@ -60,6 +66,9 @@
   --color-bg-highlight: var(--color-bg-light-highlight);
   --color-bg-accent: var(--color-bg-accent-on-light);
   --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
+  --color-bg-deemphasis: var(--color-bg-light-deemphasis);
+  --color-bg-gradient-highlight-start: var(--color-bg-light-gradient-highlight-start);
+  --color-bg-gradient-highlight-end: var(--color-bg-light-gradient-highlight-end);
   --color-text: var(--color-text-dark-on-light);
   --color-text-highlight: var(--color-text-dark-on-light-emphasis);
   --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
@@ -79,6 +88,9 @@
     --color-bg-highlight: var(--color-bg-light-highlight);
     --color-bg-accent: var(--color-bg-accent-on-light);
     --color-bg-accent-highlight: var(--color-bg-accent-on-light-highlight);
+    --color-bg-deemphasis: var(--color-bg-light-deemphasis);
+    --color-bg-gradient-highlight-start: var(--color-bg-light-gradient-highlight-start);
+    --color-bg-gradient-highlight-end: var(--color-bg-light-gradient-highlight-end);
     --color-text: var(--color-text-dark-on-light);
     --color-text-highlight: var(--color-text-dark-on-light-emphasis);
     --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
@@ -102,6 +114,9 @@
     --color-bg-highlight: var(--color-bg-dark-highlight);
     --color-bg-accent: var(--color-bg-accent-on-dark);
     --color-bg-accent-highlight: var(--color-bg-accent-on-dark-highlight);
+    --color-bg-deemphasis: var(--color-bg-dark-deemphasis);
+    --color-bg-gradient-highlight-start: var(--color-bg-dark-gradient-highlight-start);
+    --color-bg-gradient-highlight-end: var(--color-bg-dark-gradient-highlight-end);
     --color-text: var(--color-text-light-on-dark);
     --color-text-highlight: var(--color-text-light-on-dark-emphasis);
     --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
@@ -497,7 +512,10 @@ body .et_pb_section {
   margin-bottom: 0; }
 
 header .header-custom > .et_pb_code_inner {
+  background-color: var(--color-bg-deemphasis);
   height: var(--height-header);
+  backdrop-filter: blur(1rem);
+  /* TODO: use variable */
   transition-duration: 300ms;
   /* TODO: use variable */
   display: flex;
