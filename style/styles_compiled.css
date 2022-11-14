@@ -551,9 +551,6 @@ header nav > button.button-menu {
   display: none; }
 
 /* Opened state */
-header nav.isOpen .nav-list + button.button-menu {
-  right: calc((var(--height-header) - var(--size-button)) / 2); }
-
 header nav button.button-menu .icon-close {
   display: none; }
 
@@ -586,9 +583,6 @@ header nav ul.nav-list > li {
   body.single-project .logo .logo-full {
     display: none; }
 
-  header nav.isOpen {
-    margin-right: calc(-1 * var(--margin-content)); }
-
   header nav ul.nav-list {
     background-color: blue;
     width: 20rem;
@@ -618,7 +612,9 @@ header nav ul.nav-list > li {
     padding-left: 0; }
 
   header nav button.button-menu {
-    display: inline-block; } }
+    display: inline-block;
+    margin-right: 1rem;
+    /* temporary, use variable */ } }
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }

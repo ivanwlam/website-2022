@@ -127,7 +127,7 @@ header nav > button.button-menu {
 
 /* Opened state */
 header nav.isOpen .nav-list + button.button-menu {
-  right: calc((var(--height-header) - var(--size-button)) / 2); 
+  // right: calc((var(--height-header) - var(--size-button)) / 2); 
 }
 
 header nav button.button-menu .icon-close {
@@ -177,7 +177,7 @@ header nav ul.nav-list > li {
   }
   
   header nav.isOpen {
-    margin-right: calc(-1 * var(--margin-content));
+    // margin-right: calc(-1 * var(--margin-content));
   }
   
   header nav ul.nav-list {
@@ -211,6 +211,7 @@ header nav ul.nav-list > li {
   
   header nav button.button-menu {
     display: inline-block;
+    margin-right: 1rem; /* temporary, use variable */
   }
 
   
