@@ -65,12 +65,13 @@ header .header-custom > .et_pb_code_inner {
   
   display: flex;
   justify-content: space-between;
-  gap: 1rem; /* TODO: use variable */
+  // gap: 1rem; /* TODO: use variable */
 }
 
 header .breadcrumb {
   display: inline-block;
   line-height: var(--height-header);
+  // position: absolute;
 }
 
 .logo {
@@ -161,8 +162,13 @@ header nav ul.nav-list > li {
 /* Mobile/Tablet */
 @media screen and (max-width: $breakpoint-desktop) {
   
+  header .header-custom > .et_pb_code_inner {
+    display: block;
+  }
+
   header .breadcrumb {
     margin-left: 1rem; /* temporary, use variable */
+    position: absolute;
   }
 
   body.home.above-fold .logo,
@@ -183,6 +189,8 @@ header nav ul.nav-list > li {
     transition-delay: 300ms; /* use variable for mobile menu transition duration */
     transition-timing-function: ease-out;
     overflow: hidden;
+    position: absolute;
+    right: 0;
   
   }
   
