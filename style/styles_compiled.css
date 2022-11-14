@@ -636,7 +636,7 @@ header nav ul.nav-list > li {
     transition-delay: 0s; }
 
   header nav ul.nav-list {
-    background-color: blue;
+    background-color: var(--color-bg-highlight);
     width: 20rem;
     height: 100vh;
     padding-top: var(--height-header);
