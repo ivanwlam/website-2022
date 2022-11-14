@@ -8,8 +8,8 @@ const documentIsBelowFold = () => {
 
 const navMenuClicked = (e) => {
   // check nav-list state. if open, set to close. if close, set to open
-  const navList = document.querySelector("header nav ul.nav-list");
-  navList.classList.toggle("isOpen");
+  const nav = document.querySelector("header nav");
+  nav.classList.toggle("isOpen");
 }
 
 const setDocAsAboveFold = () => {

@@ -551,16 +551,16 @@ header nav > button.button-menu {
   display: none; }
 
 /* Opened state */
-header nav .nav-list.isOpen + button.button-menu {
+header nav.isOpen .nav-list + button.button-menu {
   right: calc((var(--height-header) - var(--size-button)) / 2); }
 
 header nav button.button-menu .icon-close {
   display: none; }
 
-header nav ul.isOpen + button.button-menu .icon-close {
+header nav.isOpen ul + button.button-menu .icon-close {
   display: inline;
   /* temporary */ }
-header nav ul.isOpen + button.button-menu .icon-hamburger {
+header nav.isOpen ul + button.button-menu .icon-hamburger {
   display: none; }
 
 header nav ul.nav-list {
@@ -582,7 +582,7 @@ header nav ul.nav-list > li {
   body.single-project .logo .logo-full {
     display: none; }
 
-  header nav:has(.nav-list.isOpen) {
+  header nav.isOpen {
     margin-right: calc(-1 * var(--margin-content)); }
 
   header nav ul.nav-list {
@@ -597,7 +597,7 @@ header nav ul.nav-list > li {
     transition-duration: 300ms;
     flex-direction: column; }
 
-  header nav ul.nav-list.isOpen {
+  header nav.isOpen ul.nav-list {
     transform: translateX(0%); }
 
   header nav ul.nav-list > li {
