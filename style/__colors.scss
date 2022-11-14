@@ -40,16 +40,20 @@
 
   // ELEMENT TYPES
   --color-bg-light:                         hsl(var(--color-hs-neutral) 95%);
-  --color-bg-light-highlight:               hsl(var(--color-hs-neutral) 100%);
-  --color-bg-light-deemphasis:              hsl(var(--color-hs-neutral) 90%);
-  --color-bg-light-gradient-highlight-start:var(--color-bg-light-highlight);
-  --color-bg-light-gradient-highlight-end:  hsl(var(--color-hs-neutral) 85%);
+  --color-bg-light-highlight:               hsl(var(--color-hs-neutral) 100%);  /* TODO: Use variable for lightness */
+  --color-bg-light-deemphasis:              hsl(var(--color-hs-neutral) 90%); /* TODO: Use variable for lightness */
+  --color-bg-light-gradient-highlight-start:var(--color-bg-light-highlight); 
+  --color-bg-light-gradient-highlight-end:  hsl(var(--color-hs-neutral) 85%); /* TODO: Use variable for lightness */
+
+  --color-bg-header-light:                  hsla(var(--color-hs-neutral) 90% / 0.8); /* TODO: Use variable for lightness and alpha */
 
   --color-bg-dark:                          hsl(var(--color-hs-neutral) 15%);
   --color-bg-dark-highlight:                hsl(var(--color-hs-neutral) 5%);
-  --color-bg-dark-deemphasis:               hsl(var(--color-hs-neutral) 10%);
-  --color-bg-dark-gradient-highlight-start: hsl(var(--color-hs-neutral) 20%);
-  --color-bg-dark-gradient-highlight-end:   hsl(var(--color-hs-neutral) 10%);
+  --color-bg-dark-deemphasis:               hsl(var(--color-hs-neutral) 10%); /* TODO: Use variable for lightness */
+  --color-bg-dark-gradient-highlight-start: hsl(var(--color-hs-neutral) 20%); /* TODO: Use variable for lightness */
+  --color-bg-dark-gradient-highlight-end:   hsl(var(--color-hs-neutral) 10%); /* TODO: Use variable for lightness */
+
+  --color-bg-header-dark:                   hsla(var(--color-hs-neutral) 10% / 0.8); /* TODO: Use variable for lightness */
 
   --color-bg-accent-on-light:               hsl(var(--color-hue-accent) var(--color-saturation-default) 30%);
   --color-bg-accent-on-light-highlight:     hsl(var(--color-hue-accent) var(--color-saturation-default) 33%);
@@ -107,6 +111,7 @@
   --color-bg-deemphasis:                  var(--color-bg-light-deemphasis);
   --color-bg-gradient-highlight-start:    var(--color-bg-light-gradient-highlight-start);
   --color-bg-gradient-highlight-end:      var(--color-bg-light-gradient-highlight-end);
+  --color-bg-header:                      var(--color-bg-header-light);
 
 
   --color-text:                           var(--color-text-dark-on-light);
@@ -126,6 +131,7 @@
   --color-line-emphasis-opaque:           var(--color-line-dark-on-light-emphasis-opaque);
   --color-line-deemphasis-opaque:         var(--color-line-dark-on-light-deemphasis-opaque);
   
+  --color-shadow:                         hsla(0 0% 0% / 0.2);
 
 }
 
@@ -138,6 +144,7 @@
     --color-bg-deemphasis:                var(--color-bg-light-deemphasis);
     --color-bg-gradient-highlight-start:  var(--color-bg-light-gradient-highlight-start);
     --color-bg-gradient-highlight-end:    var(--color-bg-light-gradient-highlight-end);
+    --color-bg-header:                    var(--color-bg-header-light);
 
 
     --color-text:                         var(--color-text-dark-on-light);
@@ -180,6 +187,7 @@
     --color-bg-deemphasis:                var(--color-bg-dark-deemphasis);
     --color-bg-gradient-highlight-start:  var(--color-bg-dark-gradient-highlight-start);
     --color-bg-gradient-highlight-end:    var(--color-bg-dark-gradient-highlight-end);
+    --color-bg-header:                    var(--color-bg-header-dark);
     
 
     --color-text:                         var(--color-text-light-on-dark);

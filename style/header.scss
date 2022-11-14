@@ -59,7 +59,7 @@
 
 
 header .header-custom > .et_pb_code_inner {
-  background-color: var(--color-bg-deemphasis);
+  background-color: var(--color-bg-header);
   height: var(--height-header);
   backdrop-filter: blur(1rem); /* TODO: use variable */
   
@@ -68,6 +68,8 @@ header .header-custom > .et_pb_code_inner {
   display: flex;
   justify-content: space-between;
   // gap: 1rem; /* TODO: use variable */
+
+  box-shadow: 0px 1px 2px var(--color-shadow);
 }
 
 header .breadcrumb {
