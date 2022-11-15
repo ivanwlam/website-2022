@@ -39,6 +39,13 @@ window.onload = () => {
   const headerNav = document.querySelector("header nav");
   headerNav.addEventListener("click", e => {
     console.log("parent capture");
-    e.stopPropagation();
+    navMenuClicked();
   }, {capture: true});
+
+  const headerNavChildren = document.querySelectorAll("header nav *");
+  headerNavChildren.forEach(el => {
+    el.addEventListener("click",e => {
+      e.stopPropagation();
+    })
+  })
 }
