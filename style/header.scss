@@ -285,8 +285,8 @@ header nav ul.nav-list > li {
     padding: 1rem 1rem; /* TODO: Use variables */
     margin: 0 1rem 0 0;
   }
-
-  header nav ul.nav-list > li:has(.scheme-component) {
+  
+  header nav ul.nav-list > li.nav-list-scheme-component {
     padding-left: 0;
   }
   
