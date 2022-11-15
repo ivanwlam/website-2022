@@ -88,12 +88,12 @@ header .logo .logo-square {
   display: none;
   width: 3rem; /* TODO: use variable, header height */
   height: 3rem; /* TODO: use variable, header height */
-  background-color: lime; /* debug */
+  background-color: var(--color-bg-accent-highlight); /* debug */
 }
 
 header .logo .logo-full {
   display: block;
-  background-color: cyan; /* debug */
+  background-color: var(--color-bg-accent); /* debug */
 }
 
 
