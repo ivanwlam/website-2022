@@ -177,9 +177,9 @@ header nav ul.nav-list {
 }
 
 header nav ul.nav-list > li {
+  // background-color: maroon; /* Debug */
   display: inline-block;
   padding: 0 1em;
-  background-color: maroon;
 
 }
 
@@ -279,9 +279,9 @@ header nav ul.nav-list > li {
   }
   
   header nav ul.nav-list > li {
+    // background-color: green; /* Debug */
     display: block;
     border-top: 1px solid gray; /* TODO: Use variables */
-    background-color: green;
     padding: 1rem 1rem; /* TODO: Use variables */
     margin: 0 0 0 -1rem; /* Not sure why I need to set left to -1rem to reset the li alignment */
   }
