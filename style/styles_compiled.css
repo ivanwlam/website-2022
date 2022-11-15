@@ -928,7 +928,7 @@ header nav ul.nav-list > li {
     border-radius: 0.25rem; }
 
   header nav .nav-link a:hover {
-    background-color: var(--color-bg-highlight); } }
+    background-color: var(--color-bg); } }
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }
