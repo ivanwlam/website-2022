@@ -259,7 +259,7 @@
     --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-start);
     --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-end);
 
-    @supports (backdrop-filter: blur(1px)) {
+    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
       --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-blur-start);
       --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-blur-end);
     }
@@ -309,7 +309,7 @@
     --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-start);
     --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-end);
 
-    @supports (backdrop-filter: blur(1px)) {
+    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
       --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-blur-start);
       --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-blur-end);
     }

@@ -232,7 +232,7 @@
   --color-bg-form-field: var(--color-bg-light-highlight);
   --color-text-form-field: var(--color-text-dark-on-light);
   --color-border-form-field: var(--color-line-dark-on-light); }
-  @supports (backdrop-filter: blur(1px)) {
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
     [data-scheme-pref='light'] {
       --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-light-gradient-blur-start);
       --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-blur-end); } }
@@ -260,7 +260,7 @@
   --color-line-opaque: var(--color-line-light-on-dark-opaque);
   --color-line-emphasis-opaque: var(--color-line-light-on-dark-emphasis-opaque);
   --color-line-deemphasis-opaque: var(--color-line-light-on-dark-deemphasis-opaque); }
-  @supports (backdrop-filter: blur(1px)) {
+  @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
     [data-scheme-pref='dark'] {
       --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-dark-gradient-blur-start);
       --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-dark-gradient-blur-end); } }
@@ -294,7 +294,7 @@
     --color-bg-form-field: var(--color-bg-light-highlight);
     --color-text-form-field: var(--color-text-dark-on-light);
     --color-border-form-field: var(--color-line-dark-on-light); }
-    @supports (backdrop-filter: blur(1px)) {
+    @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
       [data-scheme-pref='auto'] {
         --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-light-gradient-blur-start);
         --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-blur-end); } } }
@@ -322,7 +322,7 @@
     --color-line-opaque: var(--color-line-light-on-dark-opaque);
     --color-line-emphasis-opaque: var(--color-line-light-on-dark-emphasis-opaque);
     --color-line-deemphasis-opaque: var(--color-line-light-on-dark-deemphasis-opaque); }
-    @supports (backdrop-filter: blur(1px)) {
+    @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
       [data-scheme-pref='auto'] {
         --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-dark-gradient-blur-start);
         --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-dark-gradient-blur-end); } } }
@@ -924,7 +924,8 @@ header nav .nav-link a:hover {
     /* 130% hard code to account for mobile/tablet margins */
     transition-duration: 300ms;
     flex-direction: column;
-    border-left: 1px solid var(--color-line-deemphasis); }
+    border-left: 1px solid var(--color-line-deemphasis);
+    padding-left: 0; }
 
   header nav.isOpen ul.nav-list {
     transform: translateX(0%); }
