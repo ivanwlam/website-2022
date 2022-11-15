@@ -22,6 +22,11 @@ const setDocAsBelowFold = () => {
   // console.debug("setting: below");
 }
 
+const setUpHeaderNavOverlayEvent = () => {
+  const headerNavOverlay = document.querySelector("header nav .overlay");
+  headerNavOverlay?.addEventListener("click", toggleNavIsOpen);
+}
+
 const toggleNavIsOpen = (e) => {
   const nav = document.querySelector("header nav");
   nav.classList.toggle("isOpen");
@@ -38,32 +43,5 @@ window.onscroll = () => {
 
 window.onload = () => {
   updateDocFoldStatus();
-
-  const headerNavOverlay = document.querySelector("header nav .overlay");
-  headerNavOverlay?.addEventListener("click", toggleNavIsOpen);
-
-  // set up listener for nav click
-  // NOTE 11/14/22: can't seem to get nav to not be clicked when children are clicked
-  // TODO 11/14/22: Create a separate div that is gray and covers the entire page and link that to the close trigger.
-  /* 
-  const headerNav = document.querySelector("header nav");
-  headerNav.addEventListener("click", e => {
-    console.debug("parent capture");
-    navMenuClicked();
-  }, {capture: true});
-
-  const headerNavChildren = document.querySelectorAll("header nav *");
-  headerNavChildren.forEach(el => {
-    el.addEventListener("click", e => {
-      console.debug("nav children clicked");
-      e.stopPropagation();
-    });
-  });
-
-  const headerNavList = document.querySelector("header nav .nav-list");
-  headerNavList.addEventListener("click", e => {
-    console.debug("nav list clicked");
-    e.stopPropagation();
-  });
-  */
+  setUpHeaderNavOverlayEvent();
 }
