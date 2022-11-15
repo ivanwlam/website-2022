@@ -820,6 +820,9 @@ header nav ul.nav-list > li {
   display: inline-block;
   padding: 0 1em; }
 
+header nav .nav-link a {
+  color: var(--color-text); }
+
 /* Mobile/Tablet */
 @media screen and (max-width: 980px) {
   header .header-custom > .et_pb_code_inner {
@@ -907,9 +910,7 @@ header nav ul.nav-list > li {
 
   header nav ul.nav-list > li {
     display: block;
-    border-top: 1px solid gray;
-    /* TODO: Use variables */
-    padding: 0.5rem 0;
+    padding: 0;
     /* TODO: Use variables */
     margin: 0 1rem 0 0; }
 
@@ -923,7 +924,7 @@ header nav ul.nav-list > li {
 
   header nav .nav-link a {
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     width: 100%;
     border-radius: 0.25rem; }
 
