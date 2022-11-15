@@ -38,32 +38,36 @@
 }
 
 [data-scheme-pref='light'] {
-  --color-fg:             var(--color-text-dark-on-light);
-  --color-fg-emphasis:    var(--color-fg);
-  --color-bg:             var(--color-bg-light);
+  --color-fg:                           var(--color-text-dark-on-light);
+  --color-fg-emphasis:                  var(--color-fg);
+  --color-bg:                           var(--color-bg-light);
   // --color-bg-hover:       var(--color-bg-hover-on-light);
+  --color-line-selected-scheme-icon:  transparent;
 }
 
 [data-scheme-pref='dark'] {
-  --color-fg:             var(--color-text-light-on-dark);
-  --color-fg-emphasis:    var(--color-text-light-on-dark-emphasis);
-  --color-bg:             var(--color-bg-dark);
+  --color-fg:                           var(--color-text-light-on-dark);
+  --color-fg-emphasis:                  var(--color-text-light-on-dark-emphasis);
+  --color-bg:                           var(--color-bg-dark);
   // --color-bg-hover:       var(--color-bg-hover-on-dark);
+  --color-line-selected-scheme-icon:    var(--color-line-emphasis);
 }
 
 [data-scheme-pref='auto'] {
   @media (prefers-color-scheme: light) {
-    --color-fg:           var(--color-text-dark-on-light);
-    --color-fg-emphasis:  var(--color-fg);
-    --color-bg:           var(--color-bg-light);
+    --color-fg:                         var(--color-text-dark-on-light);
+    --color-fg-emphasis:                var(--color-fg);
+    --color-bg:                         var(--color-bg-light);
     // --color-bg-hover:     var(--color-bg-hover-on-light);
+    --color-line-selected-scheme-icon:  transparent;
   }
   
   @media (prefers-color-scheme: dark) {
-    --color-fg:           var(--color-text-light-on-dark);
-    --color-fg-emphasis:  var(--color-text-light-on-dark-emphasis);
-    --color-bg:           var(--color-bg-dark);
+    --color-fg:                         var(--color-text-light-on-dark);
+    --color-fg-emphasis:                var(--color-text-light-on-dark-emphasis);
+    --color-bg:                         var(--color-bg-dark);
     // --color-bg-hover:     var(--color-bg-hover-on-dark);
+    --color-line-selected-scheme-icon:  var(--color-line-emphasis);
   }
 }
 
@@ -258,6 +262,7 @@ svg.scheme-icon {
   transform: scale(1);
   opacity: 1;
   transition-duration: var(--duration-icon-scheme-on);
+  border: 2px solid var(--color-line-selected-scheme-icon);
 }
 
 

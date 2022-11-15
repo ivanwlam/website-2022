@@ -273,6 +273,7 @@ header nav .nav-link a {
     transform: translateX(130%); /* 130% hard code to account for mobile/tablet margins */
     transition-duration: 300ms;
     flex-direction: column;
+    border-left: 1px solid var(--color-line-deemphasis);
   }
   
   header nav.isOpen ul.nav-list {
@@ -289,6 +290,9 @@ header nav .nav-link a {
   
   header nav ul.nav-list > li.nav-list-scheme-component {
     padding-left: 0;
+    border-top: 1px solid var(--color-line);
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
   
   header nav button.button-menu {
