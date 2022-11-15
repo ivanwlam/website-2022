@@ -708,6 +708,8 @@ body .et_pb_section {
 /* TODO: Set --width-content depending on window width, then set --margin-content based on content width, then replace margin-right of "header nav:has(.nav-list.isOpen)"  */
 header .section-header {
   background-color: var(--color-bg-header);
+  -webkit-backdrop-filter: blur(1rem);
+  /* TODO: use variable */
   backdrop-filter: blur(1rem);
   /* TODO: use variable */
   box-shadow: 0px 1px 2px var(--color-shadow);
@@ -856,17 +858,23 @@ header nav ul.nav-list > li {
 
   header nav.isOpen {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
+    /* Make it taller than screen as menu bars change size on phone when scrolling */
     transition-duration: 0s;
-    transition-delay: 0s; }
+    transition-delay: 0s;
+    background-color: hsla(var(--color-hsl-black)/0.5);
+    /* TODO: use variable */ }
 
   header nav ul.nav-list {
     background-image: linear-gradient(var(--color-bg-nav-menu-gradient-start), var(--color-bg-nav-menu-gradient-end));
+    -webkit-backdrop-filter: blur(1rem);
+    /* TODO: use variable */
     backdrop-filter: blur(1rem);
     /* TODO: use variable */
     box-shadow: -1px 0px 2px var(--color-shadow);
     width: 20rem;
-    height: 100vh;
+    height: 150vh;
+    /* Make it taller than screen as menu bars change size on phone when scrolling */
     padding-top: var(--height-header);
     position: absolute;
     right: 0;
