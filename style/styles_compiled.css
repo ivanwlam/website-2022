@@ -590,6 +590,9 @@ p {
 li {
   margin-bottom: 1em; }
 
+a {
+  color: var(--color-text-link); }
+
 .page-title h1 {
   font-size: var(--font-size-super-heading); }
 
@@ -906,7 +909,7 @@ header nav ul.nav-list > li {
     display: block;
     border-top: 1px solid gray;
     /* TODO: Use variables */
-    padding: 1rem 1rem;
+    padding: 0.5rem 0;
     /* TODO: Use variables */
     margin: 0 1rem 0 0; }
 
@@ -916,7 +919,16 @@ header nav ul.nav-list > li {
   header nav button.button-menu {
     display: inline-block;
     margin-right: 1rem;
-    /* temporary, use variable */ } }
+    /* temporary, use variable */ }
+
+  header nav .nav-link a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 0.25rem; }
+
+  header nav .nav-link a:hover {
+    background-color: var(--color-bg-highlight); } }
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }

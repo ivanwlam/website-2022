@@ -282,7 +282,7 @@ header nav ul.nav-list > li {
     // background-color: green; /* Debug */
     display: block;
     border-top: 1px solid gray; /* TODO: Use variables */
-    padding: 1rem 1rem; /* TODO: Use variables */
+    padding: 0.5rem 0; /* TODO: Use variables */
     margin: 0 1rem 0 0;
   }
   
@@ -295,7 +295,17 @@ header nav ul.nav-list > li {
     margin-right: 1rem; /* temporary, use variable */
   }
 
-  
+  header nav .nav-link a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+
+  header nav .nav-link a:hover {
+    background-color: var(--color-bg-highlight);
+  }
 
 }
 
