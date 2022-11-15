@@ -85,10 +85,14 @@ header .logo {
 
 header .logo .logo-square {
   display: none;
+  width: 3rem; /* TODO: use variable, header height */
+  height: 3rem; /* TODO: use variable, header height */
+  background-color: lime; /* debug */
 }
 
 header .logo .logo-full {
   display: block;
+  background-color: cyan; /* debug */
 }
 
 

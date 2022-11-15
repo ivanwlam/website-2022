@@ -568,10 +568,18 @@ header .logo {
   vertical-align: top; }
 
 header .logo .logo-square {
-  display: none; }
+  display: none;
+  width: 3rem;
+  /* TODO: use variable, header height */
+  height: 3rem;
+  /* TODO: use variable, header height */
+  background-color: lime;
+  /* debug */ }
 
 header .logo .logo-full {
-  display: block; }
+  display: block;
+  background-color: cyan;
+  /* debug */ }
 
 header .breadcrumb .case-study-title {
   display: none;
