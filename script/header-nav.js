@@ -38,7 +38,11 @@ const updateDocFoldStatus = () => {
 }
 
 const updateHeaderBreadcrumbCaseStudyTitle = () => {
-  document.querySelector("header .case-study-title")?.textContent = document.querySelector("h1")?.textContent;
+  const el_caseStudyTitle = document.querySelector("header .case-study-title");
+  const el_h1 = document.querySelector("h1");
+  
+  if (!(el_caseStudyTitle && el_caseStudyTitle.textContent && el_h1 && el_h1.textContent)) return;
+  el_caseStudyTitle.textContent = el_h1.textContent;
 }
 
 window.onscroll = () => {
