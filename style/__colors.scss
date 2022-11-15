@@ -334,7 +334,7 @@
 }
 
 [data-scheme-pref='dark'] {
-  @include light-scheme-variables;
+  @include dark-scheme-variables;
 }
 
 [data-scheme-pref='auto'] {
