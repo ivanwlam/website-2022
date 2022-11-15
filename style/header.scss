@@ -124,6 +124,9 @@ header .breadcrumb .case-study-title span {
   background-color: orange; /* debug */
 }
 
+
+/* HEADER NAVIGATION */
+
 header nav {
   /* background-color: orange; /* debug */
   display: inline-block;
@@ -177,11 +180,17 @@ header nav ul.nav-list > li {
   // background-color: maroon; /* Debug */
   display: inline-block;
   padding: 0 1em;
+  margin-bottom: 0;
 
+}
+
+header nav ul.nav-list li.scheme-component {
+  top: calc((var(--height-header) - var(--size-target-icon-scheme-trigger)) / 2);
 }
 
 header nav .nav-link a {
   color: var(--color-text);
+  line-height: var(--height-header);
 }
 
 
@@ -263,7 +272,7 @@ header nav .nav-link a {
     background-image: linear-gradient(var(--color-bg-nav-menu-gradient-start), var(--color-bg-nav-menu-gradient-end));
     -webkit-backdrop-filter: blur(1rem); /* TODO: use variable */
     backdrop-filter: blur(1rem); /* TODO: use variable */
-    box-shadow: -1px 0px 2px var(--color-shadow);
+    // box-shadow: -1px 0px 2px var(--color-shadow);
     
     width: 20rem;
     height: 150vh; /* Make it taller than screen as menu bars change size on phone when scrolling */
@@ -285,7 +294,7 @@ header nav .nav-link a {
     display: block;
     // border-top: 1px solid gray; /* TODO: Use variables */
     padding: 0; /* TODO: Use variables */
-    margin: 0 1rem 0 0;
+    margin: 0 1rem 0 1rem;
   }
   
   header nav ul.nav-list > li.nav-list-scheme-component {
@@ -305,6 +314,7 @@ header nav .nav-link a {
     padding: 1em 1em;
     width: 100%;
     border-radius: var(--border-radius-medium);
+    line-height: unset;
   }
 
 

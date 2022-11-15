@@ -787,6 +787,7 @@ header .breadcrumb .case-study-title span {
   background-color: orange;
   /* debug */ }
 
+/* HEADER NAVIGATION */
 header nav {
   /* background-color: orange; /* debug */
   display: inline-block;
@@ -827,10 +828,15 @@ header nav ul.nav-list {
 
 header nav ul.nav-list > li {
   display: inline-block;
-  padding: 0 1em; }
+  padding: 0 1em;
+  margin-bottom: 0; }
+
+header nav ul.nav-list li.scheme-component {
+  top: calc((var(--height-header) - var(--size-target-icon-scheme-trigger)) / 2); }
 
 header nav .nav-link a {
-  color: var(--color-text); }
+  color: var(--color-text);
+  line-height: var(--height-header); }
 
 /* Mobile/Tablet */
 @media screen and (max-width: 980px) {
@@ -902,7 +908,6 @@ header nav .nav-link a {
     /* TODO: use variable */
     backdrop-filter: blur(1rem);
     /* TODO: use variable */
-    box-shadow: -1px 0px 2px var(--color-shadow);
     width: 20rem;
     height: 150vh;
     /* Make it taller than screen as menu bars change size on phone when scrolling */
@@ -922,7 +927,7 @@ header nav .nav-link a {
     display: block;
     padding: 0;
     /* TODO: Use variables */
-    margin: 0 1rem 0 0; }
+    margin: 0 1rem 0 1rem; }
 
   header nav ul.nav-list > li.nav-list-scheme-component {
     padding-left: 0;
@@ -939,7 +944,8 @@ header nav .nav-link a {
     display: inline-block;
     padding: 1em 1em;
     width: 100%;
-    border-radius: var(--border-radius-medium); }
+    border-radius: var(--border-radius-medium);
+    line-height: unset; }
 
   header nav .nav-link a:hover {
     background-color: var(--color-bg-hover);
@@ -1256,7 +1262,7 @@ svg.scheme-icon {
   position: relative;
   width: var(--size-target-icon-scheme-controls);
   text-align: center;
-  background-color: var(--color-bg-light-highlight);
+  background-color: var(--color-bg-highlight);
   margin-bottom: 0;
   /* override */ }
 
@@ -1283,7 +1289,7 @@ svg.scheme-icon {
   outline-color: currentColor; }
 
 .module-scheme-controls li label {
-  background-color: var(--color-bg-light-highlight); }
+  background-color: var(--color-bg-highlight); }
 
 .module-scheme-controls li button {
   background: none;
@@ -1341,7 +1347,7 @@ svg.scheme-icon {
 .scheme-trigger svg.scheme-dark,
 .module-scheme-controls li input:checked + label svg.icon-on.scheme-dark {
   /* Glow around the moon against dark background */
-  filter: drop-shadow(0px 0px 0.25rem var(--color-icon-fill)); }
+  filter: drop-shadow(0px 0px 0.25rem var(--color-text-light-on-dark-emphasis)); }
 
 .module-scheme-controls .label-control {
   display: inline-block;
