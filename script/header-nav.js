@@ -44,8 +44,13 @@ window.onload = () => {
 
   const headerNavChildren = document.querySelectorAll("header nav *");
   headerNavChildren.forEach(el => {
-    el.addEventListener("click",e => {
+    el.addEventListener("click", e => {
       e.stopPropagation();
-    })
-  })
+    });
+  });
+
+  const headerNavList = document.querySelector("header nav .nav-list");
+  headerNavList.addEventListener("click", e => {
+    e.stopPropagation();
+  });
 }
