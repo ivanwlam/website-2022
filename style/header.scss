@@ -185,7 +185,7 @@ header nav ul.nav-list > li {
 
 }
 
-header nav ul.nav-list li.scheme-component {
+header nav ul.nav-list li.nav-list-scheme-component .scheme-component {
   top: calc((var(--height-header) - var(--size-target-icon-scheme-trigger)) / 2);
   margin-left: 1rem;
 }
