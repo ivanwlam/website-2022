@@ -768,14 +768,15 @@ header .breadcrumb .case-study-title {
   margin-left: 0.5rem;
   /* TODO: Use variable, for spacing between logo and case study title unit */
   height: 3rem;
-  /* TODO: Use variable, header height */ }
+  /* TODO: Use variable, header height */
+  font-weight: var(--font-weight-bold); }
   body.single-project.below-fold header .breadcrumb .case-study-title {
     display: inline-block; }
 
 header .breadcrumb .case-study-title::before {
-  content: ">";
+  content: "\025B8";
   display: inline-block;
-  margin-right: .5rem;
+  margin-right: .25rem;
   /* TODO: Use variable, between arrow and text */
   vertical-align: top; }
 

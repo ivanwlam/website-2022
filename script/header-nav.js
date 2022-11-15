@@ -37,6 +37,10 @@ const updateDocFoldStatus = () => {
   pageIsBelowFold ? setDocAsBelowFold() : setDocAsAboveFold();
 }
 
+const updateHeaderBreadcrumbCaseStudyTitle = () => {
+  document.querySelector("header .case-study-title")?.textContent = document.querySelector("h1")?.textContent;
+}
+
 window.onscroll = () => {
   updateDocFoldStatus();
 }
@@ -44,4 +48,5 @@ window.onscroll = () => {
 window.onload = () => {
   updateDocFoldStatus();
   setUpHeaderNavOverlayEvent();
+  updateHeaderBreadcrumbCaseStudyTitle();
 }
