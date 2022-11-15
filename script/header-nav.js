@@ -35,7 +35,13 @@ window.onscroll = () => {
 
 window.onload = () => {
   updateDocFoldStatus();
+
+
+
   // set up listener for nav click
+  // NOTE 11/14/22: can't seem to get nav to not be clicked when children are clicked
+  // TODO 11/14/22: Create a separate div that is gray and covers the entire page and link that to the close trigger.
+  /* 
   const headerNav = document.querySelector("header nav");
   headerNav.addEventListener("click", e => {
     console.debug("parent capture");
@@ -55,4 +61,5 @@ window.onload = () => {
     console.debug("nav list clicked");
     e.stopPropagation();
   });
+  */
 }
