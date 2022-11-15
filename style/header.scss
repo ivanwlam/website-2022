@@ -313,6 +313,10 @@ header nav .nav-link a:hover {
     margin-top: 1rem;
     padding-top: 1rem;
   }
+
+  header nav ul.nav-list li.nav-list-scheme-component .scheme-component {
+    margin-left: 0;
+  }
   
   header nav button.button-menu {
     display: inline-block;
