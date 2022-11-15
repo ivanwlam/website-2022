@@ -867,6 +867,8 @@ header nav ul.nav-list > li {
     transition-delay: 0s; }
 
   header nav.isOpen .overlay {
+    background-color: hsla(var(--color-hsl-black)/0.5);
+    /* TODO: use variable */
     width: 100vw;
     height: 100vh;
     position: fixed; }

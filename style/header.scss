@@ -241,7 +241,7 @@ header nav ul.nav-list > li {
   }
 
   header nav.isOpen .overlay {
-    // background-color: hsla(var(--color-hsl-black) / 0.5); /* TODO: use variable */
+    background-color: hsla(var(--color-hsl-black) / 0.5); /* TODO: use variable */
     width: 100vw;
     height: 100vh;
     position: fixed;
