@@ -37,5 +37,8 @@ window.onload = () => {
   updateDocFoldStatus();
   // set up listener for nav click
   const headerNav = document.querySelector("header nav");
-  headerNav.addEventListener("click", navMenuClicked);
+  headerNav.addEventListener("click", e => {
+    console.log("parent capture");
+    e.stopPropagation();
+  }, {capture: true});
 }
