@@ -152,8 +152,8 @@ svg.scheme-icon {
   --padding-vertical: calc(0.375 * var(--size-icon-scheme-controls));
   --padding-horizontal: calc(0.75 * var(--size-icon-scheme-controls));
   --gap-between-targets: calc(0.5 * var(--size-icon-scheme-controls));
-  --color-bg-module: var(--color-bg-light-highlight);
-  --color-fg-module: var(--color-text-dark-on-light);
+  --color-bg-module: var(--color-bg-highlight);
+  --color-fg-module: var(--color-text);
   --color-icon-fill: var(--color-fg-module);
   
   background-color: var(--color-bg-module);
@@ -353,6 +353,12 @@ svg.scheme-icon {
     box-shadow: none;
     border-radius: 0;
     margin-top: 0;
+  }
+
+  .module-scheme-controls,
+  .module-scheme-controls li,
+  .module-scheme-controls li label {
+    background-color: transparent;
   }
   
 }
