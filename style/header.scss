@@ -179,18 +179,26 @@ header nav ul.nav-list {
 header nav ul.nav-list > li {
   // background-color: maroon; /* Debug */
   display: inline-block;
-  padding: 0 1em;
+  // padding: 0 1em;
   margin-bottom: 0;
 
 }
 
 header nav ul.nav-list li.scheme-component {
   top: calc((var(--height-header) - var(--size-target-icon-scheme-trigger)) / 2);
+  margin-left: 1rem;
 }
 
 header nav .nav-link a {
   color: var(--color-text);
   line-height: var(--height-header);
+  display: inline-block;
+  padding: 0 1em;
+}
+
+header nav .nav-link a:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-highlight);
 }
 
 

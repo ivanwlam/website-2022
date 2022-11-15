@@ -325,6 +325,7 @@ svg.scheme-icon {
 
 .module-scheme-controls li input:checked+label .label-control {
   font-weight: var(--font-weight-bold);
+  color: var(--color-text-highlight);
 }
 
 .module-scheme-controls li input:checked+label .label-control,
