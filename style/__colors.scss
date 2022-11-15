@@ -153,9 +153,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root,
-  [data-scheme-pref='light'],
-  [data-scheme-pref='auto'] {
+  :root {
     --color-bg:                           var(--color-bg-light);
     --color-bg-highlight:                 var(--color-bg-light-highlight);
     --color-bg-accent:                    var(--color-bg-accent-on-light);
@@ -204,9 +202,7 @@
 
 
 @media (prefers-color-scheme: dark) {
-  :root,
-  [data-scheme-pref='dark'],
-  [data-scheme-pref='auto'] {
+  :root{
 
     --color-bg:                           var(--color-bg-dark);
     --color-bg-highlight:                 var(--color-bg-dark-highlight);
@@ -257,3 +253,18 @@
   --color-text-form-field:            var(--color-text);
   --color-border-form-field:          var(--color-line);
 }
+
+
+/* Scratch pad
+
+[data=light] {
+  (Light mode vars)
+}
+
+
+[data=dark] {
+  (Light mode vars)
+}
+
+
+*/

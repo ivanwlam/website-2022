@@ -109,9 +109,7 @@
       --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-blur-end); } }
 
 @media (prefers-color-scheme: light) {
-  :root,
-  [data-scheme-pref='light'],
-  [data-scheme-pref='auto'] {
+  :root {
     --color-bg: var(--color-bg-light);
     --color-bg-highlight: var(--color-bg-light-highlight);
     --color-bg-accent: var(--color-bg-accent-on-light);
@@ -139,15 +137,11 @@
     --color-text-form-field: var(--color-text-dark-on-light);
     --color-border-form-field: var(--color-line-dark-on-light); }
     @supports (backdrop-filter: blur(1px)) {
-      :root,
-      [data-scheme-pref='light'],
-      [data-scheme-pref='auto'] {
+      :root {
         --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-light-gradient-blur-start);
         --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-blur-end); } } }
 @media (prefers-color-scheme: dark) {
-  :root,
-  [data-scheme-pref='dark'],
-  [data-scheme-pref='auto'] {
+  :root {
     --color-bg: var(--color-bg-dark);
     --color-bg-highlight: var(--color-bg-dark-highlight);
     --color-bg-accent: var(--color-bg-accent-on-dark);
@@ -170,9 +164,7 @@
     --color-line-emphasis-opaque: var(--color-line-light-on-dark-emphasis-opaque);
     --color-line-deemphasis-opaque: var(--color-line-light-on-dark-deemphasis-opaque); }
     @supports (backdrop-filter: blur(1px)) {
-      :root,
-      [data-scheme-pref='dark'],
-      [data-scheme-pref='auto'] {
+      :root {
         --color-bg-nav-menu-gradient-start: var(--color-bg-nav-menu-dark-gradient-blur-start);
         --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-dark-gradient-blur-end); } } }
 :root {
@@ -183,6 +175,19 @@
   --color-text-form-field: var(--color-text);
   --color-border-form-field: var(--color-line); }
 
+/* Scratch pad
+
+[data=light] {
+  (Light mode vars)
+}
+
+
+[data=dark] {
+  (Light mode vars)
+}
+
+
+*/
 :root {
   /* Scale: 1.414 (Augmented Fourth) 
   https://type-scale.com
