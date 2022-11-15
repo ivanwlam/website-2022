@@ -237,7 +237,14 @@ header nav ul.nav-list > li {
     height: 150vh; /* Make it taller than screen as menu bars change size on phone when scrolling */
     transition-duration: 0s;
     transition-delay: 0s;
-    background-color: hsla(var(--color-hsl-black) / 0.5); /* TODO: use variable */
+    // background-color: hsla(var(--color-hsl-black) / 0.5); /* TODO: use variable */
+  }
+
+  header nav.isOpen .overlay {
+    // background-color: hsla(var(--color-hsl-black) / 0.5); /* TODO: use variable */
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
   }
   
   header nav ul.nav-list {

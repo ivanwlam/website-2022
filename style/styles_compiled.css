@@ -864,9 +864,12 @@ header nav ul.nav-list > li {
     height: 150vh;
     /* Make it taller than screen as menu bars change size on phone when scrolling */
     transition-duration: 0s;
-    transition-delay: 0s;
-    background-color: hsla(var(--color-hsl-black)/0.5);
-    /* TODO: use variable */ }
+    transition-delay: 0s; }
+
+  header nav.isOpen .overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed; }
 
   header nav ul.nav-list {
     background-image: linear-gradient(var(--color-bg-nav-menu-gradient-start), var(--color-bg-nav-menu-gradient-end));

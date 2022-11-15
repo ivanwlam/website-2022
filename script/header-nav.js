@@ -36,7 +36,8 @@ window.onscroll = () => {
 window.onload = () => {
   updateDocFoldStatus();
 
-
+  const headerNavOverlay = document.querySelector("header nav.isOpen .overlay");
+  headerNavOverlay.addEventListener("click", navMenuClicked);
 
   // set up listener for nav click
   // NOTE 11/14/22: can't seem to get nav to not be clicked when children are clicked
