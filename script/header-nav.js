@@ -7,9 +7,7 @@ const documentIsBelowFold = () => {
 }
 
 const navMenuClicked = (e) => {
-  // check nav-list state. if open, set to close. if close, set to open
-  const nav = document.querySelector("header nav");
-  nav.classList.toggle("isOpen");
+  toggleNavIsOpen(e);
 }
 
 const setDocAsAboveFold = () => {
@@ -22,6 +20,11 @@ const setDocAsBelowFold = () => {
   document.body.classList.remove("above-fold");
   document.body.classList.add("below-fold");
   // console.debug("setting: below");
+}
+
+const toggleNavIsOpen = (e) => {
+  const nav = document.querySelector("header nav");
+  nav.classList.toggle("isOpen");
 }
 
 const updateDocFoldStatus = () => {  
@@ -37,7 +40,7 @@ window.onload = () => {
   updateDocFoldStatus();
 
   const headerNavOverlay = document.querySelector("header nav .overlay");
-  headerNavOverlay?.addEventListener("click", navMenuClicked);
+  headerNavOverlay?.addEventListener("click", toggleNavIsOpen);
 
   // set up listener for nav click
   // NOTE 11/14/22: can't seem to get nav to not be clicked when children are clicked
