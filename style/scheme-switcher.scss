@@ -4,11 +4,11 @@
   // --multiplier-browser-offset: 1.5;
 
   /* Temporary */
-  --color-bg-hover-on-dark: hsla(0 0% 100% / 20%); /* TODO: Add to actual site */
+  // --color-bg-hover-on-dark: hsla(0 0% 100% / 20%); /* TODO: Add to actual site */
   
-  --color-bg-hover-on-light: hsla(0 0% 0% / 15%);/* TODO: Add to actual site */
+  // --color-bg-hover-on-light: hsla(0 0% 0% / 15%);/* TODO: Add to actual site */
  
-  --color-bg-hover: var(--color-bg-hover-on-light); /* TODO: Add to actual site? */
+  // --color-bg-hover: var(--color-bg-hover-on-light); /* TODO: Add to actual site? */
   
   // --color-icon-control:   var(--color-text-dark-on-light);
   --color-icon-control:   var(--color-text);
@@ -41,14 +41,14 @@
   --color-fg:             var(--color-text-dark-on-light);
   --color-fg-emphasis:    var(--color-fg);
   --color-bg:             var(--color-bg-light);
-  --color-bg-hover:       var(--color-bg-hover-on-light);
+  // --color-bg-hover:       var(--color-bg-hover-on-light);
 }
 
 [data-scheme-pref='dark'] {
   --color-fg:             var(--color-text-light-on-dark);
   --color-fg-emphasis:    var(--color-text-light-on-dark-emphasis);
   --color-bg:             var(--color-bg-dark);
-  --color-bg-hover:       var(--color-bg-hover-on-dark);
+  // --color-bg-hover:       var(--color-bg-hover-on-dark);
 }
 
 [data-scheme-pref='auto'] {
@@ -56,14 +56,14 @@
     --color-fg:           var(--color-text-dark-on-light);
     --color-fg-emphasis:  var(--color-fg);
     --color-bg:           var(--color-bg-light);
-    --color-bg-hover:     var(--color-bg-hover-on-light);
+    // --color-bg-hover:     var(--color-bg-hover-on-light);
   }
   
   @media (prefers-color-scheme: dark) {
     --color-fg:           var(--color-text-light-on-dark);
     --color-fg-emphasis:  var(--color-text-light-on-dark-emphasis);
     --color-bg:           var(--color-bg-dark);
-    --color-bg-hover:     var(--color-bg-hover-on-dark);
+    // --color-bg-hover:     var(--color-bg-hover-on-dark);
   }
 }
 
