@@ -554,13 +554,29 @@ header .breadcrumb {
 .logo .logo-full {
   display: block; }
 
-.case-study-title {
-  display: none; }
-  body.single-project.below-fold .case-study-title {
+header .breadcrumb .case-study-title {
+  display: none;
+  margin-left: 0.5rem;
+  /* TODO: Use variable, for spacing between logo and case study title unit */
+  height: 3rem;
+  /* TODO: Use variable, header height */ }
+  body.single-project.below-fold header .breadcrumb .case-study-title {
     display: inline-block; }
 
-.case-study-title::before {
-  content: ">"; }
+header .breadcrumb .case-study-title::before {
+  content: ">";
+  display: inline-block;
+  margin-right: .5rem;
+  /* TODO: Use variable, between arrow and text */
+  vertical-align: top; }
+
+header .breadcrumb .case-study-title span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  background-color: orange;
+  /* debug */ }
 
 header nav {
   /* background-color: orange; /* debug */
@@ -613,14 +629,25 @@ header nav ul.nav-list > li {
   header .breadcrumb {
     margin-left: 1rem;
     /* temporary, use variable */
-    position: absolute; }
+    position: absolute;
+    display: flex;
+    margin-right: 4rem;
+    /* TODO: use variable, width of nav trigger and margins */ }
 
   body.home.above-fold .logo .logo-square,
   body.single-project .logo .logo-square {
-    display: block; }
+    display: block;
+    width: 3rem;
+    /* TODO: Use variable, header height */
+    height: 3rem;
+    /* TODO: Use variable, header height */ }
   body.home.above-fold .logo .logo-full,
   body.single-project .logo .logo-full {
     display: none; }
+
+  header .breadcrumb .case-study-title span {
+    width: calc(100vw - 1rem - 3rem - 4rem - 2rem);
+    /* TODO: use variables */ }
 
   header nav {
     width: 4rem;
