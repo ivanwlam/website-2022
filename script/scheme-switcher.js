@@ -56,7 +56,7 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
   console.debug("verifying scheme control change");
   console.debug("control value:", e.target.value);
   if (e.target.value == true) {
-    console.debug("control is checked", e.target);
+    // console.debug("control is checked", e.target);
     onClick_colorSchemeControl(e);
   }
 }
@@ -73,17 +73,17 @@ const updateColorSchemeControlWithPref = () => {
   const colorSchemeControlSelector = "#color-scheme-" + scheme.pref;
   console.debug("radio input element", document.querySelector(colorSchemeControlSelector));
   // if (document.querySelector(colorSchemeControlSelector) ) {
-    console.debug("radio input element: before", document.querySelector(colorSchemeControlSelector));
+    // console.debug("radio input element: before", document.querySelector(colorSchemeControlSelector));
     document.querySelector(colorSchemeControlSelector)?.setAttribute("checked", "checked");
     document.querySelector(colorSchemeControlSelector)?.click();
-    console.debug("radio input element: after", document.querySelector(colorSchemeControlSelector));
+    // console.debug("radio input element: after", document.querySelector(colorSchemeControlSelector));
   
   // }
 
   /* TODO 11/8/22: Adjust to allow for multiple instances of the scheme component and therefore multiple radio input for the same value */
 }
 
-console.debug("Running: scheme-switcher scripts");
+// console.debug("Running: scheme-switcher scripts");
 // Set early so no page flashes and that CSS is made aware
 reflectSchemePref();
 
@@ -105,15 +105,14 @@ window.onresize = () => {
     2) the update only happens after the resizing stops, and not constantly.
     */
   setTimeout(() => {
-    console.debug("timeout to update controls");
+    // console.debug("timeout to update controls");
     setUpColorSchemeControls();
     updateColorSchemeControlWithPref();
-    console.debug("end of timeout");
+    // console.debug("end of timeout");
   }, 500);
 
 }
 
-console.debug("End of scheme-switcher.js");
 
 // runFeature_ColorSchemeControl();
 

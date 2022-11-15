@@ -15,13 +15,13 @@ const navMenuClicked = (e) => {
 const setDocAsAboveFold = () => {
   document.body.classList.remove("below-fold");
   document.body.classList.add("above-fold");
-  console.log("setting: above");
+  // console.debug("setting: above");
 }
 
 const setDocAsBelowFold = () => {
   document.body.classList.remove("above-fold");
   document.body.classList.add("below-fold");
-  console.log("setting: below");
+  // console.debug("setting: below");
 }
 
 const updateDocFoldStatus = () => {  
