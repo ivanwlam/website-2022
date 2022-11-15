@@ -784,9 +784,7 @@ header .breadcrumb .case-study-title span {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  display: inline-block;
-  background-color: orange;
-  /* debug */ }
+  display: inline-block; }
 
 /* HEADER NAVIGATION */
 header nav {
