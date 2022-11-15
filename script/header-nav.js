@@ -38,19 +38,21 @@ window.onload = () => {
   // set up listener for nav click
   const headerNav = document.querySelector("header nav");
   headerNav.addEventListener("click", e => {
-    console.log("parent capture");
+    console.debug("parent capture");
     navMenuClicked();
   }, {capture: true});
 
   const headerNavChildren = document.querySelectorAll("header nav *");
   headerNavChildren.forEach(el => {
     el.addEventListener("click", e => {
+      console.debug("nav children clicked");
       e.stopPropagation();
     });
   });
 
   const headerNavList = document.querySelector("header nav .nav-list");
   headerNavList.addEventListener("click", e => {
+    console.debug("nav list clicked");
     e.stopPropagation();
   });
 }
