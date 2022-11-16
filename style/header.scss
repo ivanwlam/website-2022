@@ -85,33 +85,36 @@ header .logo {
   vertical-align: top;
 }
 
-@mixin variables-logo-light-scheme {
-  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png";
-  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png";
+// @mixin variables-logo-light-scheme {
+//   --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png";
+//   --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png";
+// }
+
+@mixin property-logo-full-dark-scheme {
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png');
 }
 
-@mixin variables-logo-dark-scheme {
-  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png";
-  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png";
+@mixin property-logo-square-dark-scheme {
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png');
 }
 
-[data-scheme-pref='light'] {
-  @include variables-logo-light-scheme;
-}
+// [data-scheme-pref='light'] {
+//   @include variables-logo-light-scheme;
+// }
 
-[data-scheme-pref='dark'] {
-  @include variables-logo-dark-scheme;
-}
+// [data-scheme-pref='dark'] {
+//   @include variables-logo-dark-scheme;
+// }
 
-[data-scheme-pref='auto'] {
-  @media (prefers-color-scheme: light) {
-    @include variables-logo-light-scheme;
-  }
+// [data-scheme-pref='auto'] {
+//   @media (prefers-color-scheme: light) {
+//     @include variables-logo-light-scheme;
+//   }
 
-  @media (prefers-color-scheme: dark) {
-    @include variables-logo-dark-scheme;
-  }
-}
+//   @media (prefers-color-scheme: dark) {
+//     @include variables-logo-dark-scheme;
+//   }
+// }
 
 
 header .logo .logo-square {
@@ -119,8 +122,17 @@ header .logo .logo-square {
   width: 3rem; /* TODO: use variable, header height */
   height: 3rem; /* TODO: use variable, header height */
   // background-color: var(--color-bg-accent-highlight); /* debug */
-  --url: 'url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png")';
-  background-image: var(--url);
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png');
+}
+
+[data-scheme-pref='dark'] header .logo .logo-square {
+  @include property-logo-square-dark-scheme;
+}
+
+[data-scheme-pref='auto'] header .logo .logo-square {
+  @media (prefers-color-scheme: dark) {
+    @include property-logo-square-dark-scheme;
+  }
 }
 
 header .logo .logo-full {
@@ -128,6 +140,17 @@ header .logo .logo-full {
   // background-color: var(--color-bg-accent); /* debug */
   height: var(--height-header);
   background-image: url(var(--url-logo-full));
+}
+
+
+[data-scheme-pref='dark'] header .logo .logo-full {
+  @include property-logo-full-dark-scheme;
+}
+
+[data-scheme-pref='auto'] header .logo .logo-full {
+  @media (prefers-color-scheme: dark) {
+    @include property-logo-full-dark-scheme;
+  }
 }
 
 header .logo .logo-square img,
