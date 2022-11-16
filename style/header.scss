@@ -119,7 +119,7 @@ header .logo .logo-square {
   width: 3rem; /* TODO: use variable, header height */
   height: 3rem; /* TODO: use variable, header height */
   // background-color: var(--color-bg-accent-highlight); /* debug */
-  --url: url(var(--url-logo-square));
+  --url: 'url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png")';
   background-image: var(--url);
 }
 
