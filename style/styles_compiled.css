@@ -727,7 +727,7 @@ header .section-header {
   /* TODO: use variable */
   backdrop-filter: blur(1rem);
   /* TODO: use variable */
-  box-shadow: 0px 1px 2px var(--color-shadow);
+  border-bottom: 1px solid var(--color-line-deemphasis);
   color: var(--color-fg); }
 
 .header-custom.et_pb_code.et_pb_module {
@@ -1288,7 +1288,8 @@ svg.scheme-icon {
   transform: translate(-5%, -5%);
   appearance: none;
   display: inline-block;
-  padding: 1rem; }
+  padding: 1rem;
+  background-color: transparent; }
 
 .module-scheme-controls li input[type=radio]:focus-visible {
   outline: 2px auto lightblue;

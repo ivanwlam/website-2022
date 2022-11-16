@@ -53,7 +53,8 @@ header .section-header {
   background-color: var(--color-bg-header);
   -webkit-backdrop-filter: blur(1rem); /* TODO: use variable */
   backdrop-filter: blur(1rem); /* TODO: use variable */
-  box-shadow: 0px 1px 2px var(--color-shadow); 
+  // box-shadow: 0px 1px 2px var(--color-shadow); 
+  border-bottom: 1px solid var(--color-line-deemphasis);
   color: var(--color-fg);
 }
 
