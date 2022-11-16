@@ -49,8 +49,14 @@ window.onscroll = () => {
   updateDocFoldStatus();
 }
 
-window.onload = () => {
+// window.onload = () => {
+//   updateDocFoldStatus();
+//   setUpHeaderNavOverlayEvent();
+//   updateHeaderBreadcrumbCaseStudyTitle();
+// }
+
+window.addEventListener("load", () => {
   updateDocFoldStatus();
   setUpHeaderNavOverlayEvent();
   updateHeaderBreadcrumbCaseStudyTitle();
-}
+});

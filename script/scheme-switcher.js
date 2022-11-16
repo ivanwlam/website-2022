@@ -87,6 +87,7 @@ const updateColorSchemeControlWithPref = () => {
 // Set early so no page flashes and that CSS is made aware
 reflectSchemePref();
 
+/*
 window.onload = () => {
   // Set after the buttons exist
   reflectSchemePref();
@@ -94,8 +95,15 @@ window.onload = () => {
   // setTimeout(() => {
     updateColorSchemeControlWithPref();
   // }, 100); // Seems like the problem is that the function was run too early, which doesn't make sense since console shows that the object is already created and detectable.
-
 }
+*/
+
+window.addEventListener("load", () => {
+
+  reflectSchemePref();
+  setUpColorSchemeControls();
+  updateColorSchemeControlWithPref();
+});
 
 window.onresize = () => {
   /* Need to implement a delay after window resize to update the switcher */
