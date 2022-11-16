@@ -750,10 +750,8 @@ header .logo {
 
 header .logo .logo-square {
   display: none;
-  width: 3rem;
-  /* TODO: use variable, header height */
-  height: 3rem;
-  /* TODO: use variable, header height */
+  width: var(--height-header);
+  height: var(--height-header);
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png"); }
 
 [data-scheme-pref='dark'] header .logo .logo-square {
@@ -765,6 +763,7 @@ header .logo .logo-square {
 
 header .logo .logo-full {
   display: block;
+  width: 130px;
   height: var(--height-header);
   background-image: url(var(--url-logo-full)); }
 
@@ -775,13 +774,11 @@ header .logo .logo-full {
   [data-scheme-pref='auto'] header .logo .logo-full {
     background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png"); } }
 
-header .logo .logo-square img,
-header .logo .logo-full img {
+header .logo .logo-square,
+header .logo .logo-full {
   height: var(--height-header);
-  position: relative;
-  /* for manual positioning */
-  top: -2px;
-  /* manual offset */ }
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 header .breadcrumb .case-study-title {
   display: none;

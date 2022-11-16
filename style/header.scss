@@ -98,29 +98,11 @@ header .logo {
   background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png');
 }
 
-// [data-scheme-pref='light'] {
-//   @include variables-logo-light-scheme;
-// }
-
-// [data-scheme-pref='dark'] {
-//   @include variables-logo-dark-scheme;
-// }
-
-// [data-scheme-pref='auto'] {
-//   @media (prefers-color-scheme: light) {
-//     @include variables-logo-light-scheme;
-//   }
-
-//   @media (prefers-color-scheme: dark) {
-//     @include variables-logo-dark-scheme;
-//   }
-// }
-
 
 header .logo .logo-square {
   display: none;
-  width: 3rem; /* TODO: use variable, header height */
-  height: 3rem; /* TODO: use variable, header height */
+  width: var(--height-header);
+  height: var(--height-header);
   // background-color: var(--color-bg-accent-highlight); /* debug */
   background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png');
 }
@@ -137,6 +119,7 @@ header .logo .logo-square {
 
 header .logo .logo-full {
   display: block;
+  width: 130px;
   // background-color: var(--color-bg-accent); /* debug */
   height: var(--height-header);
   background-image: url(var(--url-logo-full));
@@ -153,11 +136,11 @@ header .logo .logo-full {
   }
 }
 
-header .logo .logo-square img,
-header .logo .logo-full img {
+header .logo .logo-square,
+header .logo .logo-full {
   height: var(--height-header);
-  position:relative; /* for manual positioning */
-  top:-2px; /* manual offset */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
