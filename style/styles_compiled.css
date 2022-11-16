@@ -692,21 +692,21 @@ body .et_pb_section {
 
 /* SCHEME-BASED VARIABLES */
 [data-scheme-pref='light'] {
-  --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png';
-  --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png'; }
+  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png";
+  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png"; }
 
 [data-scheme-pref='dark'] {
-  --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png';
-  --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png'; }
+  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png";
+  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png"; }
 
 @media (prefers-color-scheme: light) {
   [data-scheme-pref='auto'] {
-    --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png';
-    --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png'; } }
+    --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png";
+    --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png"; } }
 @media (prefers-color-scheme: dark) {
   [data-scheme-pref='auto'] {
-    --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png';
-    --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png'; } }
+    --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png";
+    --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png"; } }
 
 :root {
   --height-header-desktop: 3rem;
