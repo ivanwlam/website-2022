@@ -151,7 +151,6 @@ header .breadcrumb .case-study-title {
   height: 3rem; /* TODO: Use variable, header height */
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-bold);
-  margin-left: 0;
   
   body.single-project.below-fold & {
     display: inline-block;
@@ -285,6 +284,9 @@ header nav .nav-link a:hover {
     }
   }
 
+  header .breadcrumb .case-study-title {
+    margin-left: 0;
+  }
 
   header .breadcrumb .case-study-title span {
     width: calc(100vw - 1rem - 3rem - 4rem - 2rem); /* TODO: use variables */
