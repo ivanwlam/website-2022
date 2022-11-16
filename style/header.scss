@@ -90,12 +90,14 @@ header .logo .logo-square {
   width: 3rem; /* TODO: use variable, header height */
   height: 3rem; /* TODO: use variable, header height */
   // background-color: var(--color-bg-accent-highlight); /* debug */
+  background-image: url(var(--url-logo-square));
 }
 
 header .logo .logo-full {
   display: block;
   // background-color: var(--color-bg-accent); /* debug */
   height: var(--height-header);
+  background-image: url(var(--url-logo-full));
 }
 
 header .logo .logo-square img,

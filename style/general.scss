@@ -137,3 +137,34 @@ body .et_pb_section {
   --shadow: 0px 1px 4px var(--color-shadow);
 
 }
+
+
+/* SCHEME-BASED VARIABLES */
+
+@mixin variables-general-light-scheme {
+  --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png';
+  --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png';
+}
+
+@mixin variables-general-dark-scheme {
+  --url-logo-full: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png';
+  --url-logo-square: 'https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png';
+}
+
+[data-scheme-pref='light'] {
+  @include variables-general-light-scheme;
+}
+
+[data-scheme-pref='dark'] {
+  @include variables-general-dark-scheme;
+}
+
+[data-scheme-pref='auto'] {
+  @media (prefers-color-scheme: light) {
+    @include variables-general-light-scheme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include variables-general-dark-scheme;
+  }
+}
