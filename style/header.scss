@@ -95,6 +95,14 @@ header .logo .logo-square {
 header .logo .logo-full {
   display: block;
   // background-color: var(--color-bg-accent); /* debug */
+  height: var(--height-header);
+}
+
+header .logo .logo-square img,
+header .logo .logo-full img {
+  height: var(--height-header);
+  position:relative; /* for manual positioning */
+  top:-2px; /* manual offset */
 }
 
 
@@ -103,7 +111,9 @@ header .breadcrumb .case-study-title {
   overflow: hidden;
   margin-left: 0.5rem; /* TODO: Use variable, for spacing between logo and case study title unit */
   height: 3rem; /* TODO: Use variable, header height */
+  font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-bold);
+  margin-left: 0;
   
   body.single-project.below-fold & {
     display: inline-block;
@@ -191,11 +201,15 @@ header nav ul.nav-list li.nav-list-scheme-component .scheme-component {
   margin-left: 1rem;
 }
 
+header nav .nav-link {
+  font-size: var(--font-size-paragraph);
+}
+
 header nav .nav-link a {
   color: var(--color-text);
   line-height: var(--height-header);
   display: inline-block;
-  padding: 0 1em;
+  padding: 0 0.75em;
 }
 
 header nav .nav-link a:hover {
@@ -212,7 +226,8 @@ header nav .nav-link a:hover {
   }
 
   header .breadcrumb {
-    margin-left: 1rem; /* temporary, use variable */
+    // margin-left: 1rem; /* temporary, use variable */
+    margin-left: 0;
     position: absolute;
 
     display: flex;
