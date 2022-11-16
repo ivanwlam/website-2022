@@ -85,12 +85,42 @@ header .logo {
   vertical-align: top;
 }
 
+@mixin variables-logo-light-scheme {
+  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png";
+  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-onlight-v2-221115.png";
+}
+
+@mixin variables-logo-dark-scheme {
+  --url-logo-full: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png";
+  --url-logo-square: "https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png";
+}
+
+[data-scheme-pref='light'] {
+  @include variables-logo-light-scheme;
+}
+
+[data-scheme-pref='dark'] {
+  @include variables-logo-dark-scheme;
+}
+
+[data-scheme-pref='auto'] {
+  @media (prefers-color-scheme: light) {
+    @include variables-logo-light-scheme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include variables-logo-dark-scheme;
+  }
+}
+
+
 header .logo .logo-square {
   display: none;
   width: 3rem; /* TODO: use variable, header height */
   height: 3rem; /* TODO: use variable, header height */
   // background-color: var(--color-bg-accent-highlight); /* debug */
-  background-image: url(var(--url-logo-square));
+  --url: url(var(--url-logo-square));
+  background-image: var(--url);
 }
 
 header .logo .logo-full {
