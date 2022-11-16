@@ -246,109 +246,109 @@
 }
 
 */
-@mixin light-scheme-variables {
-    --color-bg:                           var(--color-bg-light);
-    --color-bg-highlight:                 var(--color-bg-light-highlight);
-    --color-bg-accent:                    var(--color-bg-accent-on-light);
-    --color-bg-accent-highlight:          var(--color-bg-accent-on-light-highlight);
-    --color-bg-deemphasis:                var(--color-bg-light-deemphasis);
-    --color-bg-hover:                     var(--color-bg-hover-on-light);
+@mixin variables-color-light-scheme {
+  --color-bg:                           var(--color-bg-light);
+  --color-bg-highlight:                 var(--color-bg-light-highlight);
+  --color-bg-accent:                    var(--color-bg-accent-on-light);
+  --color-bg-accent-highlight:          var(--color-bg-accent-on-light-highlight);
+  --color-bg-deemphasis:                var(--color-bg-light-deemphasis);
+  --color-bg-hover:                     var(--color-bg-hover-on-light);
 
-    --color-bg-header:                    var(--color-bg-header-light);
-    --color-bg-nav-menu:                  var(--color-bg-nav-menu-light);
-    --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-start);
-    --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-end);
+  --color-bg-header:                    var(--color-bg-header-light);
+  --color-bg-nav-menu:                  var(--color-bg-nav-menu-light);
+  --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-start);
+  --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-end);
 
-    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-      --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-blur-start);
-      --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-blur-end);
-    }
-
-
-    --color-text:                         var(--color-text-dark-on-light);
-    --color-text-highlight:               var(--color-text-dark-on-light-emphasis);
-    --color-text-secondary-default:       var(--color-text-dark-on-light-deemphasis);
-    --color-text-link:                    var(--color-text-link-on-light);
-    --color-text-accent:                  var(--color-text-accent-on-light);
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-light-gradient-blur-start);
+    --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-light-gradient-blur-end);
+  }
 
 
-    --color-line:                         var(--color-line-dark-on-light);
-    --color-line-emphasis:                var(--color-line-dark-on-light-emphasis);
-    --color-line-deemphasis:              var(--color-line-dark-on-light-deemphasis);
+  --color-text:                         var(--color-text-dark-on-light);
+  --color-text-highlight:               var(--color-text-dark-on-light-emphasis);
+  --color-text-secondary-default:       var(--color-text-dark-on-light-deemphasis);
+  --color-text-link:                    var(--color-text-link-on-light);
+  --color-text-accent:                  var(--color-text-accent-on-light);
 
 
-    --color-line-opaque:                  var(--color-line-dark-on-light-opaque);
-    --color-line-emphasis-opaque:         var(--color-line-dark-on-light-emphasis-opaque);
-    --color-line-deemphasis-opaque:       var(--color-line-dark-on-light-deemphasis-opaque);
+  --color-line:                         var(--color-line-dark-on-light);
+  --color-line-emphasis:                var(--color-line-dark-on-light-emphasis);
+  --color-line-deemphasis:              var(--color-line-dark-on-light-deemphasis);
 
 
-    --color-bg-button:                    var(--color-bg-accent-on-light);
-    --color-bg-button-hover:              var(--color-bg-accent-on-light-highlight);
-    --color-text-button:                  hsla(var(--color-hsl-white) / 95%);
+  --color-line-opaque:                  var(--color-line-dark-on-light-opaque);
+  --color-line-emphasis-opaque:         var(--color-line-dark-on-light-emphasis-opaque);
+  --color-line-deemphasis-opaque:       var(--color-line-dark-on-light-deemphasis-opaque);
+
+
+  --color-bg-button:                    var(--color-bg-accent-on-light);
+  --color-bg-button-hover:              var(--color-bg-accent-on-light-highlight);
+  --color-text-button:                  hsla(var(--color-hsl-white) / 95%);
 
 
 
-    --color-bg-form-field:                var(--color-bg-light-highlight);
-    --color-text-form-field:              var(--color-text-dark-on-light);
-    --color-border-form-field:            var(--color-line-dark-on-light);
+  --color-bg-form-field:                var(--color-bg-light-highlight);
+  --color-text-form-field:              var(--color-text-dark-on-light);
+  --color-border-form-field:            var(--color-line-dark-on-light);
   
 }
 
 
-@mixin dark-scheme-variables {
+@mixin variables-color-dark-scheme {
 
-    --color-bg:                           var(--color-bg-dark);
-    --color-bg-highlight:                 var(--color-bg-dark-highlight);
-    --color-bg-accent:                    var(--color-bg-accent-on-dark);
-    --color-bg-accent-highlight:          var(--color-bg-accent-on-dark-highlight);
-    --color-bg-deemphasis:                var(--color-bg-dark-deemphasis);
-    --color-bg-hover:                     var(--color-bg-hover-on-dark);
+  --color-bg:                           var(--color-bg-dark);
+  --color-bg-highlight:                 var(--color-bg-dark-highlight);
+  --color-bg-accent:                    var(--color-bg-accent-on-dark);
+  --color-bg-accent-highlight:          var(--color-bg-accent-on-dark-highlight);
+  --color-bg-deemphasis:                var(--color-bg-dark-deemphasis);
+  --color-bg-hover:                     var(--color-bg-hover-on-dark);
 
-    --color-bg-header:                    var(--color-bg-header-dark);
-    --color-bg-nav-menu:                  var(--color-bg-nav-menu-dark);
-    --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-start);
-    --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-end);
+  --color-bg-header:                    var(--color-bg-header-dark);
+  --color-bg-nav-menu:                  var(--color-bg-nav-menu-dark);
+  --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-start);
+  --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-end);
 
-    @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-      --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-blur-start);
-      --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-blur-end);
-    }
-    
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    --color-bg-nav-menu-gradient-start:   var(--color-bg-nav-menu-dark-gradient-blur-start);
+    --color-bg-nav-menu-gradient-end:     var(--color-bg-nav-menu-dark-gradient-blur-end);
+  }
+  
 
-    --color-text:                         var(--color-text-light-on-dark);
-    --color-text-highlight:               var(--color-text-light-on-dark-emphasis);
-    --color-text-secondary-default:       var(--color-text-light-on-dark-deemphasis);
-    --color-text-link:                    var(--color-text-link-on-dark);
-    --color-text-accent:                  var(--color-text-accent-on-dark);
-
-
-    --color-line:                         var(--color-line-light-on-dark);
-    --color-line-emphasis:                var(--color-line-light-on-dark-emphasis);
-    --color-line-deemphasis:              var(--color-line-light-on-dark-deemphasis);
-    --color-line-accent:                  var(--color-line-accent-on-dark);
+  --color-text:                         var(--color-text-light-on-dark);
+  --color-text-highlight:               var(--color-text-light-on-dark-emphasis);
+  --color-text-secondary-default:       var(--color-text-light-on-dark-deemphasis);
+  --color-text-link:                    var(--color-text-link-on-dark);
+  --color-text-accent:                  var(--color-text-accent-on-dark);
 
 
-    --color-line-opaque:                  var(--color-line-light-on-dark-opaque);
-    --color-line-emphasis-opaque:         var(--color-line-light-on-dark-emphasis-opaque);
-    --color-line-deemphasis-opaque:       var(--color-line-light-on-dark-deemphasis-opaque);
+  --color-line:                         var(--color-line-light-on-dark);
+  --color-line-emphasis:                var(--color-line-light-on-dark-emphasis);
+  --color-line-deemphasis:              var(--color-line-light-on-dark-deemphasis);
+  --color-line-accent:                  var(--color-line-accent-on-dark);
+
+
+  --color-line-opaque:                  var(--color-line-light-on-dark-opaque);
+  --color-line-emphasis-opaque:         var(--color-line-light-on-dark-emphasis-opaque);
+  --color-line-deemphasis-opaque:       var(--color-line-light-on-dark-deemphasis-opaque);
 
 }
 
 [data-scheme-pref='light'] {
-  @include light-scheme-variables;
+  @include variables-color-light-scheme;
 }
 
 [data-scheme-pref='dark'] {
-  @include dark-scheme-variables;
+  @include variables-color-dark-scheme;
 }
 
 [data-scheme-pref='auto'] {
   @media (prefers-color-scheme: light) {
-    @include light-scheme-variables;
+    @include variables-color-light-scheme;
   }
 
   @media (prefers-color-scheme: dark) {
-    @include dark-scheme-variables;
+    @include variables-color-dark-scheme;
   }
 }
 
