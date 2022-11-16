@@ -829,7 +829,10 @@ header nav button.button-menu {
   top: 0;
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-menu-onlight-221116.png");
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-color: transparent; }
+  header nav button.button-menu:hover {
+    background-color: var(--color-bg-hover); }
 
 header nav.isOpen button.button-menu {
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-close-onlight-221116.png"); }

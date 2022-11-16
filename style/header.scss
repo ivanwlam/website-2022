@@ -209,6 +209,11 @@ header nav button.button-menu {
   background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-menu-onlight-221116.png');
   background-size: contain;
   background-repeat: no-repeat;
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--color-bg-hover);
+  }
 }
 
 header nav.isOpen button.button-menu {
@@ -240,6 +245,7 @@ header nav.isOpen button.button-menu {
 header nav > button.button-menu {
   display: none;
 }
+
 
 /* Opened state */
 
