@@ -191,6 +191,13 @@ header nav {
   justify-content: flex-end;
 }
 
+@mixin property-icon-menu-dark-scheme {
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-menu-ondark-221116.png');
+}
+
+@mixin property-icon-close-dark-scheme {
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-close-ondark-221116.png');
+}
 
 header nav button.button-menu {
   --size-button: var(--height-header);
@@ -204,7 +211,31 @@ header nav button.button-menu {
   background-repeat: no-repeat;
 }
 
+header nav.isOpen button.button-menu {
+  background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-close-onlight-221116.png');
+  
+}
 
+[data-scheme-pref='dark'] header nav button.button-menu {
+  @include property-icon-menu-dark-scheme;
+}
+
+[data-scheme-pref='auto'] header nav button.button-menu {
+  @media (prefers-color-scheme: dark) {
+    @include property-icon-menu-dark-scheme;
+  }
+}
+
+
+[data-scheme-pref='dark'] header nav.isOpen button.button-menu {
+  @include property-icon-close-dark-scheme;
+}
+
+[data-scheme-pref='auto'] header nav.isOpen button.button-menu {
+  @media (prefers-color-scheme: dark) {
+    @include property-icon-close-dark-scheme;
+  }
+}
 
 header nav > button.button-menu {
   display: none;
