@@ -752,7 +752,7 @@ header .logo .logo-square {
   display: none;
   width: var(--height-header);
   height: var(--height-header);
-  background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png"); }
+  background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png"); }
 
 [data-scheme-pref='dark'] header .logo .logo-square {
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-square-ondark-v2-221115.png"); }
