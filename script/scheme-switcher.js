@@ -121,6 +121,7 @@ window.onresize = () => {
 
 }
 
+// TODO: 11/15/22: Add event listener for when "et_builder_inner_content et_pb_gutters3" and other divs changes class to run the scheme update. 
 
 // runFeature_ColorSchemeControl();
 

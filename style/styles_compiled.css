@@ -821,12 +821,15 @@ header nav {
   justify-content: flex-end; }
 
 header nav button.button-menu {
-  --size-button: 2rem;
+  --size-button: var(--height-header);
   width: var(--size-button);
   height: var(--size-button);
   border: 0;
   position: absolute;
-  top: calc((var(--height-header) - var(--size-button)) / 2); }
+  top: 0;
+  background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/icon-menu-onlight-221116.png");
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 header nav > button.button-menu {
   display: none; }
