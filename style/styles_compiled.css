@@ -753,14 +753,10 @@ header .logo .logo-square {
   width: 3rem;
   /* TODO: use variable, header height */
   height: 3rem;
-  /* TODO: use variable, header height */
-  background-color: var(--color-bg-accent-highlight);
-  /* debug */ }
+  /* TODO: use variable, header height */ }
 
 header .logo .logo-full {
-  display: block;
-  background-color: var(--color-bg-accent);
-  /* debug */ }
+  display: block; }
 
 header .breadcrumb .case-study-title {
   display: none;
