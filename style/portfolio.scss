@@ -83,13 +83,18 @@
   line-height: var(--line-height-h5);
 }
 
-.text-portfolio-stat-value p {
-  font-size: var(--font-size-super-heading);
+.text-portfolio-stat-value {
+	font-size: 96px; /* TODO: use variable */
+  margin-bottom: 0;
 }
 
+.text-portfolio-stat-value p {
+  font-size: var(--font-size-super-heading);
+  margin-bottom: 0;
+}
 
-.text-portfolio-stat-value {
-	font-size: 96px;
+.text-portfolio-stat-description .et_pb_text_inner {
+	font-size: var(--font-size-h4);
 }
 
 /* Sample Project Grid */
