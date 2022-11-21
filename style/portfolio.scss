@@ -93,8 +93,9 @@
   margin-bottom: 0;
 }
 
-.text-portfolio-stat-description .et_pb_text_inner {
+.text-portfolio-stat-description * {
 	font-size: var(--font-size-h4);
+  margin-bottom: 0;
 }
 
 /* Sample Project Grid */
