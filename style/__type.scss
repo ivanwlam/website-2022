@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6, p, li,
 
 .heading-metadata,
 .heading-metadata h3{
-  font-family: var(--font-family-default);
+  font-family: var(--font-family-default) !important;
 	font-size: var(--font-size-paragraph);
   line-height: var(--line-height-paragraph);
 	// font-weight: var(--font-weight-extra-bold);
