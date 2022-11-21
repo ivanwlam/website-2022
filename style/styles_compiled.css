@@ -497,9 +497,9 @@ h1, h2, h3, h4, h5, h6, p, li,
 
 .heading-metadata,
 .heading-metadata h3 {
-  font-size: var(--font-size-sub-paragraph);
-  line-height: var(--line-height-sub-paragraph);
-  font-weight: var(--font-weight-extra-bold); }
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-paragraph);
+  line-height: var(--line-height-paragraph); }
 
 .heading-eyebrow,
 .heading-eyebrow .et_pb_text_inner,
