@@ -1459,10 +1459,6 @@ svg.scheme-icon {
   .module-scheme-controls li label {
     background-color: transparent; } }
 /* DEBUG */
-body .et_pb_row_1 {
-  background-color: var(--color-bg);
-  border-bottom: 1px solid black; }
-
 /* TODO: 
 - 11/2/22: On load, the checked state is not reflected from CSS (even though HTML shows "checked" attribute.
 - resizing window width removes the checked state
