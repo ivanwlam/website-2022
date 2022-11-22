@@ -70,11 +70,11 @@
 
 
 /* General Text Styles */
-body .et_pb_row.layout-portfolio-body-row.layout-portfolio-body-row-heading-main-only {
+body .et_pb_row.layout-portfolio-body-row.layout-portfolio-body-row-heading-only {
   margin-bottom: 0;
 
   &+* {
-    margin-top: 0;
+    margin-top: 2rem; /* 2rem = by eye, not perfect */
   }
 }
 
