@@ -1064,6 +1064,12 @@ header nav .nav-link a:hover {
   font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph); }
 
+/* General Text Styles */
+body .et_pb_row.layout-portfolio-body-row-heading-main-only {
+  margin-bottom: 0; }
+  body .et_pb_row.layout-portfolio-body-row-heading-main-only + * {
+    margin-top: 0; }
+
 /* Portfolio Stats */
 .layout-portfolio-stats-1-1 .et_pb_column,
 .layout-portfolio-stats-t-1 .et_pb_column:nth-child(2) {

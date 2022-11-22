@@ -69,6 +69,15 @@
 }
 
 
+/* General Text Styles */
+body .et_pb_row.layout-portfolio-body-row-heading-main-only {
+  margin-bottom: 0;
+
+  &+* {
+    margin-top: 0;
+  }
+}
+
 
 /* Portfolio Stats */
 
