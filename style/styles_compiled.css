@@ -1066,9 +1066,12 @@ header nav .nav-link a:hover {
 
 /* Portfolio Stats */
 .layout-portfolio-stats .et_pb_column {
-  border: 1px solid black;
   padding: 2rem;
   border-radius: var(--border-radius-large); }
+
+.layout-portfolio-stats-1-1 .et_pb_column {
+  border: 1px solid var(--color-line);
+  /* TODO use variable */ }
 
 .layout-portfolio-stats .heading-eyebrow h3 {
   font-family: var(--font-family-default) !important;
