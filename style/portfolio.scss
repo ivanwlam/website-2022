@@ -76,7 +76,8 @@
 	border-radius: var(--border-radius-large);
 }
 
-.layout-portfolio-stats-1-1 .et_pb_column {
+.layout-portfolio-stats-1-1 .et_pb_column,
+.layout-portfolio-stats-1-1 .et_pb_column:nth-child(2) {
 	// border: 1px solid black; /* TODO use variable */
 	border: 1px solid var(--color-line); /* TODO use variable */
 }
@@ -90,7 +91,7 @@
 body .text-portfolio-stat-value,
 body .text-portfolio-stat-value p {
 	font-size: var(--font-size-super-heading); /* override */
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .text-portfolio-stat-description * {
