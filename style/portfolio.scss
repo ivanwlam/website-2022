@@ -71,14 +71,12 @@
 
 
 /* Portfolio Stats */
-.layout-portfolio-stats .et_pb_column {
-	padding: 2rem;
-	border-radius: var(--border-radius-large);
-}
 
 .layout-portfolio-stats-1-1 .et_pb_column,
 .layout-portfolio-stats-t-1 .et_pb_column:nth-child(2) {
 	border: 1px solid var(--color-line);
+	padding: 2rem;
+	border-radius: var(--border-radius-large);
 }
 
 .layout-portfolio-stats-t-1 .et_pb_column:nth-child(1) {
