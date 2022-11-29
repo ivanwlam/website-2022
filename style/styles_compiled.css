@@ -1187,15 +1187,20 @@ body .text-portfolio-stat-value p {
 @keyframes effect-alternate-content {
   0% {
     opacity: 0; }
+  25% {
+    opacity: 0; }
+  75% {
+    opacity: 1; }
   100% {
     opacity: 1; } }
-.effect-alternate-content > div:nth-of-type(2) {
+.effect-alternate-content > :nth-child(2) {
   position: absolute;
   top: 0;
   opacity: 0;
   animation-direction: alternate;
   animation-name: effect-alternate-content;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
 
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,

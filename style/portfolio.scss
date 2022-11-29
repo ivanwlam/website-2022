@@ -242,16 +242,23 @@ body .text-portfolio-stat-value p {
 
 @keyframes effect-alternate-content {
   0% {opacity: 0;}
+  25% {opacity: 0;}
+  75% {opacity: 1;}
   100% {opacity: 1;}
 }
 
-.effect-alternate-content > div:nth-of-type(2) {
+.effect-alternate-content > :nth-child(2) {
+  // --seconds-animation-transition-duration: 1;
+  // --seconds-animation-pause: 1;
+  // --seconds-animation-one-way: calc(var(--seconds-animation-transition-duration) + var(--seconds-animation-pause));
+  
 	position: absolute;
 	top: 0;
 	opacity: 0;
   animation-direction: alternate;
   animation-name: effect-alternate-content;
   animation-duration: 2s;
+  animation-iteration-count: infinite;
   
 }
 
