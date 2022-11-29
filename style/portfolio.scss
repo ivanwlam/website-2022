@@ -247,7 +247,7 @@ body .text-portfolio-stat-value p {
   100% {opacity: 1;}
 }
 
-.effect-alternate-content > .et_pb_module.et_pb_image:nth-child(2) {
+.effect-alternate-content > .et_pb_image:not(:first-of-type) {
 	position: absolute;
 	top: 0;
 	opacity: 0;
