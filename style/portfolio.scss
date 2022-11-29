@@ -248,6 +248,7 @@ body .text-portfolio-stat-value p {
 }
 
 .effect-alternate-content > .et_pb_image:not(:first-of-type) {
+  /* Note: This selector: .et_pb_image:not(:first-of-type) allows targeting the second image, not the second child, which could be a caption (text) element. Also, it only works when there are two images to alternate. Use something else to make a series of changing images. */
 	position: absolute;
 	top: 0;
 	opacity: 0;
