@@ -1187,9 +1187,9 @@ body .text-portfolio-stat-value p {
 @keyframes effect-alternate-content {
   0% {
     opacity: 0; }
-  25% {
+  16.5% {
     opacity: 0; }
-  75% {
+  83.5% {
     opacity: 1; }
   100% {
     opacity: 1; } }
