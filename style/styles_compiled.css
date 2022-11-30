@@ -1151,11 +1151,16 @@ body .text-portfolio-stat-value p {
   body.page-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item:nth-child(3n) {
     margin-right: 0; } }
 /* Images */
+.layout-portfolio-hero-row :not(.background-image-none) > * > img,
+.layout-portfolio-body-row :not(.background-image-none) > * > img,
+.layout-portfolio-body-row :not(.background-image-none) > * > video,
+.et_pb_title_featured_container img {
+  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%); }
+
 .layout-portfolio-hero-row img,
 .layout-portfolio-body-row img,
 .layout-portfolio-body-row video,
 .et_pb_title_featured_container img {
-  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
 .single-project .et_pb_post_content .et_pb_image.et_pb_module,
