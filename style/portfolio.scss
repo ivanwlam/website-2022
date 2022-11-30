@@ -265,10 +265,32 @@ body .text-portfolio-stat-value p {
   
 }
 
+
+.image-full-width-viewport {
+	max-width: 100vw !important; /* override */
+	width: 100vw;
+	position: relative;
+	left: -10%; /* TODO: Adjust based on margins for the screen width */
+	overflow-x: hidden;
+}
+
+.image-full-width-viewport .et_pb_image_wrap {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100vw;
+}
+
+
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
 .caption.et_pb_module .et_pb_text_inner {
 	font-size: var(--font-size-sub-paragraph);
 	font-style: italic;
 	max-width: fit-content;
+}
+
+/* One Offs */
+
+.image-edu-dh-flow {
+  min-width: 160rem;
 }
