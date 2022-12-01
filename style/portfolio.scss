@@ -78,6 +78,10 @@ body .et_pb_row.layout-portfolio-body-row.layout-portfolio-body-row-heading-only
   }
 }
 
+body .et_pb_column .et_pb_module {
+  margin-bottom: 1em; /* override defaults */
+}
+
 
 /* Portfolio Stats */
 
