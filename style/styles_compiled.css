@@ -1191,12 +1191,13 @@ body .text-portfolio-stat-value p {
   margin-bottom: 0.5rem !important; }
 
 @media screen and (max-width: 480px) {
-  .et_pb_image .et_pb_image_wrap, .et_pb_code_inner:has(> video) {
+  .et_pb_image .et_pb_image_wrap,
+  .et_pb_code_inner:has(> video) {
     max-width: 100vw !important;
     /* override */
     width: 100vw !important;
     /* override */
-    margin-left: -10vw;
+    margin-left: calc(-1 * var(--width-content-margin));
     /* override */ }
 
   .et_pb_image_wrap img, .et_pb_code_inner video {
