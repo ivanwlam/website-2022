@@ -582,6 +582,35 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   /* override */
   border: 1px solid var(--color-line); }
 
+:root {
+  --width-content-mobile: 80vw;
+  --width-content-tablet: 90vw;
+  --width-content-desktop: 80vw;
+  /* TODO: get real value */
+  --width-content-desktop-wide: 1536px;
+  --width-content: var(--width-content-mobile);
+  --width-content-margin-mobile: calc((100vw - var(--width-content-mobile)) / 2);
+  --width-content-margin-tablet: calc((100vw - var(--width-content-tablet)) / 2);
+  --width-content-margin-desktop: calc((100vw - var(--width-content-desktop)) / 2);
+  --width-content-margin-desktop-wide: calc((100vw - var(--width-content-desktop-wide)) / 2);
+  --width-content-margin: var(--width-content-margin-mobile); }
+  @media screen and (max-width: 480px) {
+    :root {
+      --width-content: var(--width-content-mobile);
+      --width-content-margin: var(--width-content-margin-mobile); } }
+  @media screen and (max-width: 768px) {
+    :root {
+      --width-content: var(--width-content-tablet);
+      --width-content-margin: var(--width-content-margin-tablet); } }
+  @media screen and (max-width: 1920px) {
+    :root {
+      --width-content: var(--width-content-desktop);
+      --width-content-margin: var(--width-content-margin-desktop); } }
+  @media screen and (min-width: 1920px) {
+    :root {
+      --width-content: var(--width-content-desktop-wide);
+      --width-content-margin: var(--width-content-margin-desktop-wide); } }
+
 html {
   background-color: var(--color-bg-header) !important; }
 
@@ -693,13 +722,7 @@ body .et_pb_section {
 :root {
   --height-header-desktop: 3rem;
   --height-header-mobile: 3rem;
-  --height-header: var(--height-header-desktop);
-  /* Move to general.scss */
-  --width-content-mobile: 80vw;
-  --width-content-tablet: 90vw;
-  --width-content-desktop: 80vw;
-  /* TODO: get real value */
-  --width-content-desktop-wide: 1536px; }
+  --height-header: var(--height-header-desktop); }
 
 @media screen and (max-width: 768px) {
   :root {
@@ -1213,8 +1236,7 @@ body .text-portfolio-stat-value p {
   /* override */
   width: 100vw;
   position: relative;
-  left: -10%;
-  /* TODO: Adjust based on margins for the screen width */
+  margin-left: calc(-1 * var(--width-content-margin));
   overflow-x: hidden; }
 
 .et_pb_row .image-full-width-viewport .et_pb_image_wrap {
@@ -1232,7 +1254,8 @@ body .text-portfolio-stat-value p {
 /* One Offs */
 .et_pb_row .image-edu-dh-flow img {
   min-width: 160rem;
-  /* TODO: Adjust based on screen size */ }
+  /* TODO 11/29/22: Adjust based on screen size */
+  padding: 0 var(--width-content-margin); }
 
 :root {
   --border-radius-small: 0.25rem;

@@ -1,3 +1,35 @@
+:root {
+  --width-content-mobile:               80vw;
+  --width-content-tablet:               90vw;
+  --width-content-desktop:              80vw; /* TODO: get real value */
+  --width-content-desktop-wide:         1536px;
+  --width-content:                      var(--width-content-mobile);
+
+  --width-content-margin-mobile:        calc((100vw - var(--width-content-mobile)) / 2);
+  --width-content-margin-tablet:        calc((100vw - var(--width-content-tablet)) / 2);
+  --width-content-margin-desktop:       calc((100vw - var(--width-content-desktop)) / 2);
+  --width-content-margin-desktop-wide:  calc((100vw - var(--width-content-desktop-wide)) / 2);
+  --width-content-margin:               var(--width-content-margin-mobile);
+
+  @media screen and (max-width: 480px) {
+    --width-content:          var(--width-content-mobile);
+    --width-content-margin:   var(--width-content-margin-mobile);
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    --width-content:          var(--width-content-tablet);
+    --width-content-margin:   var(--width-content-margin-tablet);
+  }
+  @media screen and (max-width: $breakpoint-desktop-wide) {
+    --width-content:          var(--width-content-desktop);
+    --width-content-margin:   var(--width-content-margin-desktop);
+  }
+  @media screen and (min-width: $breakpoint-desktop-wide) {
+    --width-content:          var(--width-content-desktop-wide);
+    --width-content-margin:   var(--width-content-margin-desktop-wide);
+  }
+}
+
 html {
   background-color: var(--color-bg-header) !important;
 }
