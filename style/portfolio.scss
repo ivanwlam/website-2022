@@ -270,7 +270,6 @@ body .text-portfolio-stat-value p {
 	max-width: 100vw !important; /* override */
 	width: 100vw;
 	position: relative;
-	// margin-left:-10vw; /* TODO 11/29/22: Adjust based on margins for the screen width */
   margin-left: calc(-1 * var(--width-content-margin));
 	overflow-x: hidden;
 }
@@ -293,6 +292,25 @@ body .text-portfolio-stat-value p {
 /* One Offs */
 
 .et_pb_row .image-edu-dh-flow img {
-  min-width: 160rem; /* TODO 11/29/22: Adjust based on screen size */
+  @media screen and (max-width: 480px) {
+    --min-width: 60rem;
+  }
+
+  @media screen and (min-width: 480px) {
+    --min-width: 90rem;
+  }
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    --min-width: 135rem;
+  }
+
+  min-width: 135rem;
+  min-width: var(--min-width);
+  
+  /* estimated sizes
+    desktop: 135rem
+    tablet: 90rem
+    mobile: 60rem
+  */
   padding: 0 var(--width-content-margin);
 }

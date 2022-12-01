@@ -583,7 +583,7 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   border: 1px solid var(--color-line); }
 
 :root {
-  --width-content-mobile: 80vw;
+  --width-content-mobile: 90vw;
   --width-content-tablet: 90vw;
   --width-content-desktop: 80vw;
   /* TODO: get real value */
@@ -594,15 +594,15 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   --width-content-margin-desktop: calc((100vw - var(--width-content-desktop)) / 2);
   --width-content-margin-desktop-wide: calc((100vw - var(--width-content-desktop-wide)) / 2);
   --width-content-margin: var(--width-content-margin-mobile); }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     :root {
       --width-content: var(--width-content-mobile);
       --width-content-margin: var(--width-content-margin-mobile); } }
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     :root {
       --width-content: var(--width-content-tablet);
       --width-content-margin: var(--width-content-margin-tablet); } }
-  @media screen and (max-width: 1920px) {
+  @media screen and (min-width: 980px) {
     :root {
       --width-content: var(--width-content-desktop);
       --width-content-margin: var(--width-content-margin-desktop); } }
@@ -1253,9 +1253,23 @@ body .text-portfolio-stat-value p {
 
 /* One Offs */
 .et_pb_row .image-edu-dh-flow img {
-  min-width: 160rem;
-  /* TODO 11/29/22: Adjust based on screen size */
+  min-width: 135rem;
+  min-width: var(--min-width);
+  /* estimated sizes
+    desktop: 135rem
+    tablet: 90rem
+    mobile: 60rem
+  */
   padding: 0 var(--width-content-margin); }
+  @media screen and (max-width: 480px) {
+    .et_pb_row .image-edu-dh-flow img {
+      --min-width: 60rem; } }
+  @media screen and (min-width: 480px) {
+    .et_pb_row .image-edu-dh-flow img {
+      --min-width: 90rem; } }
+  @media screen and (min-width: 980px) {
+    .et_pb_row .image-edu-dh-flow img {
+      --min-width: 135rem; } }
 
 :root {
   --border-radius-small: 0.25rem;
