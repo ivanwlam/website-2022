@@ -78,10 +78,17 @@ body .et_pb_row.layout-portfolio-body-row.layout-portfolio-body-row-heading-only
   }
 }
 
-body .et_pb_column .et_pb_module {
-  margin-bottom: 1em; /* override defaults */
-}
+.layout-portfolio-body-row .et_pb_column .et_pb_module.et_pb_text {
+  /* Spacing between portfolio body headings and subsequent paragraphs */
 
+  margin-bottom: 1em; /* override defaults */
+
+  & h2,
+  & h3,
+  & h4 {
+    padding-bottom: 0;
+  }
+}
 
 /* Portfolio Stats */
 

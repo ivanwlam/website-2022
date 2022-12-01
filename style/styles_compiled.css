@@ -1094,9 +1094,12 @@ body .et_pb_row.layout-portfolio-body-row.layout-portfolio-body-row-heading-only
     margin-top: 2rem;
     /* 2rem = by eye, not perfect */ }
 
-body .et_pb_column .et_pb_module {
+.layout-portfolio-body-row .et_pb_column .et_pb_module.et_pb_text {
+  /* Spacing between portfolio body headings and subsequent paragraphs */
   margin-bottom: 1em;
   /* override defaults */ }
+  .layout-portfolio-body-row .et_pb_column .et_pb_module.et_pb_text h2, .layout-portfolio-body-row .et_pb_column .et_pb_module.et_pb_text h3, .layout-portfolio-body-row .et_pb_column .et_pb_module.et_pb_text h4 {
+    padding-bottom: 0; }
 
 /* Portfolio Stats */
 .layout-portfolio-stats-1-1 .et_pb_column,
