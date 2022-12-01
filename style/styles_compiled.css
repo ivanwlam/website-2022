@@ -1140,7 +1140,7 @@ body .text-portfolio-stat-value p {
 /* Project List Grid */
 .et_pb_portfolio .et_pb_module_header,
 .et_pb_portfolio_grid .et_pb_module_header {
-  font-size: var(--font-size-h54) !important;
+  font-size: var(--font-size-h5) !important;
   line-height: var(--line-height-h5); }
 
 /* Projects Gallery Grid */
