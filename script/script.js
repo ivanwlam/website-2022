@@ -1,5 +1,5 @@
 	const vv_cMin = 60 * 24 * 7;
-	const redirectUrl = "/wordpress.php/portfolio-home-2022-06/";
+	const redirectUrl = "/wordpress.php/portfolio/";
 	
 	const vv_setC_unhide = function () {
 		console.log("temp: func: set and unhiding");
