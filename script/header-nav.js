@@ -10,6 +10,19 @@ const navMenuClicked = (e) => {
   toggleNavIsOpen(e);
 }
 
+const pageHeadingIsAboveViewport = () => {
+  const pageHeading = document.querySelector("h1.entry-title");
+  if (!pageHeading) return false;
+
+  const pageHeadingY = pageHeading.getBoundingClientRect().y;
+  const pageHeadingHeight = pageHeading.offsetHeight;
+  const pageHeadingBottomY = pageHeadingY + pageHeadingHeight;
+  const pageYScrollPosition = window.pageYOffset;
+
+  return (pageYScrollPosition >= pageHeadingBottomY);
+}
+
+
 const setDocAsAboveFold = () => {
   document.body.classList.remove("below-fold");
   document.body.classList.add("above-fold");
@@ -20,6 +33,21 @@ const setDocAsBelowFold = () => {
   document.body.classList.remove("above-fold");
   document.body.classList.add("below-fold");
   // console.debug("setting: below");
+}
+
+
+const setPageHeadingAsAboveViewport = () => {
+  document.body.classList.remove("page-heading-below-viewport");
+  document.body.classList.add("page-heading-above-viewport");
+
+  console.debug("page heading above viewport");
+}
+
+const setPageHeadingAsBelowViewport = () => {
+  document.body.classList.remove("page-heading-above-viewport");
+  document.body.classList.add("page-heading-below-viewport");
+
+  console.debug("page heading below viewport");
 }
 
 const setUpHeaderNavOverlayEvent = () => {
@@ -37,6 +65,10 @@ const updateDocFoldStatus = () => {
   pageIsBelowFold ? setDocAsBelowFold() : setDocAsAboveFold();
 }
 
+const updatePageHeadingPositionStatus = () => {
+  pageHeadingIsAboveViewport() ? setPageHeadingAsAboveViewport() : setPageHeadingAsBelowViewport();
+}
+
 const updateHeaderBreadcrumbCaseStudyTitle = () => {
   const el_caseStudyTitle = document.querySelector("header .case-study-title span");
   const el_h1 = document.querySelector("h1");
@@ -47,6 +79,7 @@ const updateHeaderBreadcrumbCaseStudyTitle = () => {
 
 window.onscroll = () => {
   updateDocFoldStatus();
+  updatePageHeadingPositionStatus();
 }
 
 // window.onload = () => {
@@ -57,6 +90,7 @@ window.onscroll = () => {
 
 window.addEventListener("load", () => {
   updateDocFoldStatus();
+  updatePageHeadingPositionStatus();
   setUpHeaderNavOverlayEvent();
   updateHeaderBreadcrumbCaseStudyTitle();
 });
