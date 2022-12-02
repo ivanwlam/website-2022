@@ -1160,10 +1160,7 @@ body .text-portfolio-stat-value p {
   margin-bottom: 3rem; }
 
 @media screen and (min-width: 767px) {
-  .et_pb_portfolio .et_pb_ajax_pagination_container {
-    /* Reset from default */
-    flex-wrap: nowrap; }
-
+  /* Reset from default */
   body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {
     --margin-right: var(--spacing-extra-large); }
 
