@@ -20,3 +20,17 @@ $breakpoint-desktop-wide:       1920px;
 $breakpoint-desktop:            980px;
 $breakpoint-tablet:             768px;
 $breakpoint-mobile-header:      $breakpoint-tablet;
+
+.visually-hidden {
+  /* from https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/ */
+  position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}

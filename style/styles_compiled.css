@@ -539,6 +539,19 @@ h1, h2, h3, h4, h5, h6 {
   --spacing-extra-large: 2rem;
   --spacing-extra-extra-large: 4rem; }
 
+.visually-hidden {
+  /* from https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/ */
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
+
 .et_pb_button,
 body .et_pb_button:hover,
 .et_pb_button.et_pb_bg_layout_light,
@@ -1300,6 +1313,19 @@ body .text-portfolio-stat-value p {
   --spacing-large: 1rem;
   --spacing-extra-large: 2rem;
   --spacing-extra-extra-large: 4rem; }
+
+.visually-hidden {
+  /* from https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/ */
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important; }
 
 :root {
   /* Temporary */
