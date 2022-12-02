@@ -17,11 +17,11 @@ const pageHeadingIsAboveViewport = () => {
   const pageHeadingY = pageHeading.getBoundingClientRect().y;
   const pageHeadingHeight = pageHeading.offsetHeight;
   const pageHeadingBottomY = pageHeadingY + pageHeadingHeight;
-  const pageYScrollPosition = window.pageYOffset;
+  const heightHeader = 48;
 
-  console.debug("pageHeadingY", pageHeadingY, "pageHeadingHeight", pageHeadingHeight, "pageHeadingBottomY", pageHeadingBottomY, "pageYScrollPosition", pageYScrollPosition);
+  // console.debug("pageHeadingY", pageHeadingY, "pageHeadingHeight", pageHeadingHeight, "pageHeadingBottomY", pageHeadingBottomY, "pageYScrollPosition", pageYScrollPosition);
 
-  return (pageYScrollPosition >= pageHeadingBottomY);
+  return (heightHeader >= pageHeadingBottomY);
 }
 
 

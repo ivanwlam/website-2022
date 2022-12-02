@@ -149,7 +149,7 @@ header .breadcrumb .case-study-title {
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-bold);
   
-  body.single-project.below-fold & {
+  body.single-project.page-heading-above-viewport & {
     display: inline-block;
   }
 }

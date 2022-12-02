@@ -814,7 +814,7 @@ header .breadcrumb .case-study-title {
   /* TODO: Use variable, header height */
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-bold); }
-  body.single-project.below-fold header .breadcrumb .case-study-title {
+  body.single-project.page-heading-above-viewport header .breadcrumb .case-study-title {
     display: inline-block; }
 
 header .breadcrumb .case-study-title::before {
