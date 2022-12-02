@@ -19,6 +19,8 @@ const pageHeadingIsAboveViewport = () => {
   const pageHeadingBottomY = pageHeadingY + pageHeadingHeight;
   const pageYScrollPosition = window.pageYOffset;
 
+  console.debug("pageHeadingY", pageHeadingY, "pageHeadingHeight", pageHeadingHeight, "pageHeadingBottomY", pageHeadingBottomY, "pageYScrollPosition", pageYScrollPosition);
+
   return (pageYScrollPosition >= pageHeadingBottomY);
 }
 
