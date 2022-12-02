@@ -17,11 +17,11 @@ const pageHeadingIsAboveViewport = () => {
   const pageHeadingY = pageHeading.getBoundingClientRect().y;
   const pageHeadingHeight = pageHeading.offsetHeight;
   const pageHeadingBottomY = pageHeadingY + pageHeadingHeight;
+
   const heightHeader = 48;
+  const offsetVertical = heightHeader;
 
-  // console.debug("pageHeadingY", pageHeadingY, "pageHeadingHeight", pageHeadingHeight, "pageHeadingBottomY", pageHeadingBottomY, "pageYScrollPosition", pageYScrollPosition);
-
-  return (heightHeader >= pageHeadingBottomY);
+  return (offsetVertical >= pageHeadingBottomY);
 }
 
 
@@ -39,17 +39,17 @@ const setDocAsBelowFold = () => {
 
 
 const setPageHeadingAsAboveViewport = () => {
-  document.body.classList.remove("page-heading-below-viewport");
+  // document.body.classList.remove("page-heading-below-viewport");
   document.body.classList.add("page-heading-above-viewport");
 
-  console.debug("page heading above viewport");
+  // console.debug("page heading above viewport");
 }
 
-const setPageHeadingAsBelowViewport = () => {
+const setPageHeadingAsNotAboveViewport = () => {
   document.body.classList.remove("page-heading-above-viewport");
-  document.body.classList.add("page-heading-below-viewport");
+  // document.body.classList.add("page-heading-below-viewport");
 
-  console.debug("page heading below viewport");
+  // console.debug("page heading below viewport");
 }
 
 const setUpHeaderNavOverlayEvent = () => {
@@ -68,7 +68,7 @@ const updateDocFoldStatus = () => {
 }
 
 const updatePageHeadingPositionStatus = () => {
-  pageHeadingIsAboveViewport() ? setPageHeadingAsAboveViewport() : setPageHeadingAsBelowViewport();
+  pageHeadingIsAboveViewport() ? setPageHeadingAsAboveViewport() : setPageHeadingAsNotAboveViewport();
 }
 
 const updateHeaderBreadcrumbCaseStudyTitle = () => {
