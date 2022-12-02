@@ -1,4 +1,5 @@
 let pageIsBelowFold = false;
+const heightHeader = 48;
 
 const documentIsBelowFold = () => {
   const pageYScrollPosition = window.pageYOffset;
@@ -18,7 +19,6 @@ const pageHeadingIsAboveViewport = () => {
   const pageHeadingHeight = pageHeading.offsetHeight;
   const pageHeadingBottomY = pageHeadingY + pageHeadingHeight;
 
-  const heightHeader = 48;
   const offsetVertical = heightHeader;
 
   return (offsetVertical >= pageHeadingBottomY);
@@ -39,7 +39,6 @@ const setDocAsBelowFold = () => {
 
 
 const setPageHeadingAsAboveViewport = () => {
-  // document.body.classList.remove("page-heading-below-viewport");
   document.body.classList.add("page-heading-above-viewport");
 
   // console.debug("page heading above viewport");
@@ -47,7 +46,6 @@ const setPageHeadingAsAboveViewport = () => {
 
 const setPageHeadingAsNotAboveViewport = () => {
   document.body.classList.remove("page-heading-above-viewport");
-  // document.body.classList.add("page-heading-below-viewport");
 
   // console.debug("page heading below viewport");
 }
@@ -83,12 +81,6 @@ window.onscroll = () => {
   updateDocFoldStatus();
   updatePageHeadingPositionStatus();
 }
-
-// window.onload = () => {
-//   updateDocFoldStatus();
-//   setUpHeaderNavOverlayEvent();
-//   updateHeaderBreadcrumbCaseStudyTitle();
-// }
 
 window.addEventListener("load", () => {
   updateDocFoldStatus();
