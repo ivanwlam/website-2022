@@ -180,6 +180,18 @@ body .text-portfolio-stat-value p {
   }
 }
 
+.et_portfolio_image::after {
+  /* Subtle vignette */
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: radial-gradient(circle at center, transparent 0%, transparent 70%, hsla(0 0% 0% / 25%));
+}
+
 
 
 
