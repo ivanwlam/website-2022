@@ -1192,7 +1192,7 @@ body .text-portfolio-stat-value p {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: radial-gradient(circle at center, transparent 0%, transparent 70%, rgba(0, 0, 0, 0.25)); }
+  background-image: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.15) 100%); }
 
 @media screen and (min-width: 767px) {
   /* Reset from default */
