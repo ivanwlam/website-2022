@@ -1172,6 +1172,17 @@ body .text-portfolio-stat-value p {
 .et_pb_portfolio_grid_items .et_pb_post.project.type-project {
   margin-bottom: 3rem; }
 
+/* Projects Gallery Grid image container */
+.et_portfolio_image {
+  /* Crops image to 16:9 ratio and vertically center the image */
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: var(--border-radius); }
+  .et_portfolio_image img {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%; }
+
 @media screen and (min-width: 767px) {
   /* Reset from default */
   body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {

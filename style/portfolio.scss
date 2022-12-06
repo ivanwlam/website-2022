@@ -166,6 +166,23 @@ body .text-portfolio-stat-value p {
   margin-bottom: 3rem;
 }
 
+/* Projects Gallery Grid image container */
+.et_portfolio_image {
+  /* Crops image to 16:9 ratio and vertically center the image */
+	aspect-ratio: 16/9;
+	overflow: hidden;
+	border-radius: var(--border-radius);
+
+  & img {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
+
+
+
+
 @media screen and (min-width: 767px) {
 
   // .et_pb_portfolio .et_pb_ajax_pagination_container {
