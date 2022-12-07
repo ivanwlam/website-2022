@@ -315,7 +315,7 @@ header nav .nav-link a:hover {
     margin-right: 4rem; /* TODO: use variable, width of nav trigger and margins */
   }
 
-  body.home.above-fold .logo,
+  body.home.page-heading-above-viewport .logo,
   body.single-project .logo {
     & .logo-square {
       display: block;

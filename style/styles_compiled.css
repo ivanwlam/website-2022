@@ -942,14 +942,14 @@ header nav .nav-link a:hover {
     margin-right: 4rem;
     /* TODO: use variable, width of nav trigger and margins */ }
 
-  body.home.above-fold .logo .logo-square,
+  body.home.page-heading-above-viewport .logo .logo-square,
   body.single-project .logo .logo-square {
     display: block;
     width: 3rem;
     /* TODO: Use variable, header height */
     height: 3rem;
     /* TODO: Use variable, header height */ }
-  body.home.above-fold .logo .logo-full,
+  body.home.page-heading-above-viewport .logo .logo-full,
   body.single-project .logo .logo-full {
     display: none; }
 
