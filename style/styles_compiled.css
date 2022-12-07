@@ -455,7 +455,8 @@ h5 {
   font-size: var(--font-size-h5);
   line-height: var(--line-height-h5); }
 
-h6 {
+h6,
+.et_pb_row .et_pb_column h6 {
   font-size: var(--font-size-h6);
   line-height: var(--line-height-h6); }
 
