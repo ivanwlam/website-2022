@@ -48,6 +48,10 @@
   padding: 0 1em 0.5em 0;
 }
 
+.layout-portfolio-body-row.layout-portfolio-body-row-meta {
+	align-items: start; /* override */
+}
+
 
 /* Typography */
 .et_pb_title_container h1 {
