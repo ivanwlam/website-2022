@@ -1177,11 +1177,10 @@ body .text-portfolio-stat-value p {
   /* Crops image to 16:9 ratio and vertically center the image */
   aspect-ratio: 16/9;
   overflow: hidden;
-  border-radius: var(--border-radius); }
-  .et_portfolio_image img {
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%; }
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .et_portfolio_image::after {
   /* Subtle vignette */

@@ -172,11 +172,14 @@ body .text-portfolio-stat-value p {
 	aspect-ratio: 16/9;
 	overflow: hidden;
 	border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   & img {
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
+    // position: relative;
+    // transform: translateY(-50%);
+    // top: 50%;
   }
 }
 
