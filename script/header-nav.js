@@ -12,7 +12,7 @@ const navMenuClicked = (e) => {
 }
 
 const pageHeadingIsAboveViewport = () => {
-  const pageHeading = document.querySelector("h1.entry-title");
+  const pageHeading = document.querySelector("h1");
   if (!pageHeading) return false;
 
   const pageHeadingY = pageHeading.getBoundingClientRect().y;
