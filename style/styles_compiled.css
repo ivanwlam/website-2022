@@ -803,6 +803,9 @@ header .logo .logo-full {
   width: 130px;
   height: var(--height-header);
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png"); }
+  @media screen and (max-width: 980px) {
+    header .logo .logo-full {
+      margin-left: var(--margin-content); } }
 
 [data-scheme-pref='dark'] header .logo .logo-full {
   background-image: url("https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-ondark-v2-221115.png"); }

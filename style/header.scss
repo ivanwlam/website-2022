@@ -118,6 +118,11 @@ header .logo .logo-full {
   // background-color: var(--color-bg-accent); /* debug */
   height: var(--height-header);
   background-image: url('https://ivanwlam.com/wordpress/wp-content/uploads/2022/11/logo-full-onlight-v2-221115.png');
+
+  @media screen and (max-width: $breakpoint-desktop) {
+    margin-left: var(--margin-content);
+    
+  }
 }
 
 
