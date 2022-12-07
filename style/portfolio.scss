@@ -175,12 +175,6 @@ body .text-portfolio-stat-value p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  & img {
-    // position: relative;
-    // transform: translateY(-50%);
-    // top: 50%;
-  }
 }
 
 .et_portfolio_image::after {
