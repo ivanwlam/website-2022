@@ -30,6 +30,7 @@ const getValidVisitorCookieString = function (minutes) {
 };
 
 const setBodyAsNotPermitted = function () {
+  console.debug("Adding body class: permission-denied");
   document.body.classList.add("permission-denied");
 }
 
