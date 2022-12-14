@@ -25,14 +25,14 @@ const getValidVisitorCookieString = function (minutes) {
 
 	  let expiryDate = getDaysFromMinutes(minutes);
 	  let cookieValue = "vv=true;expires=" + expiryDate.toUTCString() + ";domain=.ivanwlam.com;path=/;secure";
-	  console.log("cookieValue", cookieValue);
+	  // console.debug("cookieValue", cookieValue);
 	  return cookieValue;
 };
 
-const setBodyAsNotPermitted = function () {
-  console.debug("Adding body class: permission-denied");
-  document.body.classList.add("permission-denied");
-}
+// const setBodyAsNotPermitted = function () {
+//   console.debug("Adding body class: permission-denied");
+//   document.body.classList.add("permission-denied");
+// }
 
 const vv_redirect = function () {
   if (window.location.href.includes(redirectUrl)) return;
@@ -41,7 +41,7 @@ const vv_redirect = function () {
 
 const vv_setC = function (minutes) {
   document.cookie = getValidVisitorCookieString(minutes);
-  console.log("Running: vv_setC");
+  // console.debug("Running: vv_setC");
 };
  
 // setValidVisitorCookie(cookieMinutes);
