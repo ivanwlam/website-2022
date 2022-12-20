@@ -739,6 +739,10 @@ body .et_pb_section {
   --color-shadow: hsla(0 0% 0% / 20%);
   --shadow: 0px 1px 4px var(--color-shadow); }
 
+/* Error/Permission Denied */
+.section-permission-denied logo.et_pb_image .et_pb_image_wrap {
+  margin-left: 0; }
+
 :root {
   --height-header-desktop: 3rem;
   --height-header-mobile: 3rem;
