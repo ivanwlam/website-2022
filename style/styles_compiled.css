@@ -1243,6 +1243,7 @@ body .text-portfolio-stat-value p {
     margin-right: 0; } }
 /* Images */
 img.bg-brand-gradient,
+.et_pb_image.bg-brand-gradient img,
 .layout-portfolio-hero-row :not(.background-image-none) > * > img,
 .layout-portfolio-body-row :not(.background-image-none) > * > img,
 .layout-portfolio-body-row :not(.background-image-none) > * > video,
