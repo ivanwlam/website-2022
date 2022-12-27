@@ -582,6 +582,26 @@ body .et_pb_button:hover,
 body .et_pb_button.et_pb_bg_layout_light:hover {
   background-color: var(--color-bg-button-hover); }
 
+.et_pb_contact_form {
+  margin-left: 0;
+  /* override */ }
+
+.et_pb_contact_form p.et_pb_contact_field {
+  padding-left: 0;
+  /* override */
+  padding-right: 2rem;
+  /* override */ }
+
+.et_pb_contact_form .et_pb_contact_field[data-id=message] {
+  max-width: 100%;
+  /* override */ }
+
+@media screen and (max-width: 767px) {
+  .et_pb_contact_form p.et_pb_contact_field,
+  .et_pb_contact_form .et_pb_contact_field[data-id=message] {
+    max-width: 100%;
+    /* Override */
+    padding-right: 0; } }
 .et_pb_contact p input,
 .et_pb_contact p textarea {
   background-color: var(--color-bg-form-field);
@@ -595,6 +615,10 @@ body .et_pb_button.et_pb_bg_layout_light:hover {
   padding: var(--spacing-large);
   /* override */
   border: 1px solid var(--color-line); }
+
+.et_pb_button, .et_pb_button.et_pb_bg_layout_light, .et_pb_button:hover, .et_pb_module .et_pb_button:hover {
+  margin-left: 0;
+  /* Override */ }
 
 /* Contact Form Submit button */
 .et_contact_bottom_container {
@@ -741,7 +765,7 @@ body .et_pb_section {
 
 /* About Page */
 .row-about-content-image .et_pb_image {
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em !important; }
 
 /* Error/Permission Denied */
 .section-permission-denied .logo.et_pb_image .et_pb_image_wrap {
