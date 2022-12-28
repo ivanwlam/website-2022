@@ -1123,7 +1123,7 @@ header nav .nav-link a:hover {
 #main-footer ul li a,
 #main-footer ul.bottom-nav li.menu-item a,
 #main-footer ul.bottom-nav li.current-menu-item a {
-  color: var(--color-link-on-light);
+  color: var(--color-text-link);
   /* override */
   font-size: var(--font-size-paragraph); }
 
@@ -1132,7 +1132,7 @@ header nav .nav-link a:hover {
   /* override */
   height: 0; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   #main-footer .container {
     width: var(--width-content-tablet); }
 
@@ -1143,7 +1143,8 @@ header nav .nav-link a:hover {
     padding-right: 0;
     margin-right: 0;
     border-right: none;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 0.5rem; }
 
   #main-footer ul {
     text-align: left;

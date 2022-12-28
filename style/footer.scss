@@ -32,7 +32,7 @@
 #main-footer ul li a,
 #main-footer ul.bottom-nav li.menu-item a,
 #main-footer ul.bottom-nav li.current-menu-item a {
-	color: var(--color-link-on-light); /* override */
+	color: var(--color-text-link); /* override */
   font-size: var(--font-size-paragraph);
 }
 
@@ -41,7 +41,7 @@
   height: 0;
 }
 
-@media screen and (max-width: $breakpoint-tablet) {
+@media screen and (max-width: $breakpoint-desktop) {
   #main-footer .container {
     width: var(--width-content-tablet);
   }
@@ -54,6 +54,7 @@
     margin-right: 0;
     border-right: none;
     text-align: left;
+    margin-bottom: 0.5rem;
   }
 
   #main-footer ul {
