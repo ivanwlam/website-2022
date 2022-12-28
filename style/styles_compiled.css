@@ -425,6 +425,9 @@ h1, h2, h3 {
   font-family: var(--font-family-serif) !important;
   font-weight: 600; }
 
+h4, h5, h6 {
+  font-weight: var(--font-weight-bold); }
+
 h1 {
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1); }
