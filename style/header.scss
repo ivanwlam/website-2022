@@ -296,7 +296,6 @@ header nav .nav-link a {
 
 header nav .nav-link a:hover {
   background-color: var(--color-bg-hover);
-  // color: var(--color-text-highlight);
   color: var(--color-text-link-emphasis);
 }
 
@@ -435,8 +434,8 @@ header nav .nav-link a:hover {
 
 
   header nav .nav-link a:hover {
-    background-color: var(--color-bg-hover);
-    color: var(--color-text-highlight);
+    // background-color: var(--color-bg-hover);
+    // color: var(--color-text-highlight);
   }
 
 }
