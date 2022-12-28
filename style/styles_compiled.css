@@ -1092,6 +1092,39 @@ header nav .nav-link a:hover {
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }
+#main-footer {
+  background-color: var(--color-bg-deemphasis);
+  /* override */
+  border-top: 1px solid var(--color-line-deemphasis); }
+
+#main-footer #et-footer-nav {
+  background-color: transparent;
+  /* override */ }
+
+#main-footer ul::before {
+  content: "Ivan W. Lam";
+  display: inline-block;
+  font-size: var(--font-size-paragraph);
+  color: var(--color-text-light-on-dark-deemphasis);
+  font-weight: var(--font-weight-bold);
+  padding-right: 1em;
+  border-right: 2px solid var(--color-line-deemphasis);
+  line-height: 1.5em;
+  margin-right: 1em; }
+
+#main-footer ul li {
+  margin-bottom: 0;
+  /* override */ }
+
+#main-footer ul li a {
+  color: var(--color-link-on-light);
+  /* override */ }
+
+#main-footer #footer-bottom {
+  padding: 0;
+  /* override */
+  height: 0; }
+
 .et_pb_row .et_pb_module .et_pb_row {
   margin-top: 5rem;
   margin-bottom: 5rem; }
