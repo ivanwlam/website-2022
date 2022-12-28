@@ -34,8 +34,14 @@ const getValidVisitorCookieString = function (minutes) {
 //   document.body.classList.add("permission-denied");
 // }
 
+const urlIsHome = function () {
+  // Strip URL of query
+  return window.location.href.replace(/\?.*/, "").endsWith(redirectUrl);
+}
+
 const vv_redirect = function () {
-  if (window.location.href.includes(redirectUrl)) return;
+  // if (window.location.href.includes(redirectUrl)) return;
+  if (urlIsHome()) return;
   window.location.replace(redirectUrl);
 }
 
