@@ -14,7 +14,9 @@
   --color-hsl-accent-on-light: var(--color-hsl-accent-on-light-text);
   --color-hsl-accent-on-dark: var(--color-hue-accent) var(--color-saturation-default) 35%;
   --color-link-on-light: hsl(var(--color-hue-link) var(--color-saturation-default) 35%);
+  --color-link-on-light-emphasis: hsl(var(--color-hue-link) var(--color-saturation-default) 25%);
   --color-link-on-dark: hsl(var(--color-hue-link) var(--color-saturation-default) 50%);
+  --color-link-on-dark-emphasis: hsl(var(--color-hue-link) var(--color-saturation-default) 90%);
   --color-accent-on-light: hsl(var(--color-hsl-accent-on-light));
   --color-accent-on-dark: hsl(var(--color-hsl-accent-on-dark));
   --color-accent-on-light-graphic: hsl(var(--color-hsl-accent-on-light-graphic));
@@ -65,7 +67,9 @@
   --color-text-light-on-dark-emphasis: hsl(var(--color-hs-neutral) 95%);
   --color-text-light-on-dark-deemphasis: hsl(var(--color-hs-neutral) 55%);
   --color-text-link-on-light: var(--color-link-on-light);
+  --color-text-link-on-light-emphasis: var(--color-link-on-light-emphasis);
   --color-text-link-on-dark: var(--color-link-on-dark);
+  --color-text-link-on-dark-emphasis: var(--color-link-on-dark-emphasis);
   --color-text-accent-on-light: var(--color-accent-on-light);
   --color-text-accent-on-dark: var(--color-accent-on-dark);
   --color-line-dark-on-light: hsla(var(--color-hsl-black) / 35%);
@@ -99,6 +103,7 @@
   --color-text-highlight: var(--color-text-dark-on-light-emphasis);
   --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
   --color-text-link: var(--color-text-link-on-light);
+  --color-text-link-emphasis: var(--color-text-link-on-light-emphasis);
   --color-text-accent: var(--color-text-accent-on-light);
   --color-line: var(--color-line-dark-on-light);
   --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
@@ -219,6 +224,7 @@
   --color-text-highlight: var(--color-text-dark-on-light-emphasis);
   --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
   --color-text-link: var(--color-text-link-on-light);
+  --color-text-link-emphasis: var(--color-text-link-on-light-emphasis);
   --color-text-accent: var(--color-text-accent-on-light);
   --color-line: var(--color-line-dark-on-light);
   --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
@@ -252,6 +258,7 @@
   --color-text-highlight: var(--color-text-light-on-dark-emphasis);
   --color-text-deemphasis: var(--color-text-light-on-dark-deemphasis);
   --color-text-link: var(--color-text-link-on-dark);
+  --color-text-link-emphasis: var(--color-text-link-on-dark-emphasis);
   --color-text-accent: var(--color-text-accent-on-dark);
   --color-line: var(--color-line-light-on-dark);
   --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
@@ -281,6 +288,7 @@
     --color-text-highlight: var(--color-text-dark-on-light-emphasis);
     --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
     --color-text-link: var(--color-text-link-on-light);
+    --color-text-link-emphasis: var(--color-text-link-on-light-emphasis);
     --color-text-accent: var(--color-text-accent-on-light);
     --color-line: var(--color-line-dark-on-light);
     --color-line-emphasis: var(--color-line-dark-on-light-emphasis);
@@ -314,6 +322,7 @@
     --color-text-highlight: var(--color-text-light-on-dark-emphasis);
     --color-text-deemphasis: var(--color-text-light-on-dark-deemphasis);
     --color-text-link: var(--color-text-link-on-dark);
+    --color-text-link-emphasis: var(--color-text-link-on-dark-emphasis);
     --color-text-accent: var(--color-text-accent-on-dark);
     --color-line: var(--color-line-light-on-dark);
     --color-line-emphasis: var(--color-line-light-on-dark-emphasis);
@@ -962,14 +971,14 @@ header nav .nav-link {
   font-size: var(--font-size-paragraph); }
 
 header nav .nav-link a {
-  color: var(--color-text);
   line-height: var(--height-header);
   display: inline-block;
-  padding: 0 0.75em; }
+  padding: 0 0.75em;
+  font-weight: var(--font-weight-bold); }
 
 header nav .nav-link a:hover {
   background-color: var(--color-bg-hover);
-  color: var(--color-text-highlight); }
+  color: var(--color-text-link-emphasis); }
 
 /* Mobile/Tablet */
 @media screen and (max-width: 980px) {
