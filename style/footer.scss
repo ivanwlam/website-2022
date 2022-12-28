@@ -45,7 +45,9 @@
   #main-footer .container {
     width: var(--width-content-tablet);
   }
+}
 
+@media screen and (max-width: $breakpoint-tablet) {
   #main-footer ul::before {
     display: block;
     font-size: var(--font-size-super-paragraph);
