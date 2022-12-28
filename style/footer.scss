@@ -19,8 +19,10 @@
 	margin-right: 1em;
 }
 
-#main-footer ul.bottom-nav {
-  padding: 1.5rem 0; /* override */
+@media screen and (max-width: $breakpoint-desktop) {
+  #main-footer ul.bottom-nav {
+    padding: 1.5rem 0; /* override */
+  }
 }
 
 #main-footer ul li {
@@ -37,4 +39,26 @@
 #main-footer #footer-bottom {
   padding: 0; /* override */
   height: 0;
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  #main-footer .container {
+    width: var(--width-content-tablet);
+  }
+
+  #main-footer ul::before {
+    display: block;
+    font-size: var(--font-size-super-paragraph);
+    line-height: var(--line-height-super-paragraph);
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    text-align: left;
+  }
+
+  #main-footer ul {
+    text-align: left; /* override */
+  }
+
+
 }
