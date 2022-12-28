@@ -136,7 +136,7 @@
 
   --color-text:                           var(--color-text-dark-on-light);
   --color-text-highlight:                 var(--color-text-dark-on-light-emphasis);
-  --color-text-secondary-default:         var(--color-text-dark-on-light-deemphasis);
+  --color-text-deemphasis:                var(--color-text-dark-on-light-deemphasis);
   --color-text-link:                      var(--color-text-link-on-light);
   --color-text-accent:                    var(--color-text-accent-on-light);
 
@@ -267,7 +267,7 @@
 
   --color-text:                         var(--color-text-dark-on-light);
   --color-text-highlight:               var(--color-text-dark-on-light-emphasis);
-  --color-text-secondary-default:       var(--color-text-dark-on-light-deemphasis);
+  --color-text-deemphasis:              var(--color-text-dark-on-light-deemphasis);
   --color-text-link:                    var(--color-text-link-on-light);
   --color-text-accent:                  var(--color-text-accent-on-light);
 
@@ -317,7 +317,7 @@
 
   --color-text:                         var(--color-text-light-on-dark);
   --color-text-highlight:               var(--color-text-light-on-dark-emphasis);
-  --color-text-secondary-default:       var(--color-text-light-on-dark-deemphasis);
+  --color-text-deemphasis:              var(--color-text-light-on-dark-deemphasis);
   --color-text-link:                    var(--color-text-link-on-dark);
   --color-text-accent:                  var(--color-text-accent-on-dark);
 

@@ -11,7 +11,7 @@
 	content: "Ivan W. Lam";
 	display: inline-block;
 	font-size: var(--font-size-paragraph);
-	color: var(--color-text-light-on-dark-deemphasis);
+	color: var(--color-text-deemphasis);
 	font-weight: var(--font-weight-bold);
 	padding-right: 1em;
 	border-right: 2px solid var(--color-line-deemphasis);
@@ -23,7 +23,8 @@
 	margin-bottom: 0; /* override */
 }
 
-#main-footer ul li a {
+#main-footer ul li a,
+#main-footer ul.bottom-nav li.current-menu-item a {
 	color: var(--color-link-on-light); /* override */
 }
 

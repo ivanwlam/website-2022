@@ -97,7 +97,7 @@
   --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-end);
   --color-text: var(--color-text-dark-on-light);
   --color-text-highlight: var(--color-text-dark-on-light-emphasis);
-  --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+  --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
   --color-text-link: var(--color-text-link-on-light);
   --color-text-accent: var(--color-text-accent-on-light);
   --color-line: var(--color-line-dark-on-light);
@@ -217,7 +217,7 @@
   --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-end);
   --color-text: var(--color-text-dark-on-light);
   --color-text-highlight: var(--color-text-dark-on-light-emphasis);
-  --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+  --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
   --color-text-link: var(--color-text-link-on-light);
   --color-text-accent: var(--color-text-accent-on-light);
   --color-line: var(--color-line-dark-on-light);
@@ -250,7 +250,7 @@
   --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-dark-gradient-end);
   --color-text: var(--color-text-light-on-dark);
   --color-text-highlight: var(--color-text-light-on-dark-emphasis);
-  --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
+  --color-text-deemphasis: var(--color-text-light-on-dark-deemphasis);
   --color-text-link: var(--color-text-link-on-dark);
   --color-text-accent: var(--color-text-accent-on-dark);
   --color-line: var(--color-line-light-on-dark);
@@ -279,7 +279,7 @@
     --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-light-gradient-end);
     --color-text: var(--color-text-dark-on-light);
     --color-text-highlight: var(--color-text-dark-on-light-emphasis);
-    --color-text-secondary-default: var(--color-text-dark-on-light-deemphasis);
+    --color-text-deemphasis: var(--color-text-dark-on-light-deemphasis);
     --color-text-link: var(--color-text-link-on-light);
     --color-text-accent: var(--color-text-accent-on-light);
     --color-line: var(--color-line-dark-on-light);
@@ -312,7 +312,7 @@
     --color-bg-nav-menu-gradient-end: var(--color-bg-nav-menu-dark-gradient-end);
     --color-text: var(--color-text-light-on-dark);
     --color-text-highlight: var(--color-text-light-on-dark-emphasis);
-    --color-text-secondary-default: var(--color-text-light-on-dark-deemphasis);
+    --color-text-deemphasis: var(--color-text-light-on-dark-deemphasis);
     --color-text-link: var(--color-text-link-on-dark);
     --color-text-accent: var(--color-text-accent-on-dark);
     --color-line: var(--color-line-light-on-dark);
@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6, p, li,
 .heading-metadata,
 .heading-metadata h3 {
   text-transform: uppercase;
-  color: var(--color-text-secondary-default); }
+  color: var(--color-text-deemphasis); }
 
 @media (prefers-color-scheme: dark) {
   .heading-eyebrow:not(:has(+ div h1, + div h2, + div h3, + div h4)) {
@@ -1105,7 +1105,7 @@ header nav .nav-link a:hover {
   content: "Ivan W. Lam";
   display: inline-block;
   font-size: var(--font-size-paragraph);
-  color: var(--color-text-light-on-dark-deemphasis);
+  color: var(--color-text-deemphasis);
   font-weight: var(--font-weight-bold);
   padding-right: 1em;
   border-right: 2px solid var(--color-line-deemphasis);
@@ -1116,7 +1116,8 @@ header nav .nav-link a:hover {
   margin-bottom: 0;
   /* override */ }
 
-#main-footer ul li a {
+#main-footer ul li a,
+#main-footer ul.bottom-nav li.current-menu-item a {
   color: var(--color-link-on-light);
   /* override */ }
 
