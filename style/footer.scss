@@ -30,10 +30,10 @@
 }
 
 #main-footer ul li a,
-#main-footer ul.bottom-nav li.menu-item a,
-#main-footer ul.bottom-nav li.current-menu-item a {
+#main-footer ul.bottom-nav li.menu-item a {
 	color: var(--color-text-link); /* override */
   font-size: var(--font-size-paragraph);
+  text-decoration: underline;
 }
 
 #main-footer #footer-bottom {
