@@ -1112,14 +1112,20 @@ header nav .nav-link a:hover {
   line-height: 1.5em;
   margin-right: 1em; }
 
+#main-footer ul.bottom-nav {
+  padding: 1.5rem 0;
+  /* override */ }
+
 #main-footer ul li {
   margin-bottom: 0;
   /* override */ }
 
 #main-footer ul li a,
+#main-footer ul.bottom-nav li.menu-item a,
 #main-footer ul.bottom-nav li.current-menu-item a {
   color: var(--color-link-on-light);
-  /* override */ }
+  /* override */
+  font-size: var(--font-size-paragraph); }
 
 #main-footer #footer-bottom {
   padding: 0;
