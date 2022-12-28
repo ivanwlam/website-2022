@@ -45,6 +45,10 @@
   #main-footer .container {
     width: var(--width-content-tablet);
   }
+
+  #main-footer ul {
+    text-align: left; /* override */
+  }
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
@@ -57,10 +61,6 @@
     border-right: none;
     text-align: left;
     margin-bottom: 0.5rem;
-  }
-
-  #main-footer ul {
-    text-align: left; /* override */
   }
 
 
