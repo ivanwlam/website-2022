@@ -1100,10 +1100,6 @@ header nav .nav-link a:hover {
 @media screen and (max-width: 320px) {
   header nav ul.nav-list {
     width: 100%; } }
-footer {
-  display: none;
-  /* To be displayed on valid perms */ }
-
 #main-footer {
   background-color: var(--color-bg-deemphasis);
   /* override */
