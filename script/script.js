@@ -13,6 +13,10 @@ const vv_unhide = function () {
 };
 */
 
+const bodyLoaded = function () {
+  console.log("bodyLoaded() ran");
+}
+
 const getDaysFromMinutes = function (minutes) {
   let date = new Date();
   date.setTime(date.getTime() + (minutes * 60 * 1000));
@@ -29,10 +33,9 @@ const getValidVisitorCookieString = function (minutes) {
 	  return cookieValue;
 };
 
-// const setBodyAsNotPermitted = function () {
-//   console.debug("Adding body class: permission-denied");
-//   document.body.classList.add("permission-denied");
-// }
+const track_pageLoad = function () {
+  console.log("track_pageLoad ran");
+}
 
 const urlIsHome = function () {
   // Strip URL of query
@@ -49,20 +52,5 @@ const vv_setC = function (minutes) {
   document.cookie = getValidVisitorCookieString(minutes);
   // console.debug("Running: vv_setC");
 };
- 
-// setValidVisitorCookie(cookieMinutes);
-	
-	/*
-	if (vv_checkC()) {
-		console.log('if checkc = true');
-		vv_setC_unhide();
-	} else {	
-		console.log('else checkc = false');
-		if (vv_checkParams()) {
-			console.log('if checkparams = true');
-			vv_setC_unhide();
-		} else {
-			console.log('else checkparams = false');
-			vv_redirect();
-		}
-	}*/
+
+document.body.addEventListener("load", bodyLoaded());
