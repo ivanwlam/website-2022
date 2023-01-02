@@ -14,7 +14,7 @@ const vv_unhide = function () {
 */
 
 const bodyLoaded = function () {
-  console.log("bodyLoaded() ran");
+  console.debug("bodyLoaded() ran");
   track_pageLoad();
 }
 
@@ -35,7 +35,7 @@ const getValidVisitorCookieString = function (minutes) {
 };
 
 const track_pageLoad = function () {
-  console.log("track_pageLoad ran");
+  console.debug("track_pageLoad ran");
 }
 
 const urlIsHome = function () {
