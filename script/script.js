@@ -15,6 +15,7 @@ const vv_unhide = function () {
 
 const bodyLoaded = function () {
   console.log("bodyLoaded() ran");
+  track_pageLoad();
 }
 
 const getDaysFromMinutes = function (minutes) {
@@ -52,5 +53,3 @@ const vv_setC = function (minutes) {
   document.cookie = getValidVisitorCookieString(minutes);
   // console.debug("Running: vv_setC");
 };
-
-document.body.addEventListener("load", bodyLoaded());
