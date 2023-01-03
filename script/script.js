@@ -1,21 +1,12 @@
 const vv_cMin = 60 * 24 * 7;
 const redirectUrl = "/wordpress.php/";
 
-/*
-const vv_setC_unhide = function () {
-  console.log("temp: func: set and unhiding");
-  vv_setC(vv_cMin);
-  vv_unhide();
-};
-
-const vv_unhide = function () {
-  console.log('temp: unhide content');
-};
-*/
 
 const bodyLoaded = function () {
   console.debug("bodyLoaded() ran");
-  track_pageLoad();
+  if (typeof track_pageLoad === "function") {
+    track_pageLoad();
+  }
 }
 
 const getDaysFromMinutes = function (minutes) {
@@ -33,10 +24,6 @@ const getValidVisitorCookieString = function (minutes) {
 	  // console.debug("cookieValue", cookieValue);
 	  return cookieValue;
 };
-
-const track_pageLoad = function () {
-  console.debug("track_pageLoad ran");
-}
 
 const urlIsHome = function () {
   // Strip URL of query
