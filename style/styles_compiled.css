@@ -1205,6 +1205,10 @@ header nav .nav-link a:hover {
 .text-hero-body, .text-hero-body * {
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3); }
+  @media screen and (max-width: 768px) {
+    .text-hero-body, .text-hero-body * {
+      font-size: var(--font-size-h4);
+      line-height: var(--line-height-h4); } }
 
 .layout-body-row-super-blurb .et_pb_module p,
 .layout-body-row-super-blurb .et_pb_module .et_pb_text_inner,
