@@ -3,7 +3,7 @@ const redirectUrl = "/wordpress.php/";
 
 
 const bodyLoaded = function () {
-  console.debug("bodyLoaded() ran");
+  // console.debug("bodyLoaded() ran");
   if (typeof track_pageLoad === "function") {
     track_pageLoad();
   }
