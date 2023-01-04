@@ -704,6 +704,19 @@ body div.et_pb_section.section-hero {
       /* mobile, tablet */
       --offset-dottedGrid-v: -12.5rem; } }
 
+.section-hero::before {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-image: url(https://ivanwlam.com/wordpress/wp-content/uploads/2023/01/graphic-dotgrid-gradient-fadeup-230104.png);
+  background-repeat: no-repeat;
+  background-size: var(--width-dottedGrid);
+  background-position: -13rem 50%; }
+
 .page-title h1 {
   font-size: var(--font-size-h1);
   color: var(--color-text-highlight) !important; }
