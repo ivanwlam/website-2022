@@ -691,11 +691,12 @@ a {
   font-size: var(--font-size-h1);
   color: var(--color-text-highlight) !important; }
 
-.text-hero-body span {
+.text-hero-body .textBlock span {
   background-color: var(--color-bg-accent);
   --offset-spacing: 0.25em;
   padding: 4px var(--offset-spacing);
-  margin: 0 calc(-1 * var(--offset-spacing)); }
+  margin: 0 calc(-1 * var(--offset-spacing));
+  border-radius: var(--border-radius-small); }
 
 .text-hero-body br {
   margin: 0.75rem 0; }
