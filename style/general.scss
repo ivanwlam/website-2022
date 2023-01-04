@@ -59,7 +59,7 @@ a {
   color: var(--color-text-link);
 }
 
-.section-hero {
+body div.et_pb_section.section-hero {
   /* wide desktop, default */
   --width-dottedGrid: 400px;
   --offset-dottedGrid-h: calc(var(--width-content-margin) + (0.6 * var(--width-content)));
