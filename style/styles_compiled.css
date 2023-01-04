@@ -687,6 +687,23 @@ li {
 a {
   color: var(--color-text-link); }
 
+.section-hero {
+  /* wide desktop, default */
+  --width-dottedGrid: 400px;
+  --offset-dottedGrid-h: calc(var(--width-content-margin) + (0.6 * var(--width-content)));
+  --offset-dottedGrid-v: -7.5rem;
+  /* mobile, tablet, small desktop */
+  background-size: var(--width-dottedGrid) auto;
+  background-position: var(--offset-dottedGrid-h) var(--offset-dottedGrid-v); }
+  @media screen and (max-width: 980px) {
+    .section-hero {
+      --width-dottedGrid: 320px;
+      --offset-dottedGrid-h: calc(var(--width-content-margin) + var(--width-content) - (1/2 * var(--width-dottedGrid))); } }
+  @media screen and (max-width: 768px) {
+    .section-hero {
+      /* mobile, tablet */
+      --offset-dottedGrid-v: -12.5rem; } }
+
 .page-title h1 {
   font-size: var(--font-size-h1);
   color: var(--color-text-highlight) !important; }
