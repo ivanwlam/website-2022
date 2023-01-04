@@ -31,8 +31,8 @@ const getValidVisitorCookieString = function (minutes) {
 
 // Home Page Hero Body Parsing Styling
 const styleHomePageHeroBody = function () {
-  const textsHomeHero = document.querySelectorAll(".text-home-hero span.textBlock");
-  textsHomeHero.forEach((textBlock) => {
+  const textsHeroBody = document.querySelectorAll(".text-hero-body span.textBlock");
+  textsHeroBody.forEach((textBlock) => {
     let textBlockContent = textBlock.textContent;
     let textBlockContentUnit = textBlockContent.split(" ");
     let newTextBlockInnerHTML = "";
@@ -40,7 +40,7 @@ const styleHomePageHeroBody = function () {
       newTextBlockInnerHTML += "<span>" + textUnit + "</span> ";
     });
     newTextBlockInnerHTML = newTextBlockInnerHTML.trim();
-    span.innerHTML = newTextBlockInnerHTML;
+    textBlock.innerHTML = newTextBlockInnerHTML;
 
   });
 }
