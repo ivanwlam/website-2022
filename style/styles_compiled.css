@@ -689,11 +689,13 @@ a {
 
 .page-title h1 {
   font-size: var(--font-size-h1);
-  color: var(--color-text-highlight); }
+  color: var(--color-text-highlight) !important; }
 
 .text-hero-body span {
   background-color: var(--color-bg-accent);
-  padding: 4px 0px; }
+  --offset-spacing: 0.25em;
+  padding: 4px var(--offset-spacing);
+  margin: 0 calc(-1 * var(--offset-spacing)); }
 
 .text-hero-body br {
   margin: 0.75rem 0; }
