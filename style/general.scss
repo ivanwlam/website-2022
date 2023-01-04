@@ -108,6 +108,8 @@ body div.et_pb_section.section-hero {
 .text-hero-body .textBlock {
   --offset-spacing: 0.25em;
 	border-radius: var(--border-radius-small);
+  margin-bottom: 0.5em;
+  display: inline-block;
 
   @media screen and (min-width: $breakpoint-tablet) {
     padding: 4px var(--offset-spacing);
@@ -128,7 +130,7 @@ body div.et_pb_section.section-hero {
 }
 
 .text-hero-body br {
-  margin: 0 0 0.5em;
+  // margin: 0 0 0.5em;
 }
 
 .layout-widget-about h2 + p{
