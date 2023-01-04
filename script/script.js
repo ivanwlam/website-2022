@@ -7,6 +7,10 @@ const bodyLoaded = function () {
   if (typeof track_pageLoad === "function") {
     track_pageLoad();
   }
+
+  if (typeof styleHomePageHeroBody === "function") {
+    styleHomePageHeroBody();
+  }
 }
 
 const getDaysFromMinutes = function (minutes) {
@@ -25,6 +29,22 @@ const getValidVisitorCookieString = function (minutes) {
 	  return cookieValue;
 };
 
+// Home Page Hero Body Parsing Styling
+const styleHomePageHeroBody = function () {
+  const textsHomeHero = document.querySelectorAll(".text-home-hero span.textBlock");
+  textsHomeHero.forEach((textBlock) => {
+    let textBlockContent = textBlock.textContent;
+    let textBlockContentUnit = textBlockContent.split(" ");
+    let newTextBlockInnerHTML = "";
+    textBlockContentUnit.forEach((textUnit) => {
+      newTextBlockInnerHTML += "<span>" + textUnit + "</span> ";
+    });
+    newTextBlockInnerHTML = newTextBlockInnerHTML.trim();
+    span.innerHTML = newTextBlockInnerHTML;
+
+  });
+}
+
 const urlIsHome = function () {
   // Strip URL of query
   return window.location.href.replace(/\?.*/, "").endsWith(redirectUrl);
@@ -40,3 +60,5 @@ const vv_setC = function (minutes) {
   document.cookie = getValidVisitorCookieString(minutes);
   // console.debug("Running: vv_setC");
 };
+
+

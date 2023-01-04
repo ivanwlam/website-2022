@@ -691,6 +691,13 @@ a {
   font-size: var(--font-size-h1);
   color: var(--color-text-highlight); }
 
+.text-hero-body span {
+  background-color: var(--color-bg-accent);
+  padding: 4px 0px; }
+
+.text-hero-body br {
+  margin: 0.75rem 0; }
+
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
   line-height: var(--line-height-super-paragraph);
