@@ -688,7 +688,8 @@ a {
   color: var(--color-text-link); }
 
 .page-title h1 {
-  font-size: var(--font-size-h1); }
+  font-size: var(--font-size-h1);
+  color: var(--color-text-highlight); }
 
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
