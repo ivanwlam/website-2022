@@ -715,7 +715,11 @@ body div.et_pb_section.section-hero {
   background-image: url(https://ivanwlam.com/wordpress/wp-content/uploads/2023/01/graphic-dotgrid-gradient-fadeup-230104.png);
   background-repeat: no-repeat;
   background-size: var(--width-dottedGrid);
-  background-position: -13rem 50%; }
+  --offset-dottedGrid-v: -17rem;
+  background-position: var(--offset-dottedGrid-v) 50%; }
+  @media screen and (max-width: 768px) {
+    .section-hero::before {
+      --offset-dottedGrid-v: -14rem; } }
 
 .page-title h1 {
   font-size: var(--font-size-h1);
@@ -729,7 +733,7 @@ body div.et_pb_section.section-hero {
   border-radius: var(--border-radius-small); }
 
 .text-hero-body br {
-  margin: 0.75rem 0; }
+  margin: 0 0 0.5em; }
 
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
