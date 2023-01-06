@@ -109,7 +109,7 @@ body div.et_pb_section.section-hero {
   --offset-spacing: 0.25em;
 	border-radius: var(--border-radius-small);
   margin-bottom: 0.5em;
-  // display: inline-block;
+  display: inline-block;
 
   @media screen and (min-width: $breakpoint-tablet) {
     padding: 0 var(--offset-spacing);
