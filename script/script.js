@@ -31,6 +31,7 @@ const getValidVisitorCookieString = function (minutes) {
 
 // Home Page Hero Body Parsing Styling
 const styleHomePageHeroBody = function () {
+  // Split up Hero Body copy and wrap each word with a element tag for custom styling
   const textsHeroBody = document.querySelectorAll(".text-hero-body span.textBlock");
   textsHeroBody.forEach((textBlock) => {
     let textBlockContent = textBlock.textContent;

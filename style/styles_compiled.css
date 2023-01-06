@@ -739,11 +739,15 @@ body div.et_pb_section.section-hero {
 .text-hero-body .textBlock span {
   background-color: var(--color-bg-accent);
   padding: 4px var(--offset-spacing);
-  margin: 0 calc(-1 * var(--offset-spacing));
+  margin: 0.25em calc(-1 * var(--offset-spacing));
   border-radius: var(--border-radius-small); }
   @media screen and (min-width: 768px) {
     .text-hero-body .textBlock span {
-      background-color: transparent; } }
+      background-color: transparent;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0; } }
 
 .layout-widget-about h2 + p {
   font-size: var(--font-size-super-paragraph);
