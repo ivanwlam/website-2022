@@ -112,7 +112,7 @@ body div.et_pb_section.section-hero {
   // display: inline-block;
 
   @media screen and (min-width: $breakpoint-tablet) {
-    padding: 4px var(--offset-spacing);
+    padding: 0 var(--offset-spacing);
     --color-temp-bg-blue: hsl(var(--color-hue-link) var(--color-saturation-default) 40%);
     background-image: linear-gradient(90deg, var(--color-bg-accent), var(--color-temp-bg-blue));
     display: inline-flex;

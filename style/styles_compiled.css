@@ -731,7 +731,7 @@ body div.et_pb_section.section-hero {
   margin-bottom: 0.5em; }
   @media screen and (min-width: 768px) {
     .text-hero-body .textBlock {
-      padding: 4px var(--offset-spacing);
+      padding: 0 var(--offset-spacing);
       --color-temp-bg-blue: hsl(var(--color-hue-link) var(--color-saturation-default) 40%);
       background-image: linear-gradient(90deg, var(--color-bg-accent), var(--color-temp-bg-blue));
       display: inline-flex;
