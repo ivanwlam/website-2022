@@ -727,6 +727,7 @@ body div.et_pb_section.section-hero {
 
 .text-hero-body .textBlock {
   --offset-spacing: 0.25em;
+  /* 1/8 of an em is "fine space", supposedly equivalent to space between word. Doubling amount to accommodate both sides of text unit having the offset */
   border-radius: var(--border-radius-small);
   margin-bottom: 0.5em;
   display: inline-block; }
@@ -735,6 +736,7 @@ body div.et_pb_section.section-hero {
       padding: 0 var(--offset-spacing);
       --color-temp-bg-blue: hsl(var(--color-hue-link) var(--color-saturation-default) 40%);
       background-image: linear-gradient(90deg, var(--color-bg-accent), var(--color-temp-bg-blue));
+      /* Alternative fix to make text block stay in one-line */
       display: inline-flex;
       column-gap: var(--offset-spacing); } }
 
