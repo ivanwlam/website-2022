@@ -721,6 +721,20 @@ body div.et_pb_section.section-hero {
     .section-hero::before {
       --offset-dottedGrid-v: -14rem; } }
 
+.section-hero::after {
+  display: block;
+  content: "";
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 150%;
+  z-index: 1;
+  background-image: url(https://ivanwlam.com/wordpress/wp-content/uploads/2023/01/graphic-dotgrid-gradient-fadedown-230104.png);
+  background-repeat: no-repeat;
+  background-size: var(--width-dottedGrid);
+  --offset-dottedGrid-v: calc(100vw - (var(--width-dottedGrid) * 3/4));
+  background-position: var(--offset-dottedGrid-v) 50%; }
+
 .page-title h1 {
   font-size: var(--font-size-h1);
   color: var(--color-text-highlight) !important; }
@@ -771,11 +785,12 @@ body div.et_pb_section.section-hero {
 
 /* Content Layout */
 .page.et_pb_pagebuilder_layout #main-content {
-  padding-bottom: 5rem;
+  --padding-bottom-main-content: 5rem;
+  padding-bottom: var(--padding-bottom-main-content);
   background-color: var(--color-bg); }
   @media screen and (min-width: 1000px) {
     .page.et_pb_pagebuilder_layout #main-content {
-      padding-bottom: 10rem; } }
+      --padding-bottom-main-content: 10rem; } }
 
 body .et_pb_section {
   padding-top: 0;
@@ -836,7 +851,22 @@ body .et_pb_section {
   --color-shadow: hsla(0 0% 0% / 20%);
   --shadow: 0px 1px 4px var(--color-shadow); }
 
-/* About Page */
+/* HOME PAGE BOTTOM DECORATIVE */
+#main-content .entry-content .et_builder_inner_content > div:last-of-type::before {
+  --width-dottedGrid: 400px;
+  --offset-dottedGrid-h: calc(var(--width-content-margin) + (0.6 * var(--width-content)));
+  content: "";
+  display: block;
+  width: 100vw;
+  height: var(--padding-bottom-main-content);
+  position: absolute;
+  bottom: calc(-1 * var(--padding-bottom-main-content));
+  background-image: url(https://ivanwlam.com/wordpress/wp-content/uploads/2023/01/graphic-dotgrid-gradient-fadedown-230104.png);
+  background-repeat: no-repeat;
+  background-size: var(--width-dottedGrid);
+  background-position: var(--offset-dottedGrid-h) 0; }
+
+/* ABOUT PAGE */
 .row-about-content-image .et_pb_image {
   margin-bottom: 0.5em !important; }
 
