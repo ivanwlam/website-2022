@@ -109,25 +109,25 @@ body div.et_pb_section.section-hero {
   --offset-spacing: 0.25em;
 	border-radius: var(--border-radius-small);
   margin-bottom: 0.5em;
-  display: inline-block;
+  // display: inline-block;
 
   @media screen and (min-width: $breakpoint-tablet) {
     padding: 4px var(--offset-spacing);
     --color-temp-bg-blue: hsl(var(--color-hue-link) var(--color-saturation-default) 40%);
     background-image: linear-gradient(90deg, var(--color-bg-accent), var(--color-temp-bg-blue));
+    display: inline-flex;
+    column-gap: var(--offset-spacing);
   }
 }
 
 .text-hero-body .textBlock span {
 	background-color: var(--color-bg-accent);
 	padding: 4px var(--offset-spacing);
-  margin: 0.25em calc(-1 * var(--offset-spacing));
+  margin: 0 calc(-1 * var(--offset-spacing));
   border-radius: var(--border-radius-small);
 
   @media screen and (min-width: $breakpoint-tablet) {
     background-color: transparent;
-    padding-top: 0;
-    padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
   }
