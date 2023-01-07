@@ -71,9 +71,10 @@ const setEventListener_htmlAttributeChange = () => {
   const htmlEl = document.firstElementChild;
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      if (mutation.type === "attributes") {
+      if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref" != getColorSchemePref())) {
+        console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
         triggerMtmEvent_htmlTagSchemeChange();
-        console.debug("attributes changed");
+        // console.debug("attributes changed");
       }
     });
   });
@@ -126,7 +127,7 @@ window.addEventListener("load", () => {
   setUpColorSchemeControls();
   updateColorSchemeControlWithPref();
   setEventListener_htmlAttributeChange();
-  
+
 });
 
 window.onresize = () => {
