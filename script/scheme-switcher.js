@@ -1,6 +1,7 @@
 // Adapted from: https://github.com/argyleink/gui-challenges/tree/main/theme-switch
 
 const storageKey_schemePref = 'scheme-preference';
+let previousSchemePref = "auto";
 
 const localStorageHasSchemePref = () => {
   return localStorage.getItem(storageKey_schemePref) ? true : false;
@@ -56,6 +57,7 @@ const triggerMtmEvent_htmlTagSchemeChange = () => {
 const onClick_colorSchemeControl = (e) => {
   setSchemePrefToTargetValue(e);
   setSchemePref();
+  updatePreviousSchemePrefVar();
 }
 
 const verifyThatColorSchemeControlIsChecked = (e) => {
@@ -72,9 +74,9 @@ const setEventListener_htmlAttributeChange = () => {
   const htmlEl = document.firstElementChild;
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "scheme.pref", scheme.pref);
-      if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref" != getColorSchemePref())) {
-        console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
+      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "previousSchemePref", previousSchemePref);
+      if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref") != previousSchemePref) {
+        console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "previousSchemePref", previousSchemePref);
         triggerMtmEvent_htmlTagSchemeChange();
         // console.debug("attributes changed");
       }
@@ -92,6 +94,10 @@ const setUpColorSchemeControls = () => {
     el.checked = false;
     el.addEventListener("click", onClick_colorSchemeControl);
   });
+}
+
+const updatePreviousSchemePrefVar = () => {
+  previousSchemePref = scheme.pref;
 }
 
 const updateColorSchemeControlWithPref = () => {
