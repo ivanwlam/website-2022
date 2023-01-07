@@ -33,8 +33,7 @@ const setLocalStorageSchemePrefToLatest = () => {
 
 const setHtmlTagSchemePref = () => {
   document.firstElementChild.setAttribute('data-scheme-pref', scheme.pref);
-  var _mtm = window._mtm || [];
-  _mtm.push({"event": "html-tag-scheme-change"});
+  // triggerMtmEvent_htmlTagSchemeChange();
 }
 
 const reflectSchemePref = () => {
@@ -47,7 +46,12 @@ const setSchemePrefToTargetValue = (e) => {
 const setSchemePref = () => {
    setLocalStorageSchemePrefToLatest();
    reflectSchemePref();
- }
+}
+
+const triggerMtmEvent_htmlTagSchemeChange = () => {
+  var _mtm = window._mtm || [];
+  _mtm.push({"event": "html-tag-scheme-change"});
+}
 
 const onClick_colorSchemeControl = (e) => {
   setSchemePrefToTargetValue(e);
@@ -61,6 +65,22 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
     // console.debug("control is checked", e.target);
     onClick_colorSchemeControl(e);
   }
+}
+
+const setEventListener_htmlAttributeChange = () => {
+  const htmlEl = document.firstElementChild;
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.type === "attributes") {
+        triggerMtmEvent_htmlTagSchemeChange();
+        console.debug("attributes changed");
+      }
+    });
+  });
+  
+  observer.observe(htmlEl, {
+    attributes: true //configure it to listen to attribute changes
+  });
 }
 
 const setUpColorSchemeControls = () => {
@@ -105,6 +125,8 @@ window.addEventListener("load", () => {
   reflectSchemePref();
   setUpColorSchemeControls();
   updateColorSchemeControlWithPref();
+  setEventListener_htmlAttributeChange();
+  
 });
 
 window.onresize = () => {
