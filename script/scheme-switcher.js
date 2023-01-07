@@ -71,6 +71,7 @@ const setEventListener_htmlAttributeChange = () => {
   const htmlEl = document.firstElementChild;
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
+      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
       if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref" != getColorSchemePref())) {
         console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
         triggerMtmEvent_htmlTagSchemeChange();
