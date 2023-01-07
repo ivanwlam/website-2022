@@ -40,8 +40,8 @@ const reflectSchemePref = () => {
 }
 const setSchemePrefToTargetValue = (e) => {
   if (scheme.pref != e.target.value) {
-    console.debug("scheme.pref != e.target.value", "scheme.pref:", scheme.pref, "e.target.value:", e.target.value);
-    triggerMtmEvent_htmlTagSchemeChange();
+    // There's a change between existing and desired preference
+    triggerMtmEvent_colorSchemeChange();
   }
   scheme.pref = e.target.value;
 }
@@ -51,9 +51,9 @@ const setSchemePref = () => {
    reflectSchemePref();
 }
 
-const triggerMtmEvent_htmlTagSchemeChange = () => {
+const triggerMtmEvent_colorSchemeChange = () => {
   var _mtm = window._mtm || [];
-  _mtm.push({"event": "html-tag-scheme-change"});
+  _mtm.push({"event": "color-scheme-change"});
 }
 
 const onClick_colorSchemeControl = (e) => {
