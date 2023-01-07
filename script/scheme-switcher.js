@@ -33,6 +33,8 @@ const setLocalStorageSchemePrefToLatest = () => {
 
 const setHtmlTagSchemePref = () => {
   document.firstElementChild.setAttribute('data-scheme-pref', scheme.pref);
+  var _mtm = window._mtm || [];
+  _mtm.push({"event": "html-tag-scheme-change"});
 }
 
 const reflectSchemePref = () => {
