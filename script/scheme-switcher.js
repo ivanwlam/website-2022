@@ -1,7 +1,6 @@
 // Adapted from: https://github.com/argyleink/gui-challenges/tree/main/theme-switch
 
 const storageKey_schemePref = 'scheme-preference';
-let previousSchemePref = "auto";
 
 const localStorageHasSchemePref = () => {
   return localStorage.getItem(storageKey_schemePref) ? true : false;
@@ -34,7 +33,6 @@ const setLocalStorageSchemePrefToLatest = () => {
 
 const setHtmlTagSchemePref = () => {
   document.firstElementChild.setAttribute('data-scheme-pref', scheme.pref);
-  // triggerMtmEvent_htmlTagSchemeChange();
 }
 
 const reflectSchemePref = () => {
@@ -43,6 +41,7 @@ const reflectSchemePref = () => {
 const setSchemePrefToTargetValue = (e) => {
   if (scheme.pref != e.target.value) {
     console.debug("scheme.pref != e.target.value", "scheme.pref:", scheme.pref, "e.target.value:", e.target.value);
+    triggerMtmEvent_htmlTagSchemeChange();
   }
   scheme.pref = e.target.value;
 }
@@ -60,7 +59,6 @@ const triggerMtmEvent_htmlTagSchemeChange = () => {
 const onClick_colorSchemeControl = (e) => {
   setSchemePrefToTargetValue(e);
   setSchemePref();
-  updatePreviousSchemePrefVar();
 }
 
 const verifyThatColorSchemeControlIsChecked = (e) => {
@@ -72,35 +70,12 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
   }
 }
 
-const setEventListener_htmlAttributeChange = () => {
-  // Adapted from https://stackoverflow.com/a/41425087
-  const htmlEl = document.firstElementChild;
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "previousSchemePref", previousSchemePref);
-      if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref") != previousSchemePref) {
-        console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "previousSchemePref", previousSchemePref);
-        triggerMtmEvent_htmlTagSchemeChange();
-        // console.debug("attributes changed");
-      }
-    });
-  });
-  
-  observer.observe(htmlEl, {
-    attributes: true //configure it to listen to attribute changes
-  });
-}
-
 const setUpColorSchemeControls = () => {
   document.querySelectorAll(".color-scheme-control").forEach((el) => {
     el.removeAttribute("checked");
     el.checked = false;
     el.addEventListener("click", onClick_colorSchemeControl);
   });
-}
-
-const updatePreviousSchemePrefVar = () => {
-  previousSchemePref = scheme.pref;
 }
 
 const updateColorSchemeControlWithPref = () => {
@@ -137,7 +112,6 @@ window.addEventListener("load", () => {
   reflectSchemePref();
   setUpColorSchemeControls();
   updateColorSchemeControlWithPref();
-  setEventListener_htmlAttributeChange();
 
 });
 
