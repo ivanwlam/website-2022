@@ -41,6 +41,9 @@ const reflectSchemePref = () => {
   setHtmlTagSchemePref();
 }
 const setSchemePrefToTargetValue = (e) => {
+  if (scheme.pref != e.target.value) {
+    console.debug("scheme.pref != e.target.value", "scheme.pref:", scheme.pref, "e.target.value:", e.target.value);
+  }
   scheme.pref = e.target.value;
 }
 
