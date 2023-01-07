@@ -68,10 +68,11 @@ const verifyThatColorSchemeControlIsChecked = (e) => {
 }
 
 const setEventListener_htmlAttributeChange = () => {
+  // Adapted from https://stackoverflow.com/a/41425087
   const htmlEl = document.firstElementChild;
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
+      console.debug("Current State:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "scheme.pref", scheme.pref);
       if (mutation.type === "attributes" && htmlEl.getAttribute("data-scheme-pref" != getColorSchemePref())) {
         console.debug("Attribute seems diff:", "htmlEl pref:", htmlEl.getAttribute("data-scheme-pref"), "getColorSchemePref()", getColorSchemePref());
         triggerMtmEvent_htmlTagSchemeChange();
