@@ -1705,7 +1705,9 @@ svg.scheme-icon {
   text-align: center;
   background-color: var(--color-bg-highlight);
   margin-bottom: 0;
-  /* override */ }
+  /* override */
+  margin-right: 1rem;
+  /* needed for 5s spacing */ }
 
 .module-scheme-controls li,
 .module-scheme-controls li * {
@@ -1718,7 +1720,12 @@ svg.scheme-icon {
   top: 0;
   left: -10%;
   transform: translate(-5%, -5%);
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
+  border: 0;
   display: inline-block;
   padding: 1rem;
   background-color: transparent; }
