@@ -52,7 +52,9 @@ const setPageHeadingAsNotAboveViewport = () => {
 
 const setUpHeaderNavOverlayEvent = () => {
   const headerNavOverlay = document.querySelector("header nav .overlay");
-  headerNavOverlay?.addEventListener("click", toggleNavIsOpen);
+  if (headerNavOverlay) {
+    headerNavOverlay.addEventListener("click", toggleNavIsOpen);
+  }
 }
 
 const toggleNavIsOpen = (e) => {
