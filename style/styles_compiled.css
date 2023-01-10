@@ -716,11 +716,12 @@ body div.et_pb_section.section-hero {
   background-image: url(https://ivanwlam.com/wordpress/wp-content/uploads/2023/01/graphic-dottedGrid-10-faderight-230106.png);
   background-repeat: no-repeat;
   background-size: var(--width-dottedGrid);
-  --offset-dottedGrid-v: -17rem;
-  background-position: var(--offset-dottedGrid-v) 50%; }
+  --offset-dottedGrid-h: -17rem;
+  background-position: var(--offset-dottedGrid-h) 50%; }
   @media screen and (max-width: 768px) {
     .section-hero::before {
-      --offset-dottedGrid-v: -14rem; } }
+      --offset-dottedGrid-h: calc((-1 * var(--width-dottedGrid)) + var(--margin-content) + 3rem);
+      /* 3rems into left side of content */ } }
 
 .section-hero::after {
   --width-dottedGrid: 266px;
