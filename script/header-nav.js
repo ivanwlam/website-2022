@@ -88,3 +88,5 @@ window.addEventListener("load", () => {
   setUpHeaderNavOverlayEvent();
   updateHeaderBreadcrumbCaseStudyTitle();
 });
+
+console.debug("header-nav loaded");
