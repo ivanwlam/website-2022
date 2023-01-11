@@ -876,7 +876,9 @@ body .et_pb_section {
 
 /* Error/Permission Denied */
 .section-permission-denied .logo.et_pb_image .et_pb_image_wrap {
-  margin-left: 0; }
+  margin-left: 0;
+  max-width: none !important;
+  width: auto !important; }
 
 .dummySelector {
   display: block; }
