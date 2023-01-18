@@ -1,5 +1,5 @@
 const vv_cMin = 60 * 24 * 7;
-const redirectUrl = "/portfolio/";
+const redirectUrl = "/";
 
 
 const bodyLoaded = function () {
