@@ -46,6 +46,7 @@ const removeProjectMetaLink = function () {
   });
 
   flagProjectMetas();
+  metas.forEach(meta => meta.innerHTML = meta.innerHTML.replaceAll(",",""));
 
 }
 
