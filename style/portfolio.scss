@@ -17,7 +17,6 @@
 
 }
 
-.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-hero-row,
 .et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-meta,
 .et_pb_row .et_pb_module .et_pb_row.layout-portfolio-body-row-text-only {
 	margin-top: 0;
@@ -34,6 +33,28 @@
   /* Make rows where there are multiple columns to align at the top */
   align-items: stretch;
 }
+
+/* Project Categories */
+
+.et_pb_row .et_pb_module .et_pb_row.layout-portfolio-hero-row {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.text-project-categories {
+  margin-top: -1rem;
+}
+
+.text-project-categories a {
+  font-size: var(--font-size-h5);
+  color: var(--color-text-default);
+  border: 1.5px solid var(--color-line);
+  padding: 0.25em 0.5em;
+  margin-right: 0.5rem;
+  border-radius: var(--border-radius-medium);
+  cursor: default;
+}
+
 
 /* Metadata headings */
 

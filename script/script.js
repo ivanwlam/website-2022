@@ -40,10 +40,10 @@ const getValidVisitorCookieString = function (minutes) {
 };
 
 const removeProjectMetaLink = function () {
-  const projectMetaAnchors = document.querySelectorAll(".et_pb_portfolio_item .post-meta a");
+  const projectMetaAnchors = document.querySelectorAll(".et_pb_portfolio_item .post-meta a, .text-project-categories a");
   const projectMetas = document.querySelectorAll(".et_pb_portfolio_item .post-meta");
   projectMetaAnchors.forEach(anchor => {
-    anchor.href = "";
+    anchor.removeAttribute("href");
   });
 
   flagProjectMetas();
