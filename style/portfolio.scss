@@ -200,7 +200,15 @@ body .text-portfolio-stat-value p {
 }
 
 
+.et_pb_portfolio_item .post-meta {
+  font-size: var(--font-size-paragraph);
+}
 
+.et_pb_portfolio_item .post-meta.js-nolink a {
+  border: 1px solid var(--color-line);
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius-small);
+}
 
 @media screen and (min-width: 767px) {
 
@@ -258,6 +266,8 @@ body .text-portfolio-stat-value p {
   }
 
 }
+
+
 
 /* Images */
 

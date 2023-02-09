@@ -1412,6 +1412,14 @@ body .text-portfolio-stat-value p {
   top: 0;
   background-image: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.15) 100%); }
 
+.et_pb_portfolio_item .post-meta {
+  font-size: var(--font-size-paragraph); }
+
+.et_pb_portfolio_item .post-meta.js-nolink a {
+  border: 1px solid var(--color-line);
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius-small); }
+
 @media screen and (min-width: 767px) {
   /* Reset from default */
   body.project-template-default .et_pb_gutters3 .et_pb_column_4_4 .et_pb_portfolio_item {

@@ -11,6 +11,16 @@ const bodyLoaded = function () {
   if (typeof styleHomePageHeroBody === "function") {
     styleHomePageHeroBody();
   }
+
+  removeProjectMetaLink();
+}
+
+const flagProjectMetas = function () {
+  // NOTE: possible to refactor to be generalized if necessary
+  const projectMetas = document.querySelectorAll(".et_pb_portfolio_item .post-meta");
+  projectMetas.forEach(projectMeta => {
+    projectMeta.classList.add("js-nolink");
+  });
 }
 
 const getDaysFromMinutes = function (minutes) {
@@ -28,6 +38,16 @@ const getValidVisitorCookieString = function (minutes) {
 	  // console.debug("cookieValue", cookieValue);
 	  return cookieValue;
 };
+
+const removeProjectMetaLink = function () {
+  const projectMetaAnchors = document.querySelectorAll(".et_pb_portfolio_item .post-meta a");
+  projectMetaAnchors.forEach(anchor => {
+    anchor.href = "";
+  });
+
+  flagProjectMetas();
+
+}
 
 // Home Page Hero Body Parsing Styling
 const styleHomePageHeroBody = function () {
@@ -61,5 +81,4 @@ const vv_setC = function (minutes) {
   document.cookie = getValidVisitorCookieString(minutes);
   // console.debug("Running: vv_setC");
 };
-
 
