@@ -1418,7 +1418,9 @@ body .text-portfolio-stat-value p {
 .et_pb_portfolio_item .post-meta.js-nolink a {
   border: 1px solid var(--color-line);
   padding: 0.25em 0.5em;
-  border-radius: var(--border-radius-small); }
+  border-radius: var(--border-radius-small);
+  margin-right: 0.25rem;
+  cursor: default; }
 
 @media screen and (min-width: 767px) {
   /* Reset from default */

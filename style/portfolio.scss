@@ -208,6 +208,8 @@ body .text-portfolio-stat-value p {
   border: 1px solid var(--color-line);
   padding: 0.25em 0.5em;
   border-radius: var(--border-radius-small);
+  margin-right: 0.25rem;
+  cursor: default;
 }
 
 @media screen and (min-width: 767px) {

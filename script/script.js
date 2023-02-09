@@ -41,12 +41,13 @@ const getValidVisitorCookieString = function (minutes) {
 
 const removeProjectMetaLink = function () {
   const projectMetaAnchors = document.querySelectorAll(".et_pb_portfolio_item .post-meta a");
+  const projectMetas = document.querySelectorAll(".et_pb_portfolio_item .post-meta");
   projectMetaAnchors.forEach(anchor => {
     anchor.href = "";
   });
 
   flagProjectMetas();
-  metas.forEach(meta => meta.innerHTML = meta.innerHTML.replaceAll(",",""));
+  projectMetas.forEach(meta => meta.innerHTML = meta.innerHTML.replaceAll(",",""));
 
 }
 
