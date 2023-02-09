@@ -1297,7 +1297,7 @@ header nav .nav-link a:hover {
   padding: 0.25em 0.5em;
   margin-right: 0.5rem;
   border-radius: var(--border-radius-medium);
-  cursor: default; }
+  cursor: auto; }
 
 /* Metadata headings */
 .layout-portfolio-body-row-meta .heading-eyebrow {
