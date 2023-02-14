@@ -1,5 +1,5 @@
 const vv_cMin = 60 * 24 * 7;
-const redirectUrl = "/";
+const redirectUrl = "ivanwlam.com/";
 
 
 const bodyLoaded = function () {
@@ -74,7 +74,6 @@ const urlIsHome = function () {
 }
 
 const vv_redirect = function () {
-  // if (window.location.href.includes(redirectUrl)) return;
   if (urlIsHome()) return;
   window.location.replace(redirectUrl);
 }
