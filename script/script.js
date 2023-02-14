@@ -1,5 +1,5 @@
 const vv_cMin = 60 * 24 * 7;
-const redirectUrl = "ivanwlam.com/";
+const redirectUrl = "https://ivanwlam.com/";
 
 
 const bodyLoaded = function () {
