@@ -687,6 +687,11 @@ li {
 a {
   color: var(--color-text-link); }
 
+/* PERMISSIONS */
+.section-valid-detection .row-no-valid-c {
+  padding: 0; }
+
+/* /////////// */
 body div.et_pb_section.section-hero {
   /* wide desktop, default */
   --width-dottedGrid: 400px;
@@ -907,6 +912,7 @@ body .et_pb_section {
   --margin-content: calc((100vw - var(--width-content)) / 2);
   /* TODO: Make sure desktop content width works too */ }
 
+/* DEFAULT */
 /* TODO: Set --width-content depending on window width, then set --margin-content based on content width, then replace margin-right of "header nav:has(.nav-list.isOpen)"  */
 header .section-header {
   background-color: var(--color-bg-header);

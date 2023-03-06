@@ -41,6 +41,10 @@
   --margin-content: calc((100vw - var(--width-content)) / 2); /* TODO: Make sure desktop content width works too */
 }
 
+
+/* DEFAULT */
+
+
 /* TODO: Set --width-content depending on window width, then set --margin-content based on content width, then replace margin-right of "header nav:has(.nav-list.isOpen)"  */
 
 // .et_pb_section_0_tb_header {
