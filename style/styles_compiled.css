@@ -1432,7 +1432,7 @@ body .text-portfolio-stat-value p {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.15) 100%); }
+  background-image: radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.7) 100%); }
 
 .et_pb_portfolio_item .post-meta {
   font-size: var(--font-size-paragraph); }
