@@ -1549,7 +1549,9 @@ img.bg-brand-gradient,
 
 /* Image Captions */
 .et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner,
-.caption.et_pb_module .et_pb_text_inner {
+.et_pb_image.et_pb_module + .caption.et_pb_module .et_pb_text_inner p,
+.caption.et_pb_module .et_pb_text_inner,
+.caption.et_pb_module .et_pb_text_inner p {
   font-size: var(--font-size-sub-paragraph);
   font-style: italic;
   max-width: fit-content; }
