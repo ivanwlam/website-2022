@@ -1480,8 +1480,15 @@ img.bg-brand-gradient,
 .layout-portfolio-body-row :not(.background-image-none) > * > img,
 .layout-portfolio-body-row :not(.background-image-none) > * > video,
 .et_pb_title_featured_container img {
-  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
-  clip-path: inset(1px 0px 0px 0px round var(--border-radius-small)); }
+  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%); }
+  @media screen and (min-width: 480px) {
+    img.bg-brand-gradient,
+    .et_pb_image.bg-brand-gradient img,
+    .layout-portfolio-hero-row :not(.background-image-none) > * > img,
+    .layout-portfolio-body-row :not(.background-image-none) > * > img,
+    .layout-portfolio-body-row :not(.background-image-none) > * > video,
+    .et_pb_title_featured_container img {
+      clip-path: inset(1px 0px 0px 0px round var(--border-radius-small)); } }
 
 .layout-portfolio-hero-row img,
 .layout-portfolio-body-row img,
