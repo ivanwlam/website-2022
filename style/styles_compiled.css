@@ -1480,7 +1480,8 @@ img.bg-brand-gradient,
 .layout-portfolio-body-row :not(.background-image-none) > * > img,
 .layout-portfolio-body-row :not(.background-image-none) > * > video,
 .et_pb_title_featured_container img {
-  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%); }
+  background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
+  clip-path: rect(1px 100% 100% 0px round var(--border-radius-small)); }
 
 .layout-portfolio-hero-row img,
 .layout-portfolio-body-row img,
@@ -1568,7 +1569,7 @@ img.bg-brand-gradient,
   padding: 0 var(--width-content-margin); }
   @media screen and (max-width: 480px) {
     .et_pb_row .image-edu-dh-flow img {
-      --min-width: 60rem; } }
+      --min-width: 90rem; } }
   @media screen and (min-width: 480px) {
     .et_pb_row .image-edu-dh-flow img {
       --min-width: 90rem; } }
