@@ -1481,7 +1481,7 @@ img.bg-brand-gradient,
 .layout-portfolio-body-row :not(.background-image-none) > * > video,
 .et_pb_title_featured_container img {
   background: linear-gradient(180deg, #cee4cd 0%, #bdd0db 100%);
-  clip-path: rect(1px 100% 100% 0px round var(--border-radius-small)); }
+  clip-path: inset(1px 0px 0px 0px round var(--border-radius-small)); }
 
 .layout-portfolio-hero-row img,
 .layout-portfolio-body-row img,
@@ -1505,7 +1505,8 @@ img.bg-brand-gradient,
 
   .et_pb_image_wrap img, .et_pb_code_inner video {
     border-radius: 0;
-    /* override */ } }
+    /* override */
+    clip-path: inset(1px 0px 0px 0px); } }
 @media screen and (prefers-color-scheme: dark) {
   .et_pb_image_wrap img, .et_pb_code_inner video {
     border-width: 1px 0;
