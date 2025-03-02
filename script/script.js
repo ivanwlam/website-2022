@@ -5,7 +5,8 @@ const redirectUrl = "https://ivanwlam.com/";
 const bodyLoaded = function () {
   // console.debug("bodyLoaded() ran");
   if (typeof track_pageLoad === "function") {
-    // track_pageLoad(); // 250202: Temporarily disabled to see how it affects Airtable API calls. As of 2/2/25, there has been 394 API calls already since 2/1/25
+    track_pageLoad(); // 250202: Temporarily disabled to see how it affects Airtable API calls. As of 2/2/25, there has been 394 API calls already since 2/1/25
+    //250302: reenabled track_pageLoad(); to see if the excessive API calls resumed.
   }
 
   if (typeof styleHomePageHeroBody === "function") {
